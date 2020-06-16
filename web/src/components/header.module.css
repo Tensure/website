@@ -14,13 +14,27 @@
   display: flex;
   align-items: center;
 
+  @media (--media-max-large) {
+    padding: 60px 32px 50px 32px;
+  }
+
   @media (--media-max-medium) {
-    padding: 20px;
+    padding: 18px 20px;
   }
 }
 
 .branding {
   flex: 1;
+
+  @nest & a {
+    display: flex;
+  }
+
+  @nest & img {
+    @media (--media-max-small) {
+      max-width: 106px;
+    }
+  }
 }
 
 .toggleNavButton {
@@ -31,11 +45,17 @@
   margin: 0;
   padding: 4px 4px 0 4px;
   outline: none;
-  color: inherit;
+  color: var(--color-dark-blue);
   line-height: 1;
+  cursor: pointer;
 
   @media (--media-min-medium) {
     display: none;
+  }
+
+  @media (--media-max-small) {
+    font-size: 20px;
+    padding: 0;
   }
 }
 
@@ -68,11 +88,11 @@
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
     left: 0;
     right: 0;
-    top: 65px;
+    top: 59px;
   }
 
   .nav ul {
-    padding: 15px 0;
+    padding: 12px 0;
   }
 
   .nav ul li a {
@@ -98,15 +118,15 @@
   }
 
   .nav ul li a {
-    padding: 0 15px;
+    padding: 0 12px;
   }
 
   .nav ul li:first-child a {
-    padding: 0 15px 0 0;
+    padding: 0 12px 0 0;
   }
 
   .nav ul li:last-child a {
-    padding: 0 0 0 15px;
+    padding: 0 0 0 12px;
   }
 }
 

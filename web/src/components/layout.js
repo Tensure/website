@@ -20,7 +20,7 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
           <li>
             <div className={styles.footerLogo}>
               <img src={tensureLogo} alt="Tensure Logo" />
-              <Link to='mailto:hello@tensure.io'>hello@tensure.io</Link>
+              <a href="mailto:hello@tensure.io">hello@tensure.io</a>
             </div>
             <div className={styles.footerSocial}>
               <ul>

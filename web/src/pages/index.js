@@ -82,20 +82,10 @@ const IndexPage = props => {
         description={site.description}
         keywords={site.keywords}
       />
-      {/* Hero */}
       <HomeHero />
-      {/* About Us */}
-      <FullWidthContainer>
-        <AboutUs />
-      </FullWidthContainer>
-      {/* Services */}
-      <FullWidthContainer>
-        <Services />
-      </FullWidthContainer>
-      {/* Apprentice At Tensure */}
-      <FullWidthContainer>
-        <ApprenticeAtTensure />
-      </FullWidthContainer>
+      <AboutUs />
+      <Services />
+      <ApprenticeAtTensure />
       {/* Recent Posts */}
       <Container>
         <p className={styles.subHeader}>Goings-on at Tensure</p>
@@ -106,10 +96,7 @@ const IndexPage = props => {
           />
         )}
       </Container>
-      {/* Support CTA */}
-      <FullWidthContainer>
-        <SupportCTA />
-      </FullWidthContainer>
+      <SupportCTA />
     </Layout>
   )
 }

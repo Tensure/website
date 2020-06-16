@@ -1,12 +1,6 @@
 @import '../../styles/custom-media.css';
 @import '../../styles/custom-properties.css';
 
-.rootFullWidth {
-  padding-top: 130px;
-  padding-bottom: 145px;
-  text-align: center;
-}
-
 .twoColGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
