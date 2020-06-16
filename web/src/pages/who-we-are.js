@@ -3,7 +3,6 @@ import {graphql} from 'gatsby'
 
 import Layout from '../components/layout'
 import Container from '../components/container'
-import FullWidthContainer from '../components/full-width-container'
 import SEO from '../components/seo'
 import SinglePurpose from '../components/about/single-purpose'
 import Leadership from '../components/about/leadership'

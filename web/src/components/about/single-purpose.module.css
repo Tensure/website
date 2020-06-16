@@ -19,6 +19,9 @@
 
   @media (--media-max-small) {
     grid-template-columns: 1fr;
+    grid-gap: 15px;
+    margin-top: -73px;
+    padding-top: 73px;
   }
 }
 
@@ -26,6 +29,10 @@
   padding-bottom: 164px;
   padding-top: 48px;
   margin-top: 0;
+
+  @media (--media-max-small) {
+    padding-bottom: 50px;
+  }
 }
 
 .singlePurposeImage {
@@ -35,19 +42,26 @@
   background-size: cover;
   margin-left: 142px;
 
+  @media (--media-max-large) {
+    margin-left: 30px;
+  }
+
   @media (--media-max-medium) {
     min-height: 300px;
   }
 
   @media (--media-max-small) {
     min-height: 210px;
-    background-position: center bottom;
+    background-position: center center;
+    order: 1;
+    margin-left: 0;
   }
 }
 
 .singlePurposeContent {
   max-width: 589px;
   padding-right: 0;
+  padding-left: 32px;
   margin-left: auto;
 
   @media (--media-max-medium) {
@@ -57,6 +71,7 @@
   @media (--media-max-small) {
     padding-right: 32px;
     padding-left: 32px;
+    order: 2;
   }
 }
 
@@ -79,20 +94,29 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (--media-max-large) {
+    min-height: 330px;
+  }
+
   @media (--media-max-medium) {
     min-height: 300px;
   }
 
   @media (--media-max-small) {
     min-height: 210px;
-    background-position: center bottom;
+    background-position: center top;
   }
 }
 
 .fullTeamContent {
   max-width: 467px;
   padding-right: 0;
+  padding-right: 32px;
   margin-left: 142px;
+
+  @media (--media-max-large) {
+    margin-left: 30px;
+  }
 
   @media (--media-max-medium) {
     max-width: 100%;
@@ -101,6 +125,7 @@
   @media (--media-max-small) {
     padding-right: 32px;
     padding-left: 32px;
+    margin-left: 0;
   }
 }
 

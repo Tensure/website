@@ -3,6 +3,12 @@ import {graphql} from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import DigitalInnovation from '../components/services/digital-innovation'
+import CloudInfrastructure from '../components/services/cloud-infrastructure'
+import DataInsights from '../components/services/data-insights'
+import DevOps from '../components/services/dev-ops'
+import ManagedServices from '../components/services/managed-services'
+import SupportCTA from '../components/support-cta'
 
 export const query = graphql`
   query WhatWeDoQuery {
@@ -24,7 +30,12 @@ const WhatWeDo = props => {
         description={site.description}
         keywords={site.keywords}
       />
-      <h1>What We Do</h1>
+      <DigitalInnovation />
+      <CloudInfrastructure />
+      <DataInsights />
+      <DevOps />
+      <ManagedServices />
+      <SupportCTA />
     </Layout>
   )
 }

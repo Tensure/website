@@ -5,15 +5,28 @@
   background: linear-gradient(#DDDFE4, var(--color-light-tuscany));
   padding-top: 63px;
   padding-bottom: 99px;
+
+  @media (--media-max-small) {
+    padding-top: 20px;
+  }
 }
 
 .twoColGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 0;
+
+  @media (--media-max-small) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .question {
+  padding-right: 30px;
+
+  @media (--media-max-small) {
+    padding-right: 0;
+  }
 
   @nest & .subHeaderRed {
     font-family: var(--font-family-titles);
@@ -36,6 +49,7 @@
       color: var(--color-dark-blue);
       -webkit-text-fill-color: var(--color-dark-blue);
       -webkit-text-stroke-color: transparent;
+      margin-bottom: 32px;
     }
   }
 
@@ -46,6 +60,16 @@
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 40px;
+
+    @media (--media-max-small) {
+      margin-bottom: 22px;
+    }
+  }
+
+  @nest & .arrows {
+    @media (--media-max-small) {
+      text-align: center;
+    }
   }
 
   @nest & .arrows a:nth-child(2) img {
@@ -69,7 +93,12 @@
     background-repeat: no-repeat;
     background-position: top left;
     max-width: 340px;
-    margin-bottom: 67px;
+    margin-bottom: 63px;
+
+    @media (--media-max-small) {
+      padding-left: 0;
+      padding-top: 120px;
+    }
   }
 
   @nest & li:last-child {
