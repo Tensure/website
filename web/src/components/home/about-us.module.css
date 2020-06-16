@@ -1,0 +1,96 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+
+.rootFullWidth {
+  padding-top: 130px;
+  padding-bottom: 145px;
+  text-align: center;
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 72px;
+  padding-top: 85px;
+  padding-bottom: 240px;
+  background: linear-gradient( #FCFCFC, #DEF1F0);
+
+  @media (--media-max-medium) {
+    grid-gap: 30px;
+    padding-bottom: 50px;
+  }
+
+  @media (--media-max-small) {
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    padding-top: 355px;
+    background: linear-gradient(var(--color-light-gray), #fcfcfc);
+  }
+}
+
+.aboutUsImage {
+  min-height: 616px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (--media-max-medium) {
+    min-height: 300px;
+  }
+
+  @media (--media-max-small) {
+    min-height: 210px;
+    background-position: center bottom;
+  }
+}
+
+.aboutUsContent {
+  max-width: 442px;
+  padding-right: 32px;
+
+  @media (--media-max-medium) {
+    max-width: 100%;
+  }
+
+  @media (--media-max-small) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+.aboutUsContent .subHeaderGreen {
+  font-family: var(--font-family-titles);
+  font-size: 24px;
+  letter-spacing: 2.3px;
+  line-height: 1.1;
+  color: var(--color-turquoise);
+  margin-top: 62px;
+  margin-bottom: 0;
+
+  @media (--media-max-small) {
+    font-size: 16px;
+  }
+}
+
+.aboutUsContent .button {
+  border: 3px solid var(--color-turquoise);
+  background-color: transparent;
+  padding: 16px 27px;
+  font-size: 14px;
+  font-family: var(--font-family-headings);
+  color: var(--color-dark-blue);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 50px;
+  display: inline-flex;
+
+  @media (--media-max-small) {
+    margin-top: 30px;
+  }
+}
+
+.aboutUsContent .button:hover {
+  background-color: var(--color-turquoise);
+  color: var(--color-white);
+}
+

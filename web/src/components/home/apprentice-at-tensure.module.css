@@ -1,0 +1,101 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+
+.rootFullWidth {
+  padding-top: 130px;
+  padding-bottom: 145px;
+  text-align: center;
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 72px;
+  padding-bottom: 175px;
+  background: linear-gradient( #DCF1F1, #FFFFFF);
+
+  @media (--media-max-medium) {
+    grid-gap: 30px;
+    padding-bottom: 50px;
+  }
+
+  @media (--media-max-small) {
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+.apprenticeImage {
+  min-height: 623px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (--media-max-medium) {
+    min-height: 300px;
+  }
+
+  @media (--media-max-small) {
+    order: 2;
+  }
+}
+
+.apprenticeContent {
+  max-width: 500px;
+  padding-right: 32px;
+
+  @media (--media-max-medium) {
+    max-width: 100%;
+  }
+
+  @media (--media-max-small) {
+    padding: 0 32px 24px 32px;
+    order: 1;
+  }
+}
+
+.apprenticeContent .subHeaderGreen {
+  font-family: var(--font-family-titles);
+  font-size: 24px;
+  letter-spacing: 2.3px;
+  line-height: 1.1;
+  color: var(--color-turquoise);
+  margin-top: 62px;
+  margin-bottom: 0;
+
+  @media (--media-max-small) {
+    font-size: 16px;
+  }
+}
+
+.apprenticeContent h2 {
+  @media (--media-max-small) {
+    font-size: 28px;
+    color: var(--color-dark-blue);
+    -webkit-text-fill-color: var(--color-dark-blue);
+    -webkit-text-stroke-color: transparent;
+  }
+}
+
+.apprenticeContent .button {
+  border: 3px solid var(--color-turquoise);
+  background-color: transparent;
+  padding: 16px 27px;
+  font-size: 14px;
+  font-family: var(--font-family-headings);
+  color: var(--color-dark-blue);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 50px;
+  display: inline-flex;
+
+  @media (--media-max-small) {
+    margin-top: 30px;
+  }
+}
+
+.apprenticeContent .button:hover {
+  background-color: var(--color-turquoise);
+  color: var(--color-white);
+}
+

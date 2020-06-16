@@ -1,0 +1,119 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+
+.rootFullWidth {
+  padding-top: 130px;
+  padding-bottom: 145px;
+  text-align: center;
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0;
+  align-items: center;
+  padding-bottom: 175px;
+  background: linear-gradient( #DEF1F0, #DCF1F1);
+
+  @media (--media-max-medium) {
+    padding-bottom: 50px;
+  }
+
+  @media (--media-max-small) {
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    background: linear-gradient( var(--color-dark-blue), var(--color-dark-blue));
+    padding-bottom: 0;
+  }
+}
+
+.servicesContentContainer {
+  height: calc(100% - 140px);
+  margin-top: -17px;
+  background-color: var(--color-dark-blue);
+  display: flex;
+  align-items: center;
+
+  @media (--media-max-medium) {
+    max-width: 100%;
+  }
+
+  @media (--media-max-small) {
+    padding-right: 32px;
+    padding-left: 32px;
+    margin-top: 0;
+    padding-bottom: 40px;
+    padding-top: 18px;
+  }
+}
+
+.servicesContent {
+  max-width: 445px;
+  margin-left: auto;
+  padding-right: 163px;
+  padding-left: 32px;
+  color: var(--color-white);
+
+  @media (--media-max-small) {
+    padding-right: 0;
+  }
+}
+
+.servicesContent h2 {
+  -webkit-text-stroke-color: var(--color-white);
+}
+
+.servicesContent p {
+  color: var(--color-white);
+}
+
+.servicesContent .subHeaderTuscany {
+  font-family: var(--font-family-titles);
+  font-size: 24px;
+  letter-spacing: 2.3px;
+  line-height: 1.1;
+  color: var(--color-tuscany);
+  margin-bottom: 0;
+
+  @media (--media-max-small) {
+    font-size: 16px;
+  }
+}
+
+.servicesContent .button {
+  border: 3px solid var(--color-tuscany);
+  background-color: transparent;
+  padding: 16px 27px;
+  font-size: 14px;
+  font-family: var(--font-family-headings);
+  color: var(--color-white);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 42px;
+  display: inline-flex;
+
+  @media (--media-max-small) {
+    margin-top: 30px;
+  }
+}
+
+.servicesContent .button:hover {
+  background-color: var(--color-tuscany);
+  color: var(--color-white);
+}
+
+.servicesImage {
+  min-height: 750px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (--media-max-medium) {
+    min-height: 300px;
+  }
+
+  @media (--media-max-small) {
+    min-height: 375px;
+  }
+}
+

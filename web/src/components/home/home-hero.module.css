@@ -1,0 +1,128 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0;
+  margin-top: -134px;
+  padding-top: 134px;
+  padding-bottom: 190px;
+  background: linear-gradient(var(--color-light-gray), #fcfcfc);
+
+  @media (--media-max-medium) {
+    padding-bottom: 50px;
+  }
+}
+
+.heroContentContainer {
+  padding: 22px 36px 74px 121px;
+  background-color: var(--color-white);
+  box-shadow: 0 0 40px 0 rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 352px;
+  left: 0;
+  z-index: 1;
+  max-height: 372px;
+
+  @media (--media-max-medium) {
+    max-width: 100%;
+  }
+
+  @media (--media-max-small) {
+    padding-right: 22px;
+    padding-left: 22px;
+    margin-left: 10px;
+    margin-right: 10px;
+    top: 280px;
+    padding-bottom: 30px;
+  }
+}
+
+.heroContent {
+  max-width: 452px;
+  margin-left: auto;
+  position: relative;
+}
+
+.heroContent .subHeaderTurquoise {
+  font-family: var(--font-family-titles);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2.3px;
+  line-height: 1.1;
+  color: var(--color-turquoise);
+  margin-bottom: 15px;
+  display: block;
+  -webkit-text-fill-color: var(--color-turquoise);
+  -webkit-text-stroke-color: transparent;
+
+  @media (--media-max-small) {
+    font-size: 16px;
+  }
+}
+
+.heroContent p {
+  margin-bottom: 0;
+}
+
+.heroContent .downArrow {
+  position: absolute;
+  bottom: -115px;
+  left: 0;
+
+  @media (--media-max-small) {
+    left: 50%;
+    bottom: -70px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+}
+
+.heroVidContainer .blueStripe {
+  position: absolute;
+  top: -135px;
+  left: -205px;
+
+  @media (--media-max-small) {
+    display: none;
+  }
+}
+
+.heroVidContainer .greenStripe {
+  position: absolute;
+  top: -135px;
+  left: -215px;
+
+  @media (--media-max-small) {
+    display: none;
+  }
+}
+
+.heroVidContainer {
+  height: 674px;
+  width: 1197px;
+  margin-left: auto;
+  position: relative;
+
+  @media (--media-max-medium) {
+    max-height: 300px;
+    width: 100%;
+  }
+}
+
+.heroVid {
+  padding: 56.25% 0 0 0;
+  position: relative;
+}
+
+.heroVid iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+

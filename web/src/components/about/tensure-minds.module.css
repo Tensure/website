@@ -1,0 +1,116 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+
+.rootFullWidth {
+  background: linear-gradient(#DDDFE4, var(--color-light-tuscany));
+  padding-top: 63px;
+  padding-bottom: 99px;
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0;
+}
+
+.question {
+
+  @nest & .subHeaderRed {
+    font-family: var(--font-family-titles);
+    font-size: 24px;
+    letter-spacing: 2.3px;
+    line-height: 1.1;
+    color: var(--color-tuscany);
+    margin-bottom: 0;
+  
+    @media (--media-max-small) {
+      font-size: 16px;
+    }
+  }
+
+  @nest & h2 {
+    margin-bottom: 98px;
+
+    @media (--media-max-small) {
+      font-size: 28px;
+      color: var(--color-dark-blue);
+      -webkit-text-fill-color: var(--color-dark-blue);
+      -webkit-text-stroke-color: transparent;
+    }
+  }
+
+  @nest & .questionContent {
+    border-top: 3px solid var(--color-tuscany);
+    border-bottom: 3px solid var(--color-tuscany);
+    max-width: 468px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  @nest & .arrows a:nth-child(2) img {
+    transform: rotate(180deg);
+    margin-left: 39px;
+  }
+}
+
+.answers {
+  padding-top: 63px;
+
+  @nest & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  @nest & li {
+    padding-left: 120px;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    max-width: 340px;
+    margin-bottom: 67px;
+  }
+
+  @nest & li:last-child {
+    margin-bottom: 0;
+  }
+
+  @nest & .personName {
+    font-family: var(--font-family-headings);
+    font-size: 25px;
+    margin: 0;
+  }
+
+  @nest & .personTitle {
+    font-family: var(--font-family-titles);
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  @nest & .personContent {
+    margin: 0;
+  }
+}
+
+ul.paginationBullets {
+  padding: 0;
+  margin: 43px 0 0 120px;
+
+  @nest & li {
+    border: 3px solid var(--color-dark-blue);
+    background-color: transparent;
+    display: inline-block;
+    margin: 0 12px 0 0;
+    padding: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+
+  @nest & li.active {
+    background-color: var(--color-dark-blue);
+  }
+}
+

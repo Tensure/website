@@ -5,35 +5,22 @@ import {
   filterOutDocsWithoutSlugs,
   filterOutDocsPublishedInTheFuture
 } from '../lib/helpers'
-import BlogPostPreviewList from '../components/blog-post-preview-list'
+
+import Layout from '../containers/layout'
+import FullWidthContainer from '../components/full-width-container'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
-import Layout from '../containers/layout'
+import HomeHero from '../components/home/home-hero'
+import AboutUs from '../components/home/about-us'
+import Services from '../components/home/services'
+import ApprenticeAtTensure from '../components/home/apprentice-at-tensure'
+import BlogPostPreviewRecent from '../components/blog-post-preview-recent'
+import SupportCTA from '../components/support-cta'
+
+import styles from '../components/layout.module.css'
 
 export const query = graphql`
-  fragment SanityImage on SanityMainImage {
-    crop {
-      _key
-      _type
-      top
-      bottom
-      left
-      right
-    }
-    hotspot {
-      _key
-      _type
-      x
-      y
-      height
-      width
-    }
-    asset {
-      _id
-    }
-  }
-
   query IndexPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
@@ -49,9 +36,9 @@ export const query = graphql`
         node {
           id
           publishedAt
-          mainImage {
-            ...SanityImage
-            alt
+          categories {
+            id
+            title
           }
           title
           _rawExcerpt
@@ -95,16 +82,34 @@ const IndexPage = props => {
         description={site.description}
         keywords={site.keywords}
       />
+      {/* Hero */}
+      <HomeHero />
+      {/* About Us */}
+      <FullWidthContainer>
+        <AboutUs />
+      </FullWidthContainer>
+      {/* Services */}
+      <FullWidthContainer>
+        <Services />
+      </FullWidthContainer>
+      {/* Apprentice At Tensure */}
+      <FullWidthContainer>
+        <ApprenticeAtTensure />
+      </FullWidthContainer>
+      {/* Recent Posts */}
       <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
+        <p className={styles.subHeader}>Goings-on at Tensure</p>
+        <h2>News & Insights</h2>
         {postNodes && (
-          <BlogPostPreviewList
-            title='Latest blog posts'
+          <BlogPostPreviewRecent
             nodes={postNodes}
-            browseMoreHref='/archive/'
           />
         )}
       </Container>
+      {/* Support CTA */}
+      <FullWidthContainer>
+        <SupportCTA />
+      </FullWidthContainer>
     </Layout>
   )
 }

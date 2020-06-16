@@ -1,0 +1,94 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+
+.grid {
+  display: grid;
+  grid-template-columns: 370px auto;
+  grid-gap: 0;
+  grid-auto-rows: 1fr;
+  max-width: 1078px;
+  margin: -52px 0 110px 0;
+}
+
+.teamTitle .subHeaderGreen {
+  font-family: var(--font-family-titles);
+  font-size: 24px;
+  letter-spacing: 2.3px;
+  line-height: 1.1;
+  color: var(--color-turquoise);
+  margin-top: 156px;
+  margin-bottom: 0;
+
+  @media (--media-max-small) {
+    font-size: 16px;
+  }
+}
+
+.teamTitle h2 {
+  @media (--media-max-small) {
+    font-size: 28px;
+    color: var(--color-dark-blue);
+    -webkit-text-fill-color: var(--color-dark-blue);
+    -webkit-text-stroke-color: transparent;
+  }
+}
+
+.teamMembers {
+  @nest & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 130px;
+    column-gap: 22px;
+  }
+}
+
+.teamMemberBox {
+  min-height: 440px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  box-shadow: 20px -20px 35px 0 rgba(0,0,0,0.05);
+  background-color: var(--color-dark-blue);
+  background-blend-mode: screen;
+
+  @nest &:hover .teamMemberBio {
+    opacity: 1;
+  }
+}
+
+.teamMemberBio {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark-blue-trans);
+  color: var(--color-white);
+  padding: 45px 35px;
+  box-sizing: border-box;
+
+  @nest & p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  @nest & a {
+    color: var(--color-light-tuscany);
+    font-family: var(--font-family-titles);
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
+
+.teamMemberName h3 {
+  font-family: var(--font-family-headings);
+  font-size: 25px;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
