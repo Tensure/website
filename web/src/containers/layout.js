@@ -2,6 +2,10 @@ import {graphql, StaticQuery} from 'gatsby'
 import React, {useState} from 'react'
 import Layout from '../components/layout'
 
+if (typeof window !== "undefined") {
+  require("smooth-scroll")('a[href*="#"]')
+}
+
 const query = graphql`
   query SiteTitleQuery {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {

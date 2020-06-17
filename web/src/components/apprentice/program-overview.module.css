@@ -1,0 +1,231 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0;
+  padding-top: 202px;
+  padding-bottom: 90px;
+  background-color: var(--color-light-gray);
+
+  @media (--media-max-small) {
+    grid-template-columns: 1fr;
+    padding-top: 60px;
+  }
+
+  @nest & h2 {
+    margin-bottom: 0;
+  
+    @media (--media-max-small) {
+      font-size: 28px;
+      color: var(--color-dark-blue);
+      -webkit-text-fill-color: var(--color-dark-blue);
+      -webkit-text-stroke-color: transparent;
+    }
+  }
+
+  @nest & h3 {
+    font-weight: 400;
+  }
+
+  @nest & .subHeaderGreen {
+    font-family: var(--font-family-titles);
+    font-size: 24px;
+    letter-spacing: 2.3px;
+    line-height: 1.1;
+    color: var(--color-turquoise);
+    margin-top: 0;
+    margin-bottom: 40px;
+  
+    @media (--media-max-small) {
+      font-size: 16px;
+      margin-bottom: 17px;
+    }
+  }
+}
+
+.mobileShow {
+  display: none;
+
+  @media (--media-max-small) {
+    display: block;
+    padding: 0 32px 0 32px;
+  }
+}
+
+.mobileHide {
+  display: block;
+
+  @media (--media-max-small) {
+    display: none;
+  }
+}
+
+.programOverviewImage {
+  min-height: 471px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @media (--media-max-medium) {
+    min-height: 300px;
+  }
+
+  @media (--media-max-small) {
+    order: 1;
+    margin-bottom: 30px;
+  }
+
+  @nest & .greenBlueLines {
+    position: absolute;
+    top: -240px;
+    right: 0;
+    max-width: 240px;
+
+    @media (--media-max-small) {
+      display: none;
+    }
+  }
+}
+
+.programOverviewContent {
+  max-width: 465px;
+  padding-right: 142px;
+  padding-left: 32px;
+  margin-left: auto;
+  position: relative;
+
+  @media (--media-max-large) {
+    padding-right: 32px;
+  }
+
+  @media (--media-max-medium) {
+    max-width: 100%;
+  }
+
+  @media (--media-max-small) {
+    padding: 0 32px 24px 32px;
+    order: 2;
+  }
+
+  @nest & .button {
+    border: 3px solid var(--color-tuscany);
+    background-color: transparent;
+    padding: 16px 27px;
+    font-size: 14px;
+    font-family: var(--font-family-headings);
+    color: var(--color-dark-blue);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 40px;
+    display: inline-flex;
+  
+    @media (--media-max-small) {
+      margin-top: 30px;
+    }
+  }
+
+  @nest & .button:hover {
+    background-color: var(--color-tuscany);
+    color: var(--color-white);
+  }
+}
+
+.twoColGrid:nth-child(2) {
+  padding-bottom: 122px;
+  padding-top: 0;
+
+  @media (--media-max-small) {
+    padding-bottom: 35px;
+  }
+}
+
+.apprenticeshipImage {
+  min-height: 471px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @media (--media-max-medium) {
+    min-height: 300px;
+  }
+
+  @media (--media-max-small) {
+    order: 1;
+    margin-bottom: 30px;
+  }
+}
+
+.apprenticeshipContent {
+  max-width: 465px;
+  padding-left: 93px;
+  padding-right: 32px;
+
+  @media (--media-max-large) {
+    padding-left: 32px;
+  }
+
+  @media (--media-max-medium) {
+    max-width: 100%;
+  }
+
+  @media (--media-max-small) {
+    padding: 0 32px 24px 32px;
+    order: 2;
+  }
+
+  @nest & h3 {
+    font-weight: 400;
+  }
+}
+
+.twoColGrid:nth-child(3) {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.internshipImage {
+  min-height: 471px;
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: -52px;
+
+  @media (--media-max-medium) {
+    min-height: 300px;
+  }
+
+  @media (--media-max-small) {
+    order: 1;
+    margin-bottom: 30px;
+  }
+}
+
+.internshipContent {
+  max-width: 465px;
+  margin-left: auto;
+  padding-right: 93px;
+  padding-left: 32px;
+
+  @media (--media-max-large) {
+    padding-right: 32px;
+  }
+
+  @media (--media-max-medium) {
+    max-width: 100%;
+  }
+
+  @media (--media-max-small) {
+    padding: 0 32px 24px 32px;
+    order: 2;
+  }
+
+  @nest & h3 {
+    font-weight: 400;
+  }
+}
+
