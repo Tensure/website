@@ -7,7 +7,6 @@ import {
 } from '../lib/helpers'
 
 import Layout from '../containers/layout'
-import FullWidthContainer from '../components/full-width-container'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
