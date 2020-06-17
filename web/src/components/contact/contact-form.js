@@ -2,13 +2,13 @@ import React from 'react'
 import Container from '../container'
 import background from '../images/apprentice/applying-cta-bg.jpg'
 
-import styles from './application.module.css'
+import styles from './contact-form.module.css'
 
-const Application = () => (
-  <div className={styles.rootFullWidth} style={{backgroundImage: `url(${background})`}} id="application">
+const ContactForm = () => (
+  <div className={styles.rootFullWidth}>
     <Container>
-      <div className={styles.applicationContent}>
-        <h2>Interested in applying?</h2>
+      <div className={styles.contactContent}>
+        <h2>Contact Us</h2>
         <p>Please fill out the form below and we will be in touch.</p>
         <form 
           name="application" 
@@ -21,8 +21,12 @@ const Application = () => (
             <input type="text" name="fname" placeholder="First Name" required />
             <input type="text" name="lname" placeholder="Last Name" />
           </div>
+          <div className={styles.twoColFields}>
           <input type="email" name="email" placeholder="Email" required />
-          <textarea name="message" placeholder="Why the interest in the apprenticeship progam?"></textarea> 
+          <input type="text" name="phone" placeholder="Phone" />
+          </div>
+          <input type="text" name="company" placeholder="Company" />
+          <textarea name="message" placeholder="How can we help you?"></textarea> 
           <button type="submit">Submit</button>
         </form>
       </div>
@@ -30,4 +34,4 @@ const Application = () => (
   </div>
 )
 
-export default Application
+export default ContactForm

@@ -2,23 +2,19 @@
 @import '../../styles/custom-properties.css';
 
 .rootFullWidth {
-  padding-top: 85px;
-  padding-bottom: 130px;
-  text-align: center;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding-top: 232px;
+  padding-bottom: 175px;
+  margin-top: -135px;
+  background: linear-gradient(#10446E, #0A2949);
 
   @media (--media-max-small) {
-    padding-top: 50px;
-    padding-bottom: 85px;
+    padding: 59px 0 85px 0;
+    margin-top: -59px;
   }
 }
 
-.applicationContent h2 {
+.contactContent h2 {
   -webkit-text-stroke-color: var(--color-white);
-  max-width: 495px;
-  margin: 0 auto;
 
   @media (--media-max-small) {
     color: var(--color-white);
@@ -27,23 +23,22 @@
   }
 }
 
-.applicationContent p {
+.contactContent p {
   font-size: 17px;
   color: var(--color-light-turquoise);
   line-height: 1.5;
   margin-bottom: 72px;
 }
 
-.applicationContent form {
-  max-width: 467px;
-  margin: 0 auto;
+.contactContent form {
+  max-width: 708px;
 }
 
-.applicationContent .hidden {
+.contactContent .hidden {
   display: none;
 }
 
-.applicationContent .twoColFields {
+.contactContent .twoColFields {
   display: flex;
   justify-content: space-between;
 
@@ -52,9 +47,9 @@
   }
 }
 
-.applicationContent input[type="text"],
-.applicationContent input[type="email"],
-.applicationContent textarea {
+.contactContent input[type="text"],
+.contactContent input[type="email"],
+.contactContent textarea {
   display: block;
   box-sizing: border-box;
   background-color: transparent;
@@ -67,7 +62,7 @@
   color: var(--color-light-turquoise);
 }
 
-.applicationContent input[type="text"] {
+.contactContent input[type="text"] {
   width: 48%;
   margin-bottom: 36px;
 
@@ -76,12 +71,21 @@
   }
 }
 
-.applicationContent input[type="email"] {
-  margin-bottom: 60px;
-  width: 100%;
+.contactContent input[type="email"] {
+  width: 48%;
+  margin-bottom: 36px;
+
+  @media (--media-max-small) {
+    width: 100%;
+  }
 }
 
-.applicationContent textarea {
+.contactContent input[name="company"] {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.contactContent textarea {
   border: 3px solid var(--color-light-turquoise);
   width: 100%;
   padding: 10px;
@@ -89,9 +93,9 @@
   margin-bottom: 60px;
 }
 
-.applicationContent input[type="text"]:focus,
-.applicationContent input[type="email"]:focus,
-.applicationContent textarea:focus {
+.contactContent input[type="text"]:focus,
+.contactContent input[type="email"]:focus,
+.contactContent textarea:focus {
   border-bottom: 3px solid var(--color-white);
   border-top: none;
   border-right: none;
@@ -100,23 +104,23 @@
   color: var(--color-white);
 }
 
-.applicationContent textarea:focus {
+.contactContent textarea:focus {
   border: 3px solid var(--color-white);
 }
 
-.applicationContent ::-webkit-input-placeholder { /* Edge */
+.contactContent ::-webkit-input-placeholder { /* Edge */
   color: var(--color-light-turquoise);
 }
 
-.applicationContent :-ms-input-placeholder { /* Internet Explorer 10-11 */
+.contactContent :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: var(--color-light-turquoise);
 }
 
-.applicationContent ::placeholder {
+.contactContent ::placeholder {
   color: var(--color-light-turquoise);
 }
 
-.applicationContent button {
+.contactContent button {
   border: 3px solid var(--color-tuscany);
   background-color: transparent;
   padding: 16px 60px;
@@ -126,9 +130,14 @@
   color: var(--color-light-gray);
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (--media-max-small) {
+    margin: 0 auto;
+    display: block;
+  }
 }
 
-.applicationContent button:hover {
+.contactContent button:hover {
   background-color: var(--color-tuscany);
   color: var(--color-white);
 }

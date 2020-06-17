@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 
 import Layout from '../containers/layout'
 import SEO from '../components/seo'
+import ContactForm from '../components/contact/contact-form'
 
 export const query = graphql`
   query ContactQuery {
@@ -24,7 +25,7 @@ const Contact = props => {
         description={site.description}
         keywords={site.keywords}
       />
-      <h1>Contact</h1>
+      <ContactForm />
     </Layout>
   )
 }
