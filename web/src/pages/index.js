@@ -74,6 +74,8 @@ const IndexPage = props => {
     )
   }
 
+  document.body.classList.add(site.title);
+
   return (
     <Layout>
       <SEO
