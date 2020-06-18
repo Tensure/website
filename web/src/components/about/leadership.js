@@ -33,79 +33,78 @@ import styles from './leadership.module.css'
 //   }
 // `
 
-function Leadership ({data}) {
+// function Leadership ({data}) {
+const Leadership = ({data}) => (
 
-  return (
-    <div className={styles.grid}>
-      <div className={styles.teamTitle}>
-        <p className={styles.subHeaderGreen}>leadership</p>
-        <h2>Team</h2>
-      </div>
-      <div className={styles.teamMembers}>
-        <ul>
-        {/* {data.leaders.edges.map(({ node: leader }) => (
-          <li key={leader.id}>
-            <h3>{leader.name}</h3>
-          </li>
-        ))} */}
-        <li>
-          <div className={styles.teamMemberBox} style={{backgroundImage: `url(${justin})`}}>
-            <div className={styles.teamMemberBio}>
-              <p>Justin's many years of experience in the IT Services industry has provided him valuable exposure to many different industries , business lines, and technologies. Justin's experience includes leading global delivery teams, acting as a technology adviser, and building out technology partnerships. Justin, his wife, and two boys enjoy experiencing new cultures through travel.</p>
-              <p>
-                <a href="#">Linkedin</a><br />
-                <a href="#">Email</a>
-              </p>
-            </div>
-          </div>
-          <div className={styles.teamMemberName}>
-            <h3>Justin Billig</h3>
-          </div>
+  <div className={styles.grid}>
+    <div className={styles.teamTitle}>
+      <p className={styles.subHeaderGreen}>leadership</p>
+      <h2>Team</h2>
+    </div>
+    <div className={styles.teamMembers}>
+      <ul>
+      {/* {data.leaders.edges.map(({ node: leader }) => (
+        <li key={leader.id}>
+          <h3>{leader.name}</h3>
         </li>
-        <li>
-          <div className={styles.teamMemberBox} style={{backgroundImage: `url(${matt})`}}>
-            <div className={styles.teamMemberBio}>
-              <p>Justin's many years of experience in the IT Services industry has provided him valuable exposure to many different industries , business lines, and technologies. Justin's experience includes leading global delivery teams, acting as a technology adviser, and building out technology partnerships. Justin, his wife, and two boys enjoy experiencing new cultures through travel.</p>
-              <p>
-                <a href="#">Linkedin</a><br />
-                <a href="#">Email</a>
-              </p>
-            </div>
-          </div>
-          <div className={styles.teamMemberName}>
-            <h3>Matt Young</h3>
-          </div>
-        </li>
-        <li>
-          <div className={styles.teamMemberBox} style={{backgroundImage: `url(${dan})`}}>
-            <div className={styles.teamMemberBio}>
-              <p>Justin's many years of experience in the IT Services industry has provided him valuable exposure to many different industries , business lines, and technologies. Justin's experience includes leading global delivery teams, acting as a technology adviser, and building out technology partnerships. Justin, his wife, and two boys enjoy experiencing new cultures through travel.</p>
-              <p>
-                <a href="#">Linkedin</a><br />
-                <a href="#">Email</a>
-              </p>
-            </div>
-          </div>
-          <div className={styles.teamMemberName}>
-            <h3>Dan Rye</h3>
-          </div>
-        </li>
-        <li>
-          <div className={styles.teamMemberBox} style={{backgroundImage: `url(${doug})`}}>
-            <div className={styles.teamMemberBio}>
-              <p>Justin's many years of experience in the IT Services industry has provided him valuable exposure to many different industries , business lines, and technologies. Justin's experience includes leading global delivery teams, acting as a technology adviser, and building out technology partnerships. Justin, his wife, and two boys enjoy experiencing new cultures through travel.</p>
+      ))} */}
+      <li>
+        <div className={styles.teamMemberBox} style={{backgroundImage: `url(${justin})`}}>
+          <div className={styles.teamMemberBio}>
+            <p>Justin's many years of experience in the IT Services industry has provided him valuable exposure to many different industries , business lines, and technologies. Justin's experience includes leading global delivery teams, acting as a technology adviser, and building out technology partnerships. Justin, his wife, and two boys enjoy experiencing new cultures through travel.</p>
+            <p>
               <a href="#">Linkedin</a><br />
               <a href="#">Email</a>
-            </div>
+            </p>
           </div>
-          <div className={styles.teamMemberName}>
-            <h3>Doug Shannon</h3>
+        </div>
+        <div className={styles.teamMemberName}>
+          <h3>Justin Billig</h3>
+        </div>
+      </li>
+      <li>
+        <div className={styles.teamMemberBox} style={{backgroundImage: `url(${matt})`}}>
+          <div className={styles.teamMemberBio}>
+            <p>Justin's many years of experience in the IT Services industry has provided him valuable exposure to many different industries , business lines, and technologies. Justin's experience includes leading global delivery teams, acting as a technology adviser, and building out technology partnerships. Justin, his wife, and two boys enjoy experiencing new cultures through travel.</p>
+            <p>
+              <a href="#">Linkedin</a><br />
+              <a href="#">Email</a>
+            </p>
           </div>
-        </li>
-        </ul>
-      </div>
+        </div>
+        <div className={styles.teamMemberName}>
+          <h3>Matt Young</h3>
+        </div>
+      </li>
+      <li>
+        <div className={styles.teamMemberBox} style={{backgroundImage: `url(${dan})`}}>
+          <div className={styles.teamMemberBio}>
+            <p>Justin's many years of experience in the IT Services industry has provided him valuable exposure to many different industries , business lines, and technologies. Justin's experience includes leading global delivery teams, acting as a technology adviser, and building out technology partnerships. Justin, his wife, and two boys enjoy experiencing new cultures through travel.</p>
+            <p>
+              <a href="#">Linkedin</a><br />
+              <a href="#">Email</a>
+            </p>
+          </div>
+        </div>
+        <div className={styles.teamMemberName}>
+          <h3>Dan Rye</h3>
+        </div>
+      </li>
+      <li>
+        <div className={styles.teamMemberBox} style={{backgroundImage: `url(${doug})`}}>
+          <div className={styles.teamMemberBio}>
+            <p>Justin's many years of experience in the IT Services industry has provided him valuable exposure to many different industries , business lines, and technologies. Justin's experience includes leading global delivery teams, acting as a technology adviser, and building out technology partnerships. Justin, his wife, and two boys enjoy experiencing new cultures through travel.</p>
+            <a href="#">Linkedin</a><br />
+            <a href="#">Email</a>
+          </div>
+        </div>
+        <div className={styles.teamMemberName}>
+          <h3>Doug Shannon</h3>
+        </div>
+      </li>
+      </ul>
     </div>
-  )
-}
+  </div>
+)
 
 export default Leadership
