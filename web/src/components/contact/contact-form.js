@@ -9,7 +9,8 @@ const ContactForm = () => (
       <div className={styles.contactContent}>
         <h2>Contact Us</h2>
         <p>Please fill out the form below and we will be in touch.</p>
-        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="thank-you">
+        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you">
+          <input type="hidden" name="form-name" value="contact" />
           <div className={styles.hidden}><input name="bot-field" /></div>
           <div className={styles.twoColFields}>
             <input type="text" name="fname" placeholder="First Name" required />
