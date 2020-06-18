@@ -15,34 +15,8 @@ import {
 
 import styles from './blog-post.module.css'
 
-export const query = graphql`
-  query RecentPostQuery {
-    posts: allSanityPost(
-      limit: 3
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
-      edges {
-        node {
-          id
-          publishedAt
-          categories {
-            id
-            title
-          }
-          title
-          _rawExcerpt
-          slug {
-            current
-          }
-        }
-      }
-    }
-  }
-`
-
 function BlogPost (props) {
-  const {_rawBody, authors, categories, title, mainImage, publishedAt, data} = props
+  const {_rawBody, categories, title, publishedAt, data} = props
 
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts)

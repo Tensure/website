@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+// import { graphql } from 'gatsby'
 
 import justin from '../images/about/who-justin.jpg'
 import matt from '../images/about/who-matt.jpg'
@@ -9,27 +9,31 @@ import doug from '../images/about/who-doug.jpg'
 import styles from './leadership.module.css'
 
 // export const query = graphql`
-//   query TeamMembers {
-//     leaders: allTeamMembers(
-//       limit: 3
-//       sort: { fields: [publishedAt], order: DESC }
-//       filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-//     ) {
+//   {
+//     leaders: allSanityTeamMember {
 //       edges {
 //         node {
-//           id
-//           title
+//           name
 //           slug {
 //             current
 //           }
+//           id
+//           linkedin
+//           email
+//           image {
+//             alt
+//             asset {
+//               url
+//             }
+//           }
+//           _rawBio
 //         }
 //       }
 //     }
 //   }
 // `
 
-function Leadership (props) {
-  const { teamMembers} = props
+function Leadership ({data}) {
 
   return (
     <div className={styles.grid}>
@@ -39,8 +43,10 @@ function Leadership (props) {
       </div>
       <div className={styles.teamMembers}>
         <ul>
-        {/* {teamMembers.map(teamMember => (
-          <li key={teamMember._id}>{teamMember.title}</li>
+        {/* {data.leaders.edges.map(({ node: leader }) => (
+          <li key={leader.id}>
+            <h3>{leader.name}</h3>
+          </li>
         ))} */}
         <li>
           <div className={styles.teamMemberBox} style={{backgroundImage: `url(${justin})`}}>

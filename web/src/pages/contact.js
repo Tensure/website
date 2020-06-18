@@ -14,9 +14,12 @@ export const query = graphql`
     }
   }
 `
+
 const Contact = props => {
   const {data} = props
   const site = (data || {}).site
+
+  document.body.classList.add('contact-page');
 
   return (
     <Layout>

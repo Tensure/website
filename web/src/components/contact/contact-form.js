@@ -1,6 +1,5 @@
 import React from 'react'
 import Container from '../container'
-import background from '../images/apprentice/applying-cta-bg.jpg'
 
 import styles from './contact-form.module.css'
 
@@ -11,7 +10,7 @@ const ContactForm = () => (
         <h2>Contact Us</h2>
         <p>Please fill out the form below and we will be in touch.</p>
         <form 
-          name="application" 
+          name="contact" 
           method="POST" 
           data-netlify="true" 
           data-netlify-honeypot="bot-field"

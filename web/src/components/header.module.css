@@ -82,6 +82,10 @@
   color: var(--color-turquoise);
 }
 
+.contact-page .nav ul li a {
+  color: var(--color-white);
+}
+
 @media (--media-max-medium) {
   .nav {
     position: absolute;
