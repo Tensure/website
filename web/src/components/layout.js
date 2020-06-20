@@ -1,4 +1,6 @@
 import React from 'react'
+import favicon from './images/tensure-favicon.png'
+import Helmet from 'react-helmet'
 import Header from './header'
 import {Link} from 'gatsby'
 
@@ -10,6 +12,9 @@ import googleCloud from './images/footer/footer-google-cloud.png'
 
 const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle, darkMode}) => (
   <>
+    <Helmet>
+      <link rel="icon" href={favicon} />
+    </Helmet>
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} darkMode={darkMode} />
     
     <div className={styles.content}>{children}</div>
