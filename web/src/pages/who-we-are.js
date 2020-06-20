@@ -15,9 +15,7 @@ function WhoWeAre ({ data }) {
   return (
     <Layout>
       <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
+        title='Who We Are'
       />
       <SinglePurpose data={data.section1.edges} />
       <Container>

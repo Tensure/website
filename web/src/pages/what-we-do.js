@@ -16,9 +16,7 @@ function WhatWeDo ({ data }) {
   return (
     <Layout>
       <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
+        title='What We Do'
       />
       <DigitalInnovation data={data.services.edges} />
       <CloudInfrastructure data={data.services.edges} />

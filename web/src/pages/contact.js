@@ -12,9 +12,7 @@ const Contact = props => {
   return (
     <Layout darkMode={true}>
       <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
+        title='Contact Us'
       />
       <ContactForm data={data.contact.edges} />
     </Layout>
