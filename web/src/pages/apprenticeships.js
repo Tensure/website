@@ -17,8 +17,6 @@ const Apprenticeships = props => {
     <Layout>
       <SEO
         title='Apprenticeships'
-        description={site.description}
-        keywords={site.keywords}
       />
       <ApprenticeProgram data={data.apprentice.edges} />
       <ProgramOverview data={data.apprentice.edges} />
