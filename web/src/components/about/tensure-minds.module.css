@@ -28,7 +28,7 @@
     padding-right: 0;
   }
 
-  @nest & .subHeaderRed {
+  @nest & .subHeader {
     font-family: var(--font-family-titles);
     font-size: 24px;
     letter-spacing: 2.3px;
@@ -140,6 +140,49 @@ ul.paginationBullets {
 
   @nest & li.active {
     background-color: var(--color-dark-blue);
+  }
+}
+
+.blueMinds .rootFullWidth {
+  background: linear-gradient(#95D5D4, #10446E);
+}
+
+.blueMinds .question .subHeader {
+  color: var(--color-white);
+}
+
+.blueMinds .questionContent {
+  border-top: 3px solid var(--color-dark-blue);
+  border-bottom: 3px solid var(--color-dark-blue);
+
+  @nest & p {
+    color: var(--color-white);
+  }
+}
+
+.blueMinds .answers {
+
+  @nest & .personName {
+    color: var(--color-white);
+  }
+
+  @nest & .personTitle {
+    color: var(--color-white);
+  }
+
+  @nest & .personContent {
+    color: var(--color-white);
+  }
+}
+
+.blueMinds ul.paginationBullets {
+
+  @nest & li {
+    border: 3px solid var(--color-white);
+  }
+
+  @nest & li.active {
+    background-color: var(--color-white);
   }
 }
 

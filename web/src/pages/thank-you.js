@@ -1,20 +1,39 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import Layout from '../containers/layout'
 import Container from '../components/container'
 import SEO from '../components/seo'
 
-const ThankYou = () => {
+const ThankYou = ({data}) => {
 
   return (
     <Layout>
       <SEO title='Thank You!' />
       <Container>
-        <h1>Thank You!</h1>
-        <p>You have succefully submitted the form. We will get back to you as soon as possible!</p>
+      {data.thanks.edges.map(({ node: thanks }) => (
+        <div key={thanks.id}>
+          <h1>{thanks.title}</h1>
+          <p>{thanks.message}</p>
+        </div>
+      ))}
       </Container>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query ThanksQuery {
+    thanks: allSanityThanks(limit: 1) {
+      edges {
+        node {
+          title
+          message
+          id
+        }
+      }
+    }
+  }
+`
 
 export default ThankYou

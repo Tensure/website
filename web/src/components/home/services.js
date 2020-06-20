@@ -1,23 +1,28 @@
-import {Link} from 'gatsby'
 import React from 'react'
-import services from '../images/home/home-services-bridge.jpg'
+import {Link} from 'gatsby'
+import PortableText from '../portableText'
 
 import styles from './services.module.css'
 
-const Services = () => (
-  <div className={styles.rootFullWidth}>
-    <div className={styles.twoColGrid}>
-      <div className={styles.servicesContentContainer}>
-        <div className={styles.servicesContent}>
-          <p className={styles.subHeaderTuscany}>yes, we do that.</p>
-          <h2>Services</h2>
-          <p>You know, the type of work that you would expect a development consultancy to do? Yes, we almost certainly do that. We do a lot of things—from custom software design to cloud infrastructure and machine learning. We focus on creating technology solutions that solve your problems, giving you the freedom to spend more time on valuable work and waste less time with slow, bad, or old technology.</p>
-          <Link className={styles.button} to='/what-we-do/'>View Services</Link>
+const Services = ({data}) => {
+
+  return (
+    <div className={styles.rootFullWidth}>
+      {data.map(({ node: services }) => (
+        <div className={styles.twoColGrid}>
+          <div className={styles.servicesContentContainer}>
+            <div className={styles.servicesContent}>
+              <p className={styles.subHeaderTuscany}>{services.servicesSubtitle}</p>
+              <h2>{services.servicesTitle}</h2>
+              <PortableText blocks={services._rawServicesDescription} />
+              <Link className={styles.button} to={`${services.servicesUrl}`}>{services.servicesButton}</Link>
+            </div>
+          </div>
+          <div className={styles.servicesImage} style={{backgroundImage: `url(${services.servicesPhoto.asset.url})`}}></div>
         </div>
-      </div>
-      <div className={styles.servicesImage} style={{backgroundImage: `url(${services})`}}></div>
+      ))}
     </div>
-  </div>
-)
+  )
+}
 
 export default Services

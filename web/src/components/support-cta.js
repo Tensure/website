@@ -1,20 +1,26 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import Container from '../components/container'
-import background from './images/home/support-cta-bridge-bg.jpg'
 
 import styles from './support-cta.module.css'
 
-const SupportCTA = () => (
-  <div className={styles.rootFullWidth} style={{backgroundImage: `url(${background})`}}>
-    <Container>
-      <div className={styles.supportContent}>
-        <h2>how can we support you?</h2>
-        <p>Contact us to get started or discuss how we can support you.</p>
-        <Link className={styles.button} to='/contact/'>Contact Us</Link>
-      </div>
-    </Container>
-  </div>
-)
+const SupportCTA = ({data}) => {
+
+  return (
+    <div>
+      {data.map(({ node: support }) => (
+        <div className={styles.rootFullWidth} style={{backgroundImage: `url(${support.supportImage.asset.url})`}} key={support.id}>
+          <Container>
+            <div className={styles.supportContent}>
+              <h2>{support.supportTitle}</h2>
+              <p>{support.supportSubtitle}</p>
+              <Link className={styles.button} to={`${support.supportUrl}`}>{support.supportButton}</Link>
+            </div>
+          </Container>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export default SupportCTA
