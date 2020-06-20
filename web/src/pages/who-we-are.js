@@ -9,12 +9,55 @@ import Leadership from '../components/about/leadership'
 import TensureMinds from '../components/about/tensure-minds'
 import SupportCTA from '../components/support-cta'
 
+function WhoWeAre ({ data }) {
+  const site = (data || {}).site
+
+  return (
+    <Layout>
+      <SEO
+        title={site.title}
+        description={site.description}
+        keywords={site.keywords}
+      />
+      <SinglePurpose data={data.section1.edges} />
+      <Container>
+        <Leadership data={data.leaders.edges} />
+      </Container>
+      <TensureMinds />
+      <SupportCTA data={data.support.edges} />
+    </Layout>
+  )
+}
+
 export const query = graphql`
   query WhoWeAreQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
       description
       keywords
+    }
+    section1: allSanityWhoWeAre(limit: 1) {
+      edges {
+        node {
+          id
+          title
+          subtitle
+          photo2 {
+            alt
+            asset {
+              url
+            }
+          }
+          photo1 {
+            alt
+            asset {
+              url
+            }
+          }
+          paragraph1
+          paragraph2
+        }
+      }
     }
     leaders: allSanityTeamMember {
       edges {
@@ -32,45 +75,28 @@ export const query = graphql`
               url
             }
           }
-          _rawBio
+          _rawBio(resolveReferences: {maxDepth: 10})
+        }
+      }
+    }
+    support: allSanitySupport(limit: 1) {
+      edges {
+        node {
+          supportTitle
+          supportSubtitle
+          supportButton
+          id
+          supportUrl
+          supportImage {
+            alt
+            asset {
+              url
+            }
+          }
         }
       }
     }
   }
 `
-
-function WhoWeAre ({ data }) {
-  // const {data} = props
-  console.log(data)
-  const site = (data || {}).site
-  const leaders = (data || {}).leaders
-
-  return (
-    <Layout>
-      <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
-      />
-      {/* Single Purpose Section */}
-      <SinglePurpose />
-      {/* Team Members */}
-      {/* <ul>
-      {data.leaders.edges.map(({ node: leader }) => (
-        <li key={leader.id}>
-          <h3>{leader.name}</h3>
-      <p>{leader.linkedin}</p>
-        </li>
-      ))}
-      </ul> */}
-      <Container>
-        <Leadership />
-      </Container>
-      <TensureMinds />
-      {/* Support CTA */}
-      <SupportCTA />
-    </Layout>
-  )
-}
 
 export default WhoWeAre

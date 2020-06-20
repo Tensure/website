@@ -17,7 +17,6 @@ import styles from './blog-post.module.css'
 
 function BlogPost (props) {
   const {_rawBody, categories, title, publishedAt, data} = props
-
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts)
       .filter(filterOutDocsWithoutSlugs)

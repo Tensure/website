@@ -10,7 +10,7 @@ const TensureMinds = () => (
     <Container>
       <div className={styles.twoColGrid}>
         <div className={styles.question}>
-          <p className={styles.subHeaderRed}>thoughts from the</p>
+          <p className={styles.subHeader}>thoughts from the</p>
           <h2>Minds Of Tensure</h2>
           <div className={styles.questionContent}>
             <p>What is the best starter language for an aspiring developer to begin their journey in this profession?</p>

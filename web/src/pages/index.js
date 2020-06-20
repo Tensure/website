@@ -19,37 +19,6 @@ import SupportCTA from '../components/support-cta'
 
 import styles from '../components/layout.module.css'
 
-export const query = graphql`
-  query IndexPageQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
-      keywords
-    }
-    posts: allSanityPost(
-      limit: 6
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
-      edges {
-        node {
-          id
-          publishedAt
-          categories {
-            id
-            title
-          }
-          title
-          _rawExcerpt
-          slug {
-            current
-          }
-        }
-      }
-    }
-  }
-`
-
 const IndexPage = props => {
   const {data, errors} = props
 
@@ -81,10 +50,10 @@ const IndexPage = props => {
         description={site.description}
         keywords={site.keywords}
       />
-      <HomeHero />
-      <AboutUs />
-      <Services />
-      <ApprenticeAtTensure />
+      <HomeHero data={data.home.edges} />
+      <AboutUs data={data.home.edges} />
+      <Services data={data.home.edges} />
+      <ApprenticeAtTensure data={data.home.edges} />
       {/* Recent Posts */}
       <Container>
         <p className={styles.subHeader}>Goings-on at Tensure</p>
@@ -95,9 +64,97 @@ const IndexPage = props => {
           />
         )}
       </Container>
-      <SupportCTA />
+      <SupportCTA data={data.support.edges} />
     </Layout>
   )
 }
+
+export const query = graphql`
+  query IndexPageQuery {
+    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+      title
+      description
+      keywords
+    }
+    posts: allSanityPost(limit: 3, sort: {fields: [publishedAt], order: DESC}, filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}) {
+      edges {
+        node {
+          id
+          publishedAt
+          categories {
+            id
+            title
+          }
+          title
+          _rawExcerpt
+          slug {
+            current
+          }
+        }
+      }
+    }
+    home: allSanityHome(limit: 1) {
+      edges {
+        node {
+          servicesUrl
+          servicesTitle
+          servicesSubtitle
+          servicesButton
+          id
+          heroTitle
+          heroSubtitle
+          heroVideo
+          apprenticeUrl
+          apprenticeTitle
+          apprenticeSubtitle
+          apprenticeButton
+          aboutUrl
+          aboutTitle
+          aboutSubtitle
+          aboutButton
+          _rawServicesDescription(resolveReferences: {maxDepth: 10})
+          _rawHeroDescription(resolveReferences: {maxDepth: 10})
+          _rawApprenticeDescription(resolveReferences: {maxDepth: 10})
+          _rawAboutDescription(resolveReferences: {maxDepth: 10})
+          servicesPhoto {
+            alt
+            asset {
+              url
+            }
+          }
+          apprenticePhoto {
+            alt
+            asset {
+              url
+            }
+          }
+          aboutPhoto {
+            alt
+            asset {
+              url
+            }
+          }
+        }
+      }
+    }
+    support: allSanitySupport(limit: 1) {
+      edges {
+        node {
+          supportTitle
+          supportSubtitle
+          supportButton
+          id
+          supportUrl
+          supportImage {
+            alt
+            asset {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

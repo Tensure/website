@@ -9,15 +9,6 @@ import ProgramOverview from '../components/apprentice/program-overview'
 import FAQ from '../components/apprentice/faq'
 import Application from '../components/apprentice/application'
 
-export const query = graphql`
-  query ApprenticeshipsQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
-      keywords
-    }
-  }
-`
 const Apprenticeships = props => {
   const {data} = props
   const site = (data || {}).site
@@ -29,14 +20,82 @@ const Apprenticeships = props => {
         description={site.description}
         keywords={site.keywords}
       />
-      <ApprenticeProgram />
-      <ProgramOverview />
+      <ApprenticeProgram data={data.apprentice.edges} />
+      <ProgramOverview data={data.apprentice.edges} />
       <Container>
-        <FAQ />
+        <FAQ data={data.faqs.edges} />
       </Container>
-      <Application />
+      <Application data={data.apprentice.edges} />
     </Layout>
   )
 }
+
+export const query = graphql`
+  query ApprenticeshipsQuery {
+    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+      title
+      description
+      keywords
+    }
+    apprentice: allSanityApprenticeship(limit: 1) {
+      edges {
+        node {
+          programUrl
+          programTitle
+          programSubtitle
+          programPhoto {
+            alt
+            asset {
+              url
+            }
+          }
+          volunteerPhoto {
+            alt
+            asset {
+              url
+            }
+          }
+          programButton
+          overviewTitle
+          overviewSubtitle
+          internshipPhoto {
+            alt
+            asset {
+              url
+            }
+          }
+          id
+          apprenticeshipPhoto {
+            alt
+            asset {
+              url
+            }
+          }
+          applicationTitle
+          applicationSubtitle
+          applicationPhoto {
+            alt
+            asset {
+              url
+            }
+          }
+          _rawVolunteerContent(resolveReferences: {maxDepth: 10})
+          _rawApprenticeshipContent(resolveReferences: {maxDepth: 10})
+          _rawInternshipContent(resolveReferences: {maxDepth: 10})
+          _rawProgramDescription(resolveReferences: {maxDepth: 10})
+        }
+      }
+    }
+    faqs: allSanityFaq {
+      edges {
+        node {
+          question
+          answer
+          id
+        }
+      }
+    }
+  }
+`
 
 export default Apprenticeships

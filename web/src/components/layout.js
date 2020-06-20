@@ -8,9 +8,9 @@ import styles from './layout.module.css'
 import tensureLogo from './images/footer/footer-tensure-icon.svg'
 import googleCloud from './images/footer/footer-google-cloud.png'
 
-const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
+const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle, darkMode}) => (
   <>
-    <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
+    <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} darkMode={darkMode} />
     
     <div className={styles.content}>{children}</div>
     
