@@ -9,7 +9,7 @@ const AboutUs = ({data}) => {
   return (
     <div className={styles.rootFullWidth}>
       {data.map(({ node: about }) => (
-        <div className={styles.twoColGrid} id='aboutUs'>
+        <div className={styles.twoColGrid} id='aboutUs' key={about.id}>
           <div className={styles.aboutUsImage} style={{backgroundImage: `url(${about.aboutPhoto.asset.url})`}}></div>
           <div className={styles.aboutUsContent}>
             <p className={styles.subHeaderGreen}>{about.aboutSubtitle}</p>

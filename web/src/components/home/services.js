@@ -9,7 +9,7 @@ const Services = ({data}) => {
   return (
     <div className={styles.rootFullWidth}>
       {data.map(({ node: services }) => (
-        <div className={styles.twoColGrid}>
+        <div className={styles.twoColGrid} key={services.id}>
           <div className={styles.servicesContentContainer}>
             <div className={styles.servicesContent}>
               <p className={styles.subHeaderTuscany}>{services.servicesSubtitle}</p>

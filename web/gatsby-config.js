@@ -27,6 +27,27 @@ module.exports = {
           id: 'kic0ucd'
         }
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Tensure`,
+        short_name: `Tensure`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#0A2949`,
+        display: `standalone`,
+        icon: `src/components/images/tensure-favicon.png`,
+        cache_busting_mode: `query`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+         workboxConfig: {
+            globPatterns: ['**/*']
+         }
+      }
+   }
   ]
 }

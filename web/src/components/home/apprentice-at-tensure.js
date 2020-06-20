@@ -9,7 +9,7 @@ const ApprenticeAtTensure = ({data}) => {
   return (
     <div className={styles.rootFullWidth}>
       {data.map(({ node: apprentice }) => (
-        <div className={styles.twoColGrid}>
+        <div className={styles.twoColGrid} key={apprentice.id}>
           <div className={styles.apprenticeImage} style={{backgroundImage: `url(${apprentice.apprenticePhoto.asset.url})`}}></div>
           <div className={styles.apprenticeContent}>
             <p className={styles.subHeaderGreen}>{apprentice.apprenticeSubtitle}</p>
