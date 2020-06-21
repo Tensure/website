@@ -29,6 +29,11 @@
   }
 }
 
+.category {
+  font-family: var(--font-family-titles);
+  letter-spacing: 2.57px;
+}
+
 .date {
   font-family: var(--font-family-titles);
   font-size: 14px;

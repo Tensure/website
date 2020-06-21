@@ -9,7 +9,7 @@ function BlogPostPreviewGrid (props) {
       <ul className={styles.grid}>
         {props.nodes &&
           props.nodes.map(node => (
-            <li key={node.id}>
+            <li key={node.id} datacat={node.categories[0].title}>
               <BlogPostPreview {...node} />
             </li>
           ))}

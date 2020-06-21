@@ -36,3 +36,17 @@
 .grid li {
   background: linear-gradient(#95D5D4, #DDDFE4);
 }
+
+.grid li[datacat="Case Study"] {
+  background: linear-gradient(#95D5D4, #DDDFE4);
+}
+
+.grid li[datacat="News"] {
+  background: linear-gradient(#E5897F, #DDDFE4);
+}
+
+.grid li[datacat="Blog"] {
+  background: linear-gradient(#7E97AD, #DDDFE4);
+}
+
+

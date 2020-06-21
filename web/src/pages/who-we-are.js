@@ -10,7 +10,6 @@ import TensureMinds from '../components/about/tensure-minds'
 import SupportCTA from '../components/support-cta'
 
 function WhoWeAre ({ data }) {
-  const site = (data || {}).site
 
   return (
     <Layout>

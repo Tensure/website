@@ -60,7 +60,9 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle, darkMode}) 
               </ul>
             </div>
             <div className={styles.footerGoogle}>
-              <img src={googleCloud} alt="Google Cloud Logo" />
+              <a href="https://cloud.google.com/" target="_blank" rel="noopener">
+                <img src={googleCloud} alt="Google Cloud Logo" />
+              </a>
             </div>
           </li>
         </ul>
