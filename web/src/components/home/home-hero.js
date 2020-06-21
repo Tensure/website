@@ -30,7 +30,7 @@ const HomeHero = ({data}) => {
             <img src={greenStripe} alt="Green Stripe" />
           </div>
           <div className={styles.heroVid}>
-            <iframe src={`${home.heroVideo}`} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+            <iframe src={`${home.heroVideo}`} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen title="hero background video"></iframe>
           </div>
           <script src="https://player.vimeo.com/api/player.js"></script>
           <div className={styles.blueStripe}>

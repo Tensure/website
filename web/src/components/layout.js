@@ -25,16 +25,16 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle, darkMode}) 
             <div className={styles.footerSocial}>
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/TensureIO" target="_blank">Facebook</a>
+                  <a href="https://www.facebook.com/TensureIO" target="_blank" rel="noopener">Facebook</a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/TensureIO" target="_blank">Twitter</a>
+                  <a href="https://twitter.com/TensureIO" target="_blank" rel="noopener">Twitter</a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/company/tensureio/about" target="_blank">LinkedIn</a>
+                  <a href="https://www.linkedin.com/company/tensureio/about" target="_blank" rel="noopener">LinkedIn</a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/tensure.io" target="_blank">Instagram</a>
+                  <a href="https://www.instagram.com/tensure.io" target="_blank" rel="noopener">Instagram</a>
                 </li>
               </ul>
             </div>
