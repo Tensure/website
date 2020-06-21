@@ -11,7 +11,7 @@ const Header = ({onHideNav, onShowNav, showNav, darkMode}) => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
       <div className={styles.branding}>
-        {darkMode ? <Link to='/index'><img src={logoDark} alt="Logo" /></Link> : <Link to='/index'><img src={logo} alt="Logo" /></Link> }
+        {darkMode ? <Link to='/'><img src={logoDark} alt="Logo" /></Link> : <Link to='/'><img src={logo} alt="Logo" /></Link> }
       </div>
 
       <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
