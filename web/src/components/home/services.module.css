@@ -50,6 +50,7 @@
 
   @media (--media-max-small) {
     padding-right: 0;
+    padding-left: 0;
   }
 }
 
