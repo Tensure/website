@@ -4,10 +4,22 @@
 .content {
   background: var(--color-white);
   min-height: calc(100% - 135px - 347px);
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards;
 
   @media (--media-min-small) {
     min-height: calc(100% - 59px - 150px);
   }
+}
+
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+  } 
 }
 
 .subHeader {

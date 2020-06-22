@@ -90,6 +90,10 @@
   padding: 45px 35px;
   box-sizing: border-box;
 
+  @media (--media-max-small) {
+    padding: 0 10px 10px 10px;
+  }
+
   @nest & p {
     font-size: 16px;
     line-height: 1.4;

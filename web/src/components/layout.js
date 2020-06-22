@@ -67,7 +67,7 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle, darkMode}) 
           </li>
         </ul>
         <div className={styles.siteInfo}>
-          &copy; {new Date().getFullYear()} Tensure. All Rights Reserved. <span className={styles.divider}>|</span> <span><a href='/privacy-policy/'>Privacy Policy</a></span> <span><a href='/terms-conditions/'>Terms & Conditions</a></span>
+          &copy; {new Date().getFullYear()} Tensure. All Rights Reserved. <span className={styles.divider}>|</span> <span><a href='/privacy-policy/'>Privacy Policy</a></span> <span><a href='/terms-of-use/'>Terms Of Use</a></span>
         </div>
       </div>
     </footer>

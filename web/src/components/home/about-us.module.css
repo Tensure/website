@@ -17,7 +17,7 @@
   @media (--media-max-small) {
     grid-gap: 0;
     grid-template-columns: 1fr;
-    padding-top: 355px;
+    padding-top: 0;
     background: linear-gradient(var(--color-light-gray), #fcfcfc);
   }
 }
