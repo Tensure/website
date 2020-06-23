@@ -14,7 +14,7 @@ const Header = ({onHideNav, onShowNav, showNav, darkMode}) => (
         {darkMode ? <Link to='/'><img src={logoDark} alt="Logo" /></Link> : <Link to='/'><img src={logo} alt="Logo" /></Link> }
       </div>
 
-      <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
+      <button className={cn(styles.toggleNavButton, darkMode && styles.darkMode)} onClick={showNav ? onHideNav : onShowNav}>
         <Icon symbol='hamburger' />
       </button>
 
