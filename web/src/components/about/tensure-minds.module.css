@@ -63,7 +63,13 @@
 
     @media (--media-max-small) {
       margin-bottom: 22px;
+      max-width: 100%;
     }
+  }
+
+  @nest & .questionContent p {
+    font-size: 28px;
+    font-weight: 300;
   }
 
   @nest & .arrows {
@@ -98,6 +104,7 @@
     @media (--media-max-small) {
       padding-left: 0;
       padding-top: 120px;
+      max-width: 100%;
     }
   }
 
@@ -114,6 +121,7 @@
   @nest & .personTitle {
     font-family: var(--font-family-titles);
     font-size: 14px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin: 0;
   }
@@ -126,6 +134,10 @@
 ul.paginationBullets {
   padding: 0;
   margin: 43px 0 0 120px;
+
+  @media (--media-max-small) {
+    margin: 43px 0 0 0;
+  }
 
   @nest & li {
     border: 3px solid var(--color-dark-blue);

@@ -4,7 +4,7 @@
 .rootFullWidth {
   background: linear-gradient(#DDDFE4, #FCFCFC);
   padding-top: 180px;
-  margin-top: -135px;
+  margin-top: -139px;
 }
 
 .servicesTitleContent {
@@ -104,6 +104,10 @@
 
   @nest & p {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
+
+    @media (--media-max-small) {
+      margin-bottom: 48px;
+    }
   }
 }

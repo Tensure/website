@@ -21,12 +21,14 @@
   composes: root;
 }
 
+.grid li:hover {
+  box-shadow: 10px 10px 25px 0 rgba(0,0,0,.1);
+}
+
 .insightContainer {
   padding: 26px 36px;
-  
-  @nest &:hover {
-    box-shadow: 10px 10px 25px 0 rgba(0,0,0,0.10);
-  }
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .category {
@@ -64,7 +66,7 @@
 
 .readMore {
   font-size: 14px;
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family-headings);
   color: var(--color-dark-blue);
   text-transform: uppercase;
   letter-spacing: 1.31px;

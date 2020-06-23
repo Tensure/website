@@ -67,7 +67,7 @@
 }
 
 .aboutUsContent .button {
-  border: 3px solid var(--color-turquoise);
+  border: 3px solid var(--color-tuscany);
   background-color: transparent;
   padding: 16px 27px;
   font-size: 14px;
@@ -77,9 +77,13 @@
   text-decoration: none;
   margin-top: 50px;
   display: inline-flex;
+  letter-spacing: 1px;
 
   @media (--media-max-small) {
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    line-height: 1;
   }
 }
 

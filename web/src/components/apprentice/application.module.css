@@ -126,6 +126,7 @@
   color: var(--color-light-gray);
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 1px;
 }
 
 .applicationContent button:hover {
