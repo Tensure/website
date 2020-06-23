@@ -63,6 +63,10 @@
   }
 }
 
+button.darkMode {
+  color: var(--color-white);
+}
+
 .nav {
   display: none;
 }
