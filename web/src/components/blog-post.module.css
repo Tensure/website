@@ -117,7 +117,7 @@
 
 .goBack {
   font-size: 14px;
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family-headings);
   color: var(--color-dark-blue);
   text-transform: uppercase;
   letter-spacing: 1.31px;

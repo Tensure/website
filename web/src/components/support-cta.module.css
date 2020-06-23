@@ -29,7 +29,7 @@
   max-width: 340px;
   margin: 0 auto 38px auto;
   font-size: 17px;
-  color: var(--color-turquoise);
+  color: var(--color-light-turquoise);
   line-height: 1.5;
 }
 
@@ -42,6 +42,7 @@
   color: var(--color-light-gray);
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 1px;
 }
 
 .supportContent .button:hover {

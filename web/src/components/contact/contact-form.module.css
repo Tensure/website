@@ -4,7 +4,7 @@
 .rootFullWidth {
   padding-top: 232px;
   padding-bottom: 175px;
-  margin-top: -135px;
+  margin-top: -139px;
   background: linear-gradient(#10446E, #0A2949);
 
   @media (--media-max-small) {
@@ -130,6 +130,7 @@
   color: var(--color-light-gray);
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 1px;
 
   @media (--media-max-small) {
     margin: 0 auto;

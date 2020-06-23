@@ -5,8 +5,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 0;
-  margin-top: -134px;
-  padding-top: 134px;
+  margin-top: -139px;
+  padding-top: 139px;
   padding-bottom: 190px;
   background: linear-gradient(var(--color-light-gray), #fcfcfc);
 
@@ -83,7 +83,7 @@
 
 .heroVidContainer .blueStripe {
   position: absolute;
-  top: -135px;
+  top: -139px;
   left: -205px;
 
   @media (--media-max-small) {
@@ -93,7 +93,7 @@
 
 .heroVidContainer .greenStripe {
   position: absolute;
-  top: -135px;
+  top: -139px;
   left: -215px;
 
   @media (--media-max-small) {
