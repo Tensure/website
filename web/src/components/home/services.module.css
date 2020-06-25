@@ -57,7 +57,12 @@
 }
 
 .servicesContent h2 {
-  -webkit-text-fill-color: var(--color-white);
+  -webkit-text-stroke-color: var(--color-white);
+
+  @media (--media-max-small) {
+    -webkit-text-fill-color: var(--color-white);
+    -webkit-text-stroke-color: transparent;
+  }
 }
 
 .servicesContent p {
