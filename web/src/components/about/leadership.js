@@ -18,7 +18,7 @@ const Leadership = ({data}) => (
             <div className={styles.teamMemberBio}>
               <PortableText blocks={leader._rawBio} />
               <p>
-                <a href={`${leader.linkedin}`} target="_blank">Linkedin</a><br />
+                <a href={`${leader.linkedin}`} target="_blank" rel="no-referrer">Linkedin</a><br />
                 <a href={`${leader.email}`}>Email</a>
               </p>
             </div>
