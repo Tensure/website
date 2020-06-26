@@ -19,7 +19,7 @@ const Leadership = ({data}) => (
               <PortableText blocks={leader._rawBio} />
               <p>
                 <a href={`${leader.linkedin}`} target="_blank" rel="no-referrer">Linkedin</a><br />
-                <a href={`${leader.email}`}>Email</a>
+                <a href={`mailto:${leader.email}`}>Email</a>
               </p>
             </div>
           </div>
