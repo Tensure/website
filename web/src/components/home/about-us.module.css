@@ -5,19 +5,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 72px;
-  padding-top: 85px;
-  padding-bottom: 240px;
+  padding-top: 0;
+  padding-bottom: 100px;
   background: linear-gradient( #FCFCFC, #DEF1F0);
 
   @media (--media-max-medium) {
-    grid-gap: 30px;
-    padding-bottom: 50px;
-  }
-
-  @media (--media-max-small) {
     grid-gap: 0;
     grid-template-columns: 1fr;
-    padding-top: 0;
     background: linear-gradient(var(--color-light-gray), #fcfcfc);
   }
 }
@@ -30,11 +24,11 @@
 
   @media (--media-max-medium) {
     min-height: 300px;
+    background-position: center bottom;
   }
 
   @media (--media-max-small) {
     min-height: 210px;
-    background-position: center bottom;
   }
 }
 
@@ -44,9 +38,6 @@
 
   @media (--media-max-medium) {
     max-width: 100%;
-  }
-
-  @media (--media-max-small) {
     padding-right: 32px;
     padding-left: 32px;
   }

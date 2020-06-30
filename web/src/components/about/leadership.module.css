@@ -7,7 +7,7 @@
   grid-gap: 0;
   grid-auto-rows: 1fr;
   max-width: 1078px;
-  margin: -52px 0 110px 0;
+  margin: -52px 0 100px 0;
 
   @media (--media-max-large) {
     grid-template-columns: 280px auto;
@@ -53,11 +53,7 @@
   row-gap: 130px;
   column-gap: 22px;
 
-  @media (--media-max-large) {
-    row-gap: 80px;
-  }
-
-  @media (--media-max-small) {
+  @media (--media-max-medium) {
     grid-template-columns: 1fr;
     row-gap: 48px;
   }

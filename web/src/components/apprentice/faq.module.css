@@ -2,12 +2,12 @@
 @import '../../styles/custom-properties.css';
 
 .faqContent {
-  padding-top: 165px;
-  padding-bottom: 180px;
+  padding-top: 120px;
+  padding-bottom: 120px;
   max-width: 835px;
   margin: 0 auto;
 
-  @media (--media-max-small) {
+  @media (--media-max-medium) {
     padding-top: 48px;
     padding-bottom: 60px;
   }

@@ -15,7 +15,7 @@
   align-items: center;
 
   @media (--media-max-large) {
-    padding: 60px 32px 50px 32px;
+    padding: 18px 20px;
   }
 
   @media (--media-max-medium) {
@@ -32,10 +32,6 @@
 
   @nest & img {
     max-width: 196px;
-
-    @media (--media-max-small) {
-      max-width: 106px;
-    }
   }
 }
 
@@ -52,12 +48,12 @@
   cursor: pointer;
   z-index: 1000;
 
-  @media only screen and (min-width: 815px) {
+  @media (--media-min-large) {
     display: none;
   }
 
   @media (--media-max-small) {
-    font-size: 20px;
+    font-size: 22px;
     padding: 0;
     color: var(--color-dark-blue);
   }
@@ -97,7 +93,7 @@ button.darkMode {
   color: var(--color-turquoise);
 }
 
-@media only screen and (max-width: 814px) {
+@media (--media-max-large) {
   .nav {
     position: absolute;
     background-color: var(--color-turquoise);
@@ -105,7 +101,7 @@ button.darkMode {
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
     left: 0;
     right: 0;
-    top: 100px;
+    top: 59px;
 
     @media (--media-max-medium) {
       top: 59px;
@@ -127,7 +123,7 @@ button.darkMode {
   }
 }
 
-@media only screen and (min-width: 815px) {
+@media (--media-min-large) {
   .nav {
     display: block;
   }
@@ -139,29 +135,15 @@ button.darkMode {
   }
 
   .nav ul li a {
-    padding: 2px 12px;
+    padding: 2px 24px;
   }
 
   .nav ul li:first-child a {
-    padding: 0 12px 0 0;
+    padding: 0 24px 0 0;
   }
 
   .nav ul li:last-child a {
-    padding: 0 0 0 12px;
-  }
-}
-
-@media (--media-min-large) {
-  .nav ul li a {
-    padding: 0 20px;
-  }
-
-  .nav ul li:first-child a {
-    padding: 0 20px 0 0;
-  }
-
-  .nav ul li:last-child a {
-    padding: 0 0 0 20px;
+    padding: 0 0 0 24px;
   }
 }
 
