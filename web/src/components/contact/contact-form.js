@@ -16,15 +16,15 @@ const ContactForm = ({data}) => {
               <input type="hidden" name="form-name" value="contact" />
               <div className={styles.hidden}><input name="bot-field" /></div>
               <div className={styles.twoColFields}>
-                <input type="text" name="fname" placeholder="First Name" required />
-                <input type="text" name="lname" placeholder="Last Name" />
+                <input type="text" name="fname" placeholder="First Name" maxLength="30" required />
+                <input type="text" name="lname" placeholder="Last Name" maxLength="30" />
               </div>
               <div className={styles.twoColFields}>
-              <input type="email" name="email" placeholder="Email" required />
-              <input type="text" name="phone" placeholder="Phone" />
+              <input type="email" name="email" placeholder="Email" maxLength="50" required />
+              <input type="text" name="phone" placeholder="Phone" maxLength="16" />
               </div>
-              <input type="text" name="company" placeholder="Company" />
-              <textarea name="message" placeholder="How can we help you?"></textarea> 
+              <input type="text" name="company" placeholder="Company" maxLength="50" />
+              <textarea name="message" placeholder="How can we help you?" maxLength="500"></textarea>
               <button type="submit">Submit</button>
             </form>
           </div>

@@ -18,7 +18,7 @@
   grid-template-columns: 1fr;
   grid-gap: 22px;
   grid-auto-rows: 1fr;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
 
   @media (--media-min-small) {
     grid-template-columns: 1fr 1fr;

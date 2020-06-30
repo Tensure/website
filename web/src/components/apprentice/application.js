@@ -1,7 +1,5 @@
 import React from 'react'
-import PortableText from '../portableText'
 import Container from '../container'
-import background from '../images/apprentice/applying-cta-bg.jpg'
 
 import styles from './application.module.css'
 
@@ -19,11 +17,11 @@ const Application = ({data}) => {
                   <input type="hidden" name="form-name" value="application" />
                   <div className={styles.hidden}><input name="bot-field" /></div>
                   <div className={styles.twoColFields}>
-                    <input type="text" name="fname" placeholder="First Name" required />
-                    <input type="text" name="lname" placeholder="Last Name" />
+                    <input type="text" name="fname" placeholder="First Name" maxLength="30" required />
+                    <input type="text" name="lname" placeholder="Last Name" maxLength="30" />
                   </div>
-                  <input type="email" name="email" placeholder="Email" required />
-                  <textarea name="message" placeholder="Why the interest in the apprenticeship progam?"></textarea> 
+                  <input type="email" name="email" placeholder="Email" maxLength="50" required />
+                  <textarea name="message" placeholder="Why the interest in the apprenticeship progam?" maxLength="500"></textarea> 
                   <button type="submit">Submit</button>
                 </form>
               </div>

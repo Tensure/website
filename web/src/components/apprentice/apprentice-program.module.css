@@ -10,10 +10,15 @@
   padding-top: 232px;
   background: linear-gradient( #BDE4E4, #E9F5F5);
 
-  @media (--media-max-small) {
+  @media (--media-max-large) {
+    margin-top: -65px;
+    padding-top: 139px;
+  }
+
+  @media (--media-max-medium) {
     grid-template-columns: 1fr;
-    margin-top: -59px;
-    padding-top: 59px;
+    margin-top: -65px;
+    padding-top: 65px;
   }
 }
 
@@ -30,12 +35,13 @@
 
   @media (--media-max-medium) {
     min-height: 300px;
+    order: 1;
+    margin-right: 0;
+    margin-bottom: 30px;
+    background-position: top left;
   }
 
   @media (--media-max-small) {
-    order: 1;
-    margin-right: 0;
-    background-position: top left;
     min-height: 269px;
   }
 }
@@ -48,9 +54,6 @@
 
   @media (--media-max-medium) {
     max-width: 100%;
-  }
-
-  @media (--media-max-small) {
     padding: 0 32px 120px 32px;
     order: 2;
   }
