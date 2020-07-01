@@ -10,6 +10,7 @@ import {toPlainText} from '../lib/helpers'
 const BlogPostTemplate = props => {
   const {data, errors} = props
   const post = data && data.post
+  const recentPosts = data && data.recentPosts
   return (
     <Layout>
       {errors && <SEO title='GraphQL Error' />}
@@ -21,7 +22,7 @@ const BlogPostTemplate = props => {
         </Container>
       )}
 
-      {post && <BlogPost {...post} />}
+      {post && <BlogPost {...post} recentPosts={recentPosts} />}
     </Layout>
   )
 }

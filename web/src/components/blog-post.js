@@ -13,9 +13,9 @@ import {
 import styles from './blog-post.module.css'
 
 function BlogPost (props) {
-  const {_rawBody, categories, title, publishedAt, data} = props
-  const postNodes = (data || {}).recentPosts
-    ? mapEdgesToNodes(data.recentPosts)
+  const {_rawBody, categories, title, publishedAt, data, recentPosts} = props
+  const postNodes = recentPosts
+    ? mapEdgesToNodes(recentPosts)
       .filter(filterOutDocsWithoutSlugs)
       .filter(filterOutDocsPublishedInTheFuture)
     : []
