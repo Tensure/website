@@ -30,6 +30,7 @@
 .apprenticeContent {
   max-width: 500px;
   padding-right: 32px;
+  position: relative;
 
   @media (--media-max-medium) {
     max-width: 100%;

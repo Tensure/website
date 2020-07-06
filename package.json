@@ -19,13 +19,14 @@
   },
   "dependencies": {
     "@sanity/core": "^1.149.17",
-    "caniuse-lite": "^1.0.30001081",
+    "caniuse-lite": "^1.0.30001091",
     "gatsby-image": "^2.4.7",
     "gatsby-plugin-manifest": "^2.4.12",
     "gatsby-plugin-offline": "^3.2.11",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "react": "^16.13.1",
     "react-accessible-accordion": "^3.0.1",
+    "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "smooth-scroll": "^16.1.3"
   }

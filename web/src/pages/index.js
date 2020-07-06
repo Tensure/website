@@ -54,7 +54,6 @@ const IndexPage = props => {
       <AboutUs data={data.home.edges} />
       <Services data={data.home.edges} />
       <ApprenticeAtTensure data={data.home.edges} />
-      {/* Recent Posts */}
       <Container>
         <p className={styles.subHeader}>Goings-on at Tensure</p>
         <h2>News & Insights</h2>
