@@ -24,7 +24,8 @@ const Services = ({data}) => {
       {data.map(({ node: services }) => (
         <div className={styles.twoColGrid} key={services.id}>
           <div className={styles.servicesContentContainer}>
-            <div className={styles.servicesContent} id={styles.servicesFloater}>
+            {/* <div className={styles.servicesContent} id={styles.servicesFloater}> */}
+            <div className={styles.servicesContent}>
               <p className={styles.subHeaderTuscany}>{services.servicesSubtitle}</p>
               <h2>{services.servicesTitle}</h2>
               <PortableText blocks={services._rawServicesDescription} />

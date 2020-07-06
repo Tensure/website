@@ -29,7 +29,8 @@ const HomeHero = ({data}) => {
       {data.map(({ node: home }) => (
       <div className={styles.twoColGrid} key={home.id}>
         
-        <div className={styles.heroContentContainer} id={styles.heroFloater}>
+        {/* <div className={styles.heroContentContainer} id={styles.heroFloater}> */}
+        <div className={styles.heroContentContainer}>
           <div className={styles.heroContent}>
             <h1>
             <span className={styles.subHeaderTurquoise}>{home.heroSubtitle}</span>

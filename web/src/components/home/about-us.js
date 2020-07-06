@@ -25,12 +25,12 @@ const AboutUs = ({data}) => {
         <div className={styles.twoColGrid} id='aboutUs' key={about.id}>
           <div className={styles.aboutUsImage} style={{backgroundImage: `url(${about.aboutPhoto.asset.url})`}}></div>
           <div className={styles.aboutUsContent}>
-            <div id={styles.aboutFloater}>
+            {/* <div id={styles.aboutFloater}> */}
               <p className={styles.subHeaderGreen}>{about.aboutSubtitle}</p>
               <h2>{about.aboutTitle}</h2>
               <PortableText blocks={about._rawAboutDescription} />
               <Link className={styles.button} to={`${about.aboutUrl}`}>{about.aboutButton}</Link>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       ))}

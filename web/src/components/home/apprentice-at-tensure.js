@@ -25,12 +25,12 @@ const ApprenticeAtTensure = ({data}) => {
         <div className={styles.twoColGrid} key={apprentice.id}>
           <div className={styles.apprenticeImage} style={{backgroundImage: `url(${apprentice.apprenticePhoto.asset.url})`}}></div>
           <div className={styles.apprenticeContent}>
-            <div id={styles.apprenticeFloater}>
+            {/* <div id={styles.apprenticeFloater}> */}
               <p className={styles.subHeaderGreen}>{apprentice.apprenticeSubtitle}</p>
               <h2>{apprentice.apprenticeTitle}</h2>
               <PortableText blocks={apprentice._rawApprenticeDescription} />
               <Link className={styles.button} to={`${apprentice.apprenticeUrl}`}>{apprentice.apprenticeButton}</Link>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       ))}
