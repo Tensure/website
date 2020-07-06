@@ -36,9 +36,9 @@ const HomeHero = ({data}) => {
             <span className={styles.subHeaderTurquoise}>{home.heroSubtitle}</span>
             {home.heroTitle}</h1>
             <PortableText blocks={home._rawHeroDescription} />
-            <Link className={styles.downArrow} to='#aboutUs'>
+            <a href="#aboutUs" className={styles.downArrow}>
               <img src={downArrow} alt="Logo" />
-            </Link>
+            </a>
           </div>
         </div>
         
