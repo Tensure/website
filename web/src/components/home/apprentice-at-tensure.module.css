@@ -30,6 +30,7 @@
 .apprenticeContent {
   max-width: 500px;
   padding-right: 32px;
+  position: relative;
 
   @media (--media-max-medium) {
     max-width: 100%;
@@ -37,6 +38,11 @@
     order: 1;
   }
 }
+
+/* #apprenticeFloater {
+  position: absolute;
+  top: 0;
+} */
 
 .apprenticeContent .subHeaderGreen {
   font-family: var(--font-family-titles);
