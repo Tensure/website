@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'gatsby'
 import PortableText from '../portableText'
 
 import heroPlaceholder from '../images/home/hero-placeholder.jpg'
@@ -11,33 +10,20 @@ import styles from './home-hero.module.css'
 
 const HomeHero = ({data}) => {
 
-  // let windowWidth = window.innerWidth;
-  // if( windowWidth > 639 ){
-  //   function heroParallax() {
-  //     let s = document.querySelector('[id*="heroFloater"]');
-  //     let yPos = 0 - window.pageYOffset/11;	
-  //     s.style.top = 352 + yPos + "px";
-  //   }
-
-  //   window.addEventListener("scroll", function(){
-  //     heroParallax();	
-  //   });
-  // }
-
   return (
     <div>
       {data.map(({ node: home }) => (
       <div className={styles.twoColGrid} key={home.id}>
         
-        <div className={styles.heroContentContainer} id={styles.heroFloater}>
+        <div className={styles.heroContentContainer}>
           <div className={styles.heroContent}>
             <h1>
             <span className={styles.subHeaderTurquoise}>{home.heroSubtitle}</span>
             {home.heroTitle}</h1>
             <PortableText blocks={home._rawHeroDescription} />
-            <Link className={styles.downArrow} to='#aboutUs'>
+            <a href="#aboutUs" className={styles.downArrow}>
               <img src={downArrow} alt="Logo" />
-            </Link>
+            </a>
           </div>
         </div>
         

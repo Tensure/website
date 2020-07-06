@@ -6,7 +6,6 @@ import Container from '../components/container'
 import SEO from '../components/seo'
 import SinglePurpose from '../components/about/single-purpose'
 import Leadership from '../components/about/leadership'
-import TensureMinds from '../components/about/tensure-minds'
 import SupportCTA from '../components/support-cta'
 
 function WhoWeAre ({ data }) {
