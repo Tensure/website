@@ -6,10 +6,8 @@ import Layout from '../containers/layout'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import Container from '../components/container'
 import SEO from '../components/seo'
-import TensureMinds from '../components/about/tensure-minds'
 
 import styles from '../components/layout.module.css'
-import styles2 from '../components/about/tensure-minds.module.css'
 
 const ArchivePage = props => {
   const {data} = props
@@ -24,9 +22,6 @@ const ArchivePage = props => {
         <h1>News & Insights</h1>
         {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
       </Container>
-      <div className={styles2.blueMinds}>
-        <TensureMinds />
-      </div>
     </Layout>
   )
 }

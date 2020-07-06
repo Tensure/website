@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import PortableText from '../portableText'
-import {cn} from '../../lib/helpers'
 
 import heroPlaceholder from '../images/home/hero-placeholder.jpg'
 import downArrow from '../images/home/hero-down-arrow.svg'
@@ -16,15 +15,15 @@ const HomeHero = ({data}) => {
     <div>
       {data.map(({ node: home }) => (
       <div className={styles.twoColGrid} key={home.id}>
-        <div className={cn(styles.heroContentContainer, styles.floater)}>
+        <div className={styles.heroContentContainer}>
           <div className={styles.heroContent}>
             <h1>
             <span className={styles.subHeaderTurquoise}>{home.heroSubtitle}</span>
             {home.heroTitle}</h1>
             <PortableText blocks={home._rawHeroDescription} />
-            <Link className={styles.downArrow} to='#aboutUs'>
+            <a href="#aboutUs" className={styles.downArrow}>
               <img src={downArrow} alt="Logo" />
-            </Link>
+            </a>
           </div>
         </div>
         <div className={styles.heroVidContainer}>

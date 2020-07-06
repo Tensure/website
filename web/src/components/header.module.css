@@ -135,7 +135,7 @@ button.darkMode {
   }
 
   .nav ul li a {
-    padding: 2px 24px;
+    padding: 0 24px;
   }
 
   .nav ul li:first-child a {
