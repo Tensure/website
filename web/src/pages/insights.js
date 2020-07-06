@@ -6,7 +6,6 @@ import Layout from '../containers/layout'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import Container from '../components/container'
 import SEO from '../components/seo'
-import TensureMinds from '../components/about/tensure-minds'
 
 import styles from '../components/layout.module.css'
 

@@ -18,11 +18,8 @@
     "lerna": "^3.13.1"
   },
   "dependencies": {
-    "@react-spring/addons": "^9.0.0-beta.33",
     "@sanity/core": "^1.149.17",
-    "acorn": "^7.3.1",
     "caniuse-lite": "^1.0.30001091",
-    "core-js": "^3.6.5",
     "gatsby-image": "^2.4.7",
     "gatsby-plugin-manifest": "^2.4.12",
     "gatsby-plugin-offline": "^3.2.11",

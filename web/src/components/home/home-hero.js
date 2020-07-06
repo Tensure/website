@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'gatsby'
 import PortableText from '../portableText'
 
 import heroPlaceholder from '../images/home/hero-placeholder.jpg'
