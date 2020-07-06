@@ -28,7 +28,6 @@
     "react-accessible-accordion": "^3.0.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "react-refresh": "^0.8.3",
     "smooth-scroll": "^16.1.3"
   }
 }
