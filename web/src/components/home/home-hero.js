@@ -11,11 +11,25 @@ import styles from './home-hero.module.css'
 
 const HomeHero = ({data}) => {
 
+  // let windowWidth = window.innerWidth;
+  // if( windowWidth > 639 ){
+  //   function heroParallax() {
+  //     let s = document.querySelector('[id*="heroFloater"]');
+  //     let yPos = 0 - window.pageYOffset/11;	
+  //     s.style.top = 352 + yPos + "px";
+  //   }
+
+  //   window.addEventListener("scroll", function(){
+  //     heroParallax();	
+  //   });
+  // }
+
   return (
     <div>
       {data.map(({ node: home }) => (
       <div className={styles.twoColGrid} key={home.id}>
-        <div className={styles.heroContentContainer}>
+        
+        <div className={styles.heroContentContainer} id={styles.heroFloater}>
           <div className={styles.heroContent}>
             <h1>
             <span className={styles.subHeaderTurquoise}>{home.heroSubtitle}</span>
@@ -26,6 +40,7 @@ const HomeHero = ({data}) => {
             </Link>
           </div>
         </div>
+        
         <div className={styles.heroVidContainer}>
           <div className={styles.greenStripe}>
             <img src={greenStripe} alt="Green Stripe" />

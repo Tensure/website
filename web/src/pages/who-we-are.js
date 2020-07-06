@@ -20,7 +20,6 @@ function WhoWeAre ({ data }) {
       <Container>
         <Leadership data={data.leaders.edges} />
       </Container>
-      <TensureMinds />
       <SupportCTA data={data.support.edges} />
     </Layout>
   )
