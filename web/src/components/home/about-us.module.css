@@ -35,6 +35,7 @@
 .aboutUsContent {
   max-width: 442px;
   padding-right: 32px;
+  position: relative;
 
   @media (--media-max-medium) {
     max-width: 100%;

@@ -25,6 +25,7 @@ const HomeHero = ({data}) => {
             </a>
           </div>
         </div>
+        
         <div className={styles.heroVidContainer}>
           <div className={styles.greenStripe}>
             <img src={greenStripe} alt="Green Stripe" />

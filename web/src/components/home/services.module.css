@@ -23,6 +23,7 @@
   background-color: var(--color-dark-blue);
   display: flex;
   align-items: center;
+  position: relative;
 
   @media (--media-max-medium) {
     max-width: 100%;
