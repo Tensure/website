@@ -6,14 +6,6 @@ if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]')
 }
 
-const query = graphql`
-  query SiteTitleQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
-      title
-    }
-  }
-`
-
 function LayoutContainer (props) {
   const [showNav, setShowNav] = useState(false)
   function handleShowNav () {
@@ -44,5 +36,13 @@ function LayoutContainer (props) {
     />
   )
 }
+
+export const query = graphql`
+  query SiteTitleQuery {
+    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+      title
+    }
+  }
+`
 
 export default LayoutContainer
