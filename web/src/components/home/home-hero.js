@@ -14,7 +14,6 @@ const HomeHero = ({data}) => {
     <div>
       {data.map(({ node: home }) => (
       <div className={styles.twoColGrid} key={home.id}>
-        
         <div className={styles.heroContentContainer}>
           <div className={styles.heroContent}>
             <h1>
