@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PortableText from '../portableText'
 
 import heroPlaceholder from '../images/home/hero-placeholder.jpg'
@@ -8,13 +8,28 @@ import blueStripe from '../images/home/hero-blue-stripe.svg'
 
 import styles from './home-hero.module.css'
 
-const HomeHero = ({data}) => {
+function HomeHero({data}) {
+
+  useEffect(() => {
+    let windowWidth = window.innerWidth;
+    if( windowWidth > 639 ){
+      function heroParallax() {
+        let s = document.querySelector('[id*="heroFloater"]');
+        let yPos = 0 - window.pageYOffset/11;
+        s.style.top = 352 + yPos + "px";
+      }
+
+      window.addEventListener( 'scroll', heroParallax );
+
+      return () => window.removeEventListener( 'scroll', heroParallax );
+    }
+  });
 
   return (
     <div>
       {data.map(({ node: home }) => (
       <div className={styles.twoColGrid} key={home.id}>
-        <div className={styles.heroContentContainer}>
+        <div className={styles.heroContentContainer} id={styles.heroFloater}>
           <div className={styles.heroContent}>
             <h1>
             <span className={styles.subHeaderTurquoise}>{home.heroSubtitle}</span>

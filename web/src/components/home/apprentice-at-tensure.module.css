@@ -39,6 +39,11 @@
   }
 }
 
+#apprenticeFloater {
+  position: absolute;
+  top: 0;
+}
+
 .apprenticeContent .subHeaderGreen {
   font-family: var(--font-family-titles);
   font-size: 24px;

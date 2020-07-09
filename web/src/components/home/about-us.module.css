@@ -44,6 +44,11 @@
   }
 }
 
+#aboutFloater {
+  position: absolute;
+  top: 0;
+}
+
 .aboutUsContent .subHeaderGreen {
   font-family: var(--font-family-titles);
   font-size: 24px;

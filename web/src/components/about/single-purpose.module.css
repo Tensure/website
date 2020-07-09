@@ -11,7 +11,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 0;
-  align-items: center;
 
   @media (--media-max-medium) {
     grid-template-columns: 1fr;
@@ -63,6 +62,8 @@
   padding-right: 0;
   padding-left: 32px;
   margin-left: auto;
+  width: 100%;
+  position: relative;
 
   @media (--media-max-medium) {
     max-width: 100%;
@@ -73,6 +74,11 @@
     padding-right: 32px;
     padding-left: 32px;
   }
+}
+
+#purposeFloater {
+  position: absolute;
+  top: 75px;
 }
 
 .singlePurposeContent .subHeaderGreen {
@@ -117,6 +123,7 @@
   padding-right: 0;
   padding-right: 32px;
   margin-left: 142px;
+  position: relative;
 
   @media (--media-max-large) {
     margin-left: 30px;
@@ -131,5 +138,10 @@
     padding-left: 32px;
     margin-left: 0;
   }
+}
+
+#purpose2Floater {
+  position: absolute;
+  top: 150px;
 }
 
