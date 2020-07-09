@@ -87,6 +87,7 @@
 }
 
 .innovationContent {
+
   @nest & h3 {
     color: var(--color-turquoise);
     font-family: var(--font-family-titles);

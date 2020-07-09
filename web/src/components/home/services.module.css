@@ -35,6 +35,11 @@
   }
 }
 
+#servicesFloater {
+  position: absolute;
+  top: 0;
+}
+
 .servicesContent {
   max-width: 445px;
   margin-left: auto;

@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PortableText from '../portableText'
 import Container from '../container'
 
 import styles from './digital-innovation.module.css'
 
-const DigitalInnovation = ({data}) => {
+function DigitalInnovation({data}) {
 
   return (
     <div className={styles.rootFullWidth}>
