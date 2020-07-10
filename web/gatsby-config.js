@@ -9,14 +9,6 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   plugins: [
-    // {
-    //   resolve: `gatsby-plugin-web-font-loader`,
-    //   options: {
-    //     typekit: {
-    //       id: `kic0ucd`
-    //     }
-    //   }
-    // },
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
