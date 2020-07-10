@@ -41,7 +41,11 @@
   }
 }
 
-#heroFloater {}
+#heroFloater {
+  @media only screen and (min-width: 1680px) {
+    width: 33%;
+  }
+}
 
 .heroContent {
   max-width: 452px;

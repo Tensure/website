@@ -46,7 +46,7 @@
 
 #aboutFloater {
   position: absolute;
-  top: 0;
+  top: 75px;
 
   @media (--media-max-medium) {
     position: relative;
