@@ -95,6 +95,7 @@
   margin-left: auto;
   width: 100%;
   position: relative;
+  box-sizing: border-box;
 
   @media (--media-max-large) {
     padding-right: 32px;
@@ -133,6 +134,10 @@
   position: absolute;
   top: 0;
   max-width: 465px;
+
+  @media (--media-max-medium) {
+    position: relative;
+  }
 }
 
 .twoColGrid:nth-child(2) {
@@ -183,6 +188,10 @@
   position: absolute;
   top: 0;
   max-width: 465px;
+
+  @media (--media-max-medium) {
+    position: relative;
+  }
 }
 
 .twoColGrid:nth-child(3) {
@@ -212,6 +221,7 @@
   padding-right: 93px;
   padding-left: 32px;
   position: relative;
+  box-sizing: border-box;
 
   @media (--media-max-large) {
     padding-right: 32px;
@@ -232,5 +242,9 @@
   position: absolute;
   top: 0;
   max-width: 465px;
+
+  @media (--media-max-medium) {
+    position: relative;
+  }
 }
 

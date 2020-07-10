@@ -9,15 +9,15 @@ function ProgramOverview({data}) {
 
   useEffect(() => {
     let windowWidth = window.innerWidth;
-    if( windowWidth > 639 ){
+    if( windowWidth > 768 ){
       function overviewParallax() {
         let s = document.querySelector('[id*="overviewFloater"]');
         let s2 = document.querySelector('[id*="overview2Floater"]');
         let s3 = document.querySelector('[id*="overview3Floater"]');
-        let yPos = 0 - window.pageYOffset/11;
-        s.style.top = 50 + yPos + "px";
-        s2.style.top = 100 + yPos + "px";
-        s3.style.top = 150 + yPos + "px";
+        let yPos = 0 - window.pageYOffset/7;
+        s.style.top = 100 + yPos + "px";
+        s2.style.top = 200 + yPos + "px";
+        s3.style.top = 285 + yPos + "px";
       }
 
       window.addEventListener( 'scroll', overviewParallax );

@@ -42,6 +42,10 @@
 #apprenticeFloater {
   position: absolute;
   top: 0;
+
+  @media (--media-max-medium) {
+    position: relative;
+  }
 }
 
 .apprenticeContent .subHeaderGreen {

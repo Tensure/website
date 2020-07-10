@@ -8,7 +8,7 @@ function ApprenticeAtTensure({data}) {
 
   useEffect(() => {
     let windowWidth = window.innerWidth;
-    if( windowWidth > 639 ){
+    if( windowWidth > 768 ){
       function apprenticeParallax() {
         let s = document.querySelector('[id*="apprenticeFloater"]');
         let yPos = 0 - window.pageYOffset/11;

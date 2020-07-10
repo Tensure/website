@@ -47,6 +47,10 @@
 #aboutFloater {
   position: absolute;
   top: 0;
+
+  @media (--media-max-medium) {
+    position: relative;
+  }
 }
 
 .aboutUsContent .subHeaderGreen {

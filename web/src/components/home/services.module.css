@@ -22,7 +22,6 @@
   margin-top: -17px;
   background-color: var(--color-dark-blue);
   display: flex;
-  align-items: center;
   position: relative;
 
   @media (--media-max-medium) {
@@ -32,26 +31,35 @@
     margin-top: 0;
     padding-bottom: 40px;
     padding-top: 18px;
+    align-items: center;
   }
-}
-
-#servicesFloater {
-  position: absolute;
-  top: 0;
 }
 
 .servicesContent {
   max-width: 445px;
+  width: 100%;
   margin-left: auto;
   padding-right: 163px;
   padding-left: 32px;
   color: var(--color-white);
+  position: relative;
 
   @media (--media-max-medium) {
     padding-right: 0;
     padding-left: 0;
     margin-left: 0;
     max-width: 100%;
+  }
+}
+
+#servicesFloater {
+  position: absolute;
+  top: 0;
+  max-width: 445px;
+  width: 100%;
+
+  @media (--media-max-medium) {
+    position: relative;
   }
 }
 

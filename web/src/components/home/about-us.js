@@ -8,10 +8,10 @@ function AboutUs({data}) {
 
   useEffect(() => {
     let windowWidth = window.innerWidth;
-    if( windowWidth > 639 ){
+    if( windowWidth > 768 ){
       function aboutParallax() {
         let s = document.querySelector('[id*="aboutFloater"]');
-        let yPos = 0 - window.pageYOffset/11;
+        let yPos = 0 - window.pageYOffset/7;
         s.style.top = 75 + yPos + "px";
       }
 

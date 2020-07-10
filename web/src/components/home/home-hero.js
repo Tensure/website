@@ -12,10 +12,10 @@ function HomeHero({data}) {
 
   useEffect(() => {
     let windowWidth = window.innerWidth;
-    if( windowWidth > 639 ){
+    if( windowWidth > 768 ){
       function heroParallax() {
         let s = document.querySelector('[id*="heroFloater"]');
-        let yPos = 0 - window.pageYOffset/11;
+        let yPos = 0 - window.pageYOffset/8;
         s.style.top = 352 + yPos + "px";
       }
 
