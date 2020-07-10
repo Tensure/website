@@ -6,11 +6,11 @@ function SinglePurpose({data}) {
 
   useEffect(() => {
     let windowWidth = window.innerWidth;
-    if( windowWidth > 639 ){
+    if( windowWidth > 768 ){
       function purposeParallax() {
         let s = document.querySelector('[id*="purposeFloater"]');
         let s2 = document.querySelector('[id*="purpose2Floater"]');
-        let yPos = 0 - window.pageYOffset/11;
+        let yPos = 0 - window.pageYOffset/7;
         s.style.top = 75 + yPos + "px";
         s2.style.top = 150 + yPos + "px";
       }

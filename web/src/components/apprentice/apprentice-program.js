@@ -9,10 +9,10 @@ function ApprenticeProgram({data}) {
 
   useEffect(() => {
     let windowWidth = window.innerWidth;
-    if( windowWidth > 639 ){
+    if( windowWidth > 768 ){
       function programParallax() {
         let s = document.querySelector('[id*="programFloater"]');
-        let yPos = 0 - window.pageYOffset/11;
+        let yPos = 0 - window.pageYOffset/7;
         s.style.top = 0 + yPos + "px";
       }
 

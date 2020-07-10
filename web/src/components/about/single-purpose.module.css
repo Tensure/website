@@ -64,13 +64,11 @@
   margin-left: auto;
   width: 100%;
   position: relative;
+  box-sizing: border-box;
 
   @media (--media-max-medium) {
     max-width: 100%;
     order: 2;
-  }
-
-  @media (--media-max-small) {
     padding-right: 32px;
     padding-left: 32px;
   }
@@ -79,6 +77,11 @@
 #purposeFloater {
   position: absolute;
   top: 75px;
+
+  @media (--media-max-medium) {
+    position: relative;
+    top: 0;
+  }
 }
 
 .singlePurposeContent .subHeaderGreen {
@@ -143,5 +146,10 @@
 #purpose2Floater {
   position: absolute;
   top: 150px;
+
+  @media (--media-max-medium) {
+    position: relative;
+    top: 0;
+  }
 }
 
