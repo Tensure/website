@@ -90,9 +90,9 @@
 
 .programOverviewContent {
   max-width: 465px;
-  padding-right: 142px;
   padding-left: 32px;
   margin-left: auto;
+  margin-right: 142px;
   width: 100%;
   position: relative;
   box-sizing: border-box;
@@ -137,6 +137,7 @@
 
   @media (--media-max-medium) {
     position: relative;
+    max-width: 100%;
   }
 }
 
@@ -191,6 +192,7 @@
 
   @media (--media-max-medium) {
     position: relative;
+    max-width: 100%;
   }
 }
 
@@ -218,7 +220,7 @@
   max-width: 465px;
   width: 100%;
   margin-left: auto;
-  padding-right: 93px;
+  margin-right: 93px;
   padding-left: 32px;
   position: relative;
   box-sizing: border-box;
@@ -245,6 +247,7 @@
 
   @media (--media-max-medium) {
     position: relative;
+    max-width: 100%;
   }
 }
 
