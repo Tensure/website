@@ -31,16 +31,9 @@ module.exports = {
         theme_color: `#0A2949`,
         display: `standalone`,
         icon: `src/components/images/tensure-favicon.png`,
-        cache_busting_mode: `query`,
+        cache_busting_mode: `none`
       }
     },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-         workboxConfig: {
-            globPatterns: [`**/*`]
-         }
-      }
-    }
+    `gatsby-plugin-offline`
   ]
 }
