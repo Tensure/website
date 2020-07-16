@@ -95,6 +95,27 @@
   @media (--media-max-small) {
     display: none;
   }
+
+  @media screen and (min-width: 2200px) {
+    top: -392px;
+    left: -465px;
+  }
+}
+
+.stripeNormal {
+  display: block;
+
+  @media screen and (min-width: 2200px) {
+    display: none;
+  }
+}
+
+.stripeLarge {
+  display: none;
+
+  @media screen and (min-width: 2200px) {
+    display: block;
+  }
 }
 
 .heroVidContainer .greenStripe {
@@ -104,6 +125,11 @@
 
   @media (--media-max-small) {
     display: none;
+  }
+
+  @media screen and (min-width: 2200px) {
+    top: -392px;
+    left: -565px;
   }
 }
 

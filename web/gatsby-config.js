@@ -9,6 +9,17 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // your google analytics tracking id
+        trackingId: `UA-159211717-1`,
+        // Puts tracking script in the head instead of the body
+        head: true,
+        // enable ip anonymization
+        anonymize: true
+      }
+    },
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
@@ -31,7 +42,7 @@ module.exports = {
         theme_color: `#0A2949`,
         display: `standalone`,
         icon: `src/components/images/tensure-favicon.png`,
-        cache_busting_mode: `none`
+        cache_busting_mode: `query`
       }
     },
     `gatsby-plugin-offline`
