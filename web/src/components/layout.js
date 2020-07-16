@@ -51,9 +51,9 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle, darkMode}) 
                 <li>
                   <Link to='/apprenticeships/'>Apprenticeships</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to='/insights/'>Insights</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to='/contact/'>Contact</Link>
                 </li>

@@ -5,6 +5,8 @@ import heroPlaceholder from '../images/home/hero-placeholder.jpg'
 import downArrow from '../images/home/hero-down-arrow.svg'
 import greenStripe from '../images/home/hero-green-stripe.svg'
 import blueStripe from '../images/home/hero-blue-stripe.svg'
+import greenStripeLg from '../images/home/hero-green-stripe-lg.svg'
+import blueStripeLg from '../images/home/hero-blue-stripe-lg.svg'
 
 import styles from './home-hero.module.css'
 
@@ -43,14 +45,16 @@ function HomeHero({data}) {
         
         <div className={styles.heroVidContainer}>
           <div className={styles.greenStripe}>
-            <img src={greenStripe} alt="Green Stripe" />
+            <img src={greenStripe} alt="Green Stripe" className={styles.stripeNormal} />
+            <img src={greenStripeLg} alt="Green Stripe" className={styles.stripeLarge} />
           </div>
           <div className={styles.heroVid} style={{backgroundImage: `url(${heroPlaceholder})`}}>
             <iframe src={`${home.heroVideo}`} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen title="hero background video"></iframe>
           </div>
           <script src="https://player.vimeo.com/api/player.js"></script>
           <div className={styles.blueStripe}>
-            <img src={blueStripe} alt="Blue Stripe" />
+            <img src={blueStripe} alt="Blue Stripe" className={styles.stripeNormal} />
+            <img src={blueStripeLg} alt="Blue Stripe" className={styles.stripeLarge} />
           </div>
         </div>
       </div>
