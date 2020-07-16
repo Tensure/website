@@ -29,9 +29,9 @@ const Header = ({onHideNav, onShowNav, showNav, darkMode}) => (
           <li>
             <Link to='/apprenticeships/'>apprenticeships</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to='/insights/'>insights</Link>
-          </li>
+          </li> */}
           <li>
             <Link to='/contact/'>contact</Link>
           </li>
