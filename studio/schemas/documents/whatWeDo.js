@@ -4,6 +4,22 @@ export default {
   title: 'What We Do',
   fieldsets: [
     {
+      name: 'seo',
+      title: 'SEO Content',
+      options: {
+        collapsible: true, // Makes the whole fieldset collapsible
+        collapsed: true
+      }
+    },
+    {
+      name: 'page',
+      title: 'Page Content',
+      options: {
+        collapsible: true, // Makes the whole fieldset collapsible
+        collapsed: true
+      }
+    },
+    {
       name: 'digitalInnovation',
       title: 'Digital Innovation Content',
       options: {
@@ -46,14 +62,40 @@ export default {
   ],
   fields: [
     {
+      name: 'seoTitle',
+      type: 'string',
+      title: 'SEO Page Title',
+      fieldset: 'seo'
+    },
+    {
+      name: 'seoDescription',
+      type: 'text',
+      title: 'SEO Page Description',
+      fieldset: 'seo'
+    },
+    {
+      name: 'seoURL',
+      type: 'string',
+      title: 'SEO Page URL',
+      fieldset: 'seo'
+    },
+    {
+      name: 'seoPhoto',
+      type: 'mainImage',
+      title: 'SEO Page Photo',
+      fieldset: 'seo'
+    },
+    {
       name: 'pageTitle',
       type: 'string',
-      title: 'Page Title'
+      title: 'Page Title',
+      fieldset: 'page'
     },
     {
       name: 'pageSubtitle',
       type: 'string',
-      title: 'Page Subtitle'
+      title: 'Page Subtitle',
+      fieldset: 'page'
     },
     {
       name: 'innovationTitle',

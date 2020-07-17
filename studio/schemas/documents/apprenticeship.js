@@ -4,6 +4,14 @@ export default {
   title: 'Apprenticeships',
   fieldsets: [
     {
+      name: 'seo',
+      title: 'SEO Content',
+      options: {
+        collapsible: true, // Makes the whole fieldset collapsible
+        collapsed: true
+      }
+    },
+    {
       name: 'program',
       title: 'Apprentice Program',
       options: {
@@ -29,6 +37,30 @@ export default {
     }
   ],
   fields: [
+    {
+      name: 'seoTitle',
+      type: 'string',
+      title: 'SEO Page Title',
+      fieldset: 'seo'
+    },
+    {
+      name: 'seoDescription',
+      type: 'text',
+      title: 'SEO Page Description',
+      fieldset: 'seo'
+    },
+    {
+      name: 'seoURL',
+      type: 'string',
+      title: 'SEO Page URL',
+      fieldset: 'seo'
+    },
+    {
+      name: 'seoPhoto',
+      type: 'mainImage',
+      title: 'SEO Page Photo',
+      fieldset: 'seo'
+    },
     {
       name: 'programTitle',
       type: 'string',

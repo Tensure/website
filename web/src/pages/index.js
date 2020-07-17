@@ -31,17 +31,12 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
+  const home = (data || {}).home
   // const postNodes = (data || {}).posts
   //   ? mapEdgesToNodes(data.posts)
   //     .filter(filterOutDocsWithoutSlugs)
   //     .filter(filterOutDocsPublishedInTheFuture)
   //   : []
-
-  if (!site) {
-    throw new Error(
-      'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
-    )
-  }
 
   return (
     <Layout>
@@ -133,6 +128,15 @@ export const query = graphql`
               url
             }
           }
+          seoTitle
+          seoURL
+          seoPhoto {
+            alt
+            asset {
+              url
+            }
+          }
+          seoDescription
         }
       }
     }
