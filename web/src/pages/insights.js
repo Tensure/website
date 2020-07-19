@@ -16,7 +16,10 @@ const ArchivePage = props => {
 
   return (
     <Layout>
-      <SEO title='News & Insights' />
+      <SEO
+        title='News & Insights'
+        description='Read about the goings-on at Tensure.'
+      />
       <Container>
         <p className={styles.subHeader}>Goings-on at Tensure</p>
         <h1>News & Insights</h1>

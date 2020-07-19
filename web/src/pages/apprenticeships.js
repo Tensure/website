@@ -11,12 +11,13 @@ import Application from '../components/apprentice/application'
 
 const Apprenticeships = props => {
   const {data} = props
-  const site = (data || {}).site
+  const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
       <SEO
-        title='Apprenticeships'
+        title={siteSeo.seoTitle}
+        description={siteSeo.seoDescription}
       />
       <ApprenticeProgram data={data.apprentice.edges} />
       <ProgramOverview data={data.apprentice.edges} />
@@ -34,6 +35,17 @@ export const query = graphql`
       title
       description
       keywords
+    }
+    siteSeo: sanityApprenticeship {
+      seoURL
+      seoTitle
+      seoDescription
+      seoPhoto {
+        alt
+        asset {
+          url
+        }
+      }
     }
     apprentice: allSanityApprenticeship(limit: 1) {
       edges {

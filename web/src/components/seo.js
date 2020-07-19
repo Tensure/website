@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import {StaticQuery, graphql} from 'gatsby'
 import {imageUrlFor} from '../lib/image-url'
 import {buildImageObj} from '../lib/helpers'
+import featuredImage from './images/tensure-featured-image.png'
 
 function SEO ({description, lang, meta, keywords, title, image}) {
   return (
@@ -13,7 +14,7 @@ function SEO ({description, lang, meta, keywords, title, image}) {
         const metaDescription = description || (data.site && data.site.description) || ''
         const siteTitle = (data.site && data.site.title) || ''
         const siteAuthor = (data.site && data.site.author && data.site.author.name) || ''
-        const metaImage = (image && image.asset) ? imageUrlFor(buildImageObj(image)).width(1200).url() : ''
+        const metaImage = (image && image.asset) ? imageUrlFor(buildImageObj(image)).width(1200).url() : 'https://tensure.io/images/tensure-featured-image.png'
 
         return (
           <Helmet

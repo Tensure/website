@@ -7,10 +7,14 @@ import SEO from '../components/seo'
 import PortableText from '../components/portableText'
 
 const Privacy = ({data}) => {
+  const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
-      <SEO title='Privacy Policy' />
+      <SEO
+        title={siteSeo.seoTitle}
+        description={siteSeo.seoDescription}
+      />
       <Container>
       {data.privacy.edges.map(({ node: privacy }) => (
         <div key={privacy.id}>
@@ -25,6 +29,17 @@ const Privacy = ({data}) => {
 
 export const query = graphql`
   query PrivacyQuery {
+    siteSeo: sanityLegal {
+      seoURL
+      seoTitle
+      seoDescription
+      seoPhoto {
+        alt
+        asset {
+          url
+        }
+      }
+    }
     privacy: allSanityLegal {
       edges {
         node {

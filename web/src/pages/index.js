@@ -1,9 +1,9 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 // import {
-//   mapEdgesToNodes,
-//   filterOutDocsWithoutSlugs,
-//   filterOutDocsPublishedInTheFuture
+  // mapEdgesToNodes
+  // filterOutDocsWithoutSlugs,
+  // filterOutDocsPublishedInTheFuture
 // } from '../lib/helpers'
 
 import Layout from '../containers/layout'
@@ -31,7 +31,7 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
-  const home = (data || {}).home
+  const siteSeo = (data || {}).siteSeo
   // const postNodes = (data || {}).posts
   //   ? mapEdgesToNodes(data.posts)
   //     .filter(filterOutDocsWithoutSlugs)
@@ -41,8 +41,10 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO
-        title={site.title}
-        description={site.description}
+        title={siteSeo.seoTitle}
+        description={siteSeo.seoDescription}
+        image={siteSeo.seoPhoto.asset.url}
+        // og:image={siteSeo.seoPhoto.asset.url}
         keywords={site.keywords}
       />
       <HomeHero data={data.home.edges} />
@@ -69,6 +71,17 @@ export const query = graphql`
       title
       description
       keywords
+    }
+    siteSeo: sanityHome {
+      seoTitle
+      seoDescription
+      seoURL
+      seoPhoto {
+        alt
+        asset {
+          url
+        }
+      }
     }
     posts: allSanityPost(limit: 3, sort: {fields: [publishedAt], order: DESC}, filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}) {
       edges {

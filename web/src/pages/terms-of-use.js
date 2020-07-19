@@ -7,10 +7,14 @@ import Container from '../components/container'
 import SEO from '../components/seo'
 
 const TermsOfUse = ({data}) => {
+  const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
-      <SEO title='Terms Of Use' />
+      <SEO
+        title={siteSeo.seoTermsTitle}
+        description={siteSeo.seoTermsDescription}
+      />
       <Container>
       {data.terms.edges.map(({ node: terms }) => (
         <div key={terms.id}>
@@ -25,6 +29,17 @@ const TermsOfUse = ({data}) => {
 
 export const query = graphql`
   query TermsQuery {
+    siteSeo: sanityLegal {
+      seoTermsURL
+      seoTermsTitle
+      seoTermsPhoto {
+        alt
+        asset {
+          url
+        }
+      }
+      seoTermsDescription
+    }
     terms: allSanityLegal {
       edges {
         node {
