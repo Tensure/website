@@ -43,8 +43,6 @@ const IndexPage = props => {
       <SEO
         title={siteSeo.seoTitle}
         description={siteSeo.seoDescription}
-        image={siteSeo.seoPhoto.asset.url}
-        // og:image={siteSeo.seoPhoto.asset.url}
         keywords={site.keywords}
       />
       <HomeHero data={data.home.edges} />
