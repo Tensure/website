@@ -11,12 +11,13 @@ import ManagedServices from '../components/services/managed-services'
 import SupportCTA from '../components/support-cta'
 
 function WhatWeDo ({ data }) {
-  const site = (data || {}).site
+  const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
       <SEO
-        title='What We Do'
+        title={siteSeo.seoTitle}
+        description={siteSeo.seoDescription}
       />
       <DigitalInnovation data={data.services.edges} />
       <CloudInfrastructure data={data.services.edges} />
@@ -30,10 +31,16 @@ function WhatWeDo ({ data }) {
 
 export const query = graphql`
   query WhatWeDoQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
-      title
-      description
-      keywords
+    siteSeo: sanityWhatWeDo {
+      seoURL
+      seoTitle
+      seoDescription
+      seoPhoto {
+        alt
+        asset {
+          url
+        }
+      }
     }
     services: allSanityWhatWeDo(limit: 1) {
       edges {

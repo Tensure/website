@@ -9,11 +9,13 @@ import Leadership from '../components/about/leadership'
 import SupportCTA from '../components/support-cta'
 
 function WhoWeAre ({ data }) {
+  const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
       <SEO
-        title='Who We Are'
+        title={siteSeo.seoTitle}
+        description={siteSeo.seoDescription}
       />
       <SinglePurpose data={data.section1.edges} />
       <Container>
@@ -26,10 +28,16 @@ function WhoWeAre ({ data }) {
 
 export const query = graphql`
   query WhoWeAreQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
-      title
-      description
-      keywords
+    siteSeo: sanityWhoWeAre {
+      seoURL
+      seoTitle
+      seoDescription
+      seoPhoto {
+        alt
+        asset {
+          url
+        }
+      }
     }
     section1: allSanityWhoWeAre(limit: 1) {
       edges {
