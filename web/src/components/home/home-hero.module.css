@@ -87,18 +87,35 @@
   }
 }
 
-.heroVidContainer .blueStripe {
+.blueStripe {
   position: absolute;
   top: -139px;
   left: -205px;
+  z-index: 0;
 
   @media (--media-max-small) {
     display: none;
   }
 
   @media screen and (min-width: 2200px) {
-    top: -392px;
-    left: -465px;
+    top: -220px;
+    left: -10px;
+  }
+}
+
+.greenStripe {
+  position: absolute;
+  top: -139px;
+  left: -215px;
+  z-index: 0;
+
+  @media (--media-max-small) {
+    display: none;
+  }
+
+  @media screen and (min-width: 2200px) {
+    top: -300px;
+    left: -30px;
   }
 }
 
@@ -115,21 +132,6 @@
 
   @media screen and (min-width: 2200px) {
     display: block;
-  }
-}
-
-.heroVidContainer .greenStripe {
-  position: absolute;
-  top: -139px;
-  left: -215px;
-
-  @media (--media-max-small) {
-    display: none;
-  }
-
-  @media screen and (min-width: 2200px) {
-    top: -392px;
-    left: -565px;
   }
 }
 
