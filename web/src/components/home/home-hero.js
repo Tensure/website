@@ -31,22 +31,29 @@ function HomeHero({data}) {
     <div>
       {data.map(({ node: home }) => (
       <div className={styles.twoColGrid} key={home.id}>
-        <div className={styles.heroContentContainer} id={styles.heroFloater}>
-          <div className={styles.heroContent}>
-            <h1>
-            <span className={styles.subHeaderTurquoise}>{home.heroSubtitle}</span>
-            {home.heroTitle}</h1>
-            <PortableText blocks={home._rawHeroDescription} />
-            <a href="#aboutUs" className={styles.downArrow}>
-              <img src={downArrow} alt="Logo" />
-            </a>
+        <div>
+          <div className={styles.heroContentContainer} id={styles.heroFloater}>
+            <div className={styles.heroContent}>
+              <h1>
+              <span className={styles.subHeaderTurquoise}>{home.heroSubtitle}</span>
+              {home.heroTitle}</h1>
+              <PortableText blocks={home._rawHeroDescription} />
+              <a href="#aboutUs" className={styles.downArrow}>
+                <img src={downArrow} alt="Logo" />
+              </a>
+            </div>
+          </div>
+          <div className={styles.greenStripe}>
+            <img src={greenStripeLg} alt="Green Stripe" className={styles.stripeLarge} />
+          </div>
+          <div className={styles.blueStripe}>
+            <img src={blueStripeLg} alt="Blue Stripe" className={styles.stripeLarge} />
           </div>
         </div>
         
         <div className={styles.heroVidContainer}>
           <div className={styles.greenStripe}>
             <img src={greenStripe} alt="Green Stripe" className={styles.stripeNormal} />
-            <img src={greenStripeLg} alt="Green Stripe" className={styles.stripeLarge} />
           </div>
           <div className={styles.heroVid} style={{backgroundImage: `url(${heroPlaceholder})`}}>
             <iframe src={`${home.heroVideo}`} frameBorder="0" allow="autoplay; fullscreen" allowFullScreen title="hero background video"></iframe>
@@ -54,7 +61,6 @@ function HomeHero({data}) {
           <script src="https://player.vimeo.com/api/player.js"></script>
           <div className={styles.blueStripe}>
             <img src={blueStripe} alt="Blue Stripe" className={styles.stripeNormal} />
-            <img src={blueStripeLg} alt="Blue Stripe" className={styles.stripeLarge} />
           </div>
         </div>
       </div>
