@@ -41,7 +41,6 @@
   @media (--media-max-medium) {
     width: 100%;
     height: 400px;
-    order: 2;
     margin-top: 0;
     margin-right: 0;
     justify-content: center;
@@ -70,7 +69,6 @@
 
   @media (--media-max-medium) {
     max-width: 100%;
-    order: 1;
     margin: 0;
     padding: 50px 32px 60px 32px;
   }
@@ -117,12 +115,14 @@
     text-decoration: none;
     margin-top: 30px;
     display: inline-block;
+    text-align: center;
   
     @media (--media-max-small) {
       margin-top: 30px;
       display: flex;
       justify-content: center;
       line-height: 1;
+      padding: 12px 10px 9px 10px;
     }
   }
 
@@ -153,12 +153,3 @@
 .scheduleBtn {
   margin-top: 25px;
 }
-
-/* #programFloater {
-  position: absolute;
-  top: 0;
-
-  @media (--media-max-medium) {
-    position: relative;
-  }
-} */
