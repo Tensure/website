@@ -17,6 +17,7 @@ import author from './documents/author'
 import category from './documents/category'
 import thanks from './documents/thanks'
 import legal from './documents/legal'
+import anthos from './documents/anthos'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 
@@ -50,6 +51,7 @@ export default createSchema({
     contact,
     thanks,
     legal,
+    anthos,
     mainImage,
     authorReference,
     bodyPortableText,
