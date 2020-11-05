@@ -13,8 +13,8 @@ const anthosInterested = ({data}) => {
               <div className={styles.interestedContent}>
                 <h2>{interested.interestedTitle}</h2>
                 <p>{interested.interestedDescription}</p>
-                <form name="application" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you">
-                  <input type="hidden" name="form-name" value="interested in anthos" />
+                <form name="anthos" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you">
+                  <input type="hidden" name="form-name" value="anthos" />
                   <div className={styles.hidden}><input name="bot-field" /></div>
                   <div className={styles.twoColFields}>
                     <input type="text" name="fname" placeholder="First Name" maxLength="30" required />
