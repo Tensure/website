@@ -41,7 +41,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#0A2949`,
         display: `standalone`,
-        icon: `src/components/images/tensure-favicon.png`,
+        icon: `src/components/images/tensure-favicon-transparent.png`,
         cache_busting_mode: `query`
       }
     },
