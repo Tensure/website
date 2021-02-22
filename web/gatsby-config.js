@@ -33,6 +33,14 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-hubspot",
+      options: {
+          trackingCode: "7506917",
+          respectDNT: true,
+          productionOnly: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Tensure`,
