@@ -35,9 +35,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-hubspot",
       options: {
-          trackingCode: "7506917",
-          respectDNT: true,
-          productionOnly: true,
+        trackingCode: "7506917",
+        respectDNT: true,
+        productionOnly: true,
       },
     },
     {
@@ -53,6 +53,7 @@ module.exports = {
         cache_busting_mode: `query`
       }
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-smoothscroll`
   ]
 }

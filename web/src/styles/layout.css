@@ -13,3 +13,15 @@ body {
   color: var(--color-dark-blue);
   margin: 0;
 }
+
+a {
+  color: var(--color-turquoise);
+}
+
+.hiring-bg {
+  background: linear-gradient(to top, #E5897F, #DDDFE4);
+}
+
+.ramp-bg {
+  background: linear-gradient(to top, #10446E, #95D5D4);
+}
