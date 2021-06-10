@@ -9,17 +9,19 @@ import SEO from '../components/seo'
 const HiringThankYou = ({ data }) => {
 
   return (
-    <Layout>
-      <SEO title='Download The Hiring Guide!' />
-      <Container>
-        {data.thanks.edges.map(({ node: thanks }) => (
-          <div key={thanks.id}>
-            <h1>{thanks.hiringTitle}</h1>
-            <PortableText blocks={thanks._rawHiringMessage} />
-          </div>
-        ))}
-      </Container>
-    </Layout>
+    <div className="hiring-bg">
+      <Layout>
+        <SEO title='Download The Hiring Guide!' />
+        <Container>
+          {data.thanks.edges.map(({ node: thanks }) => (
+            <div className="thank-you-content" key={thanks.id}>
+              <h1>{thanks.hiringTitle}</h1>
+              <PortableText blocks={thanks._rawHiringMessage} />
+            </div>
+          ))}
+        </Container>
+      </Layout>
+    </div>
   )
 }
 

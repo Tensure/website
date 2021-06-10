@@ -25,3 +25,16 @@ a {
 .ramp-bg {
   background: linear-gradient(to top, #10446E, #95D5D4);
 }
+
+.thank-you-content {
+  min-height: 600px;
+}
+
+.thank-you-content a {
+  color: var(--color-tuscany);
+  text-decoration: underline;
+}
+
+.ramp-bg .thank-you-content a {
+  color: var(--color-white);
+}

@@ -9,17 +9,19 @@ import SEO from '../components/seo'
 const RampThankYou = ({ data }) => {
 
   return (
-    <Layout>
-      <SEO title='Thank You for Registering!' />
-      <Container>
-        {data.thanks.edges.map(({ node: thanks }) => (
-          <div key={thanks.id}>
-            <h1>{thanks.rampTitle}</h1>
-            <PortableText blocks={thanks._rawRampMessage} />
-          </div>
-        ))}
-      </Container>
-    </Layout>
+    <div className="ramp-bg">
+      <Layout>
+        <SEO title='Thank You for Registering!' />
+        <Container>
+          {data.thanks.edges.map(({ node: thanks }) => (
+            <div className="thank-you-content" key={thanks.id}>
+              <h1>{thanks.rampTitle}</h1>
+              <PortableText blocks={thanks._rawRampMessage} />
+            </div>
+          ))}
+        </Container>
+      </Layout>
+    </div>
   )
 }
 
