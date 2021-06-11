@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './header'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 
 import '../styles/layout.css'
 import styles from './layout.module.css'
@@ -8,12 +8,12 @@ import styles from './layout.module.css'
 import tensureLogo from './images/footer/footer-tensure-icon.svg'
 import googleCloud from './images/footer/footer-google-cloud.png'
 
-const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle, darkMode}) => (
+const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle, darkMode }) => (
   <>
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} darkMode={darkMode} />
-    
+
     <div className={styles.content}>{children}</div>
-    
+
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>
         <ul className={styles.footerGrid}>

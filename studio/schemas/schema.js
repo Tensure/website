@@ -18,6 +18,8 @@ import category from './documents/category'
 import thanks from './documents/thanks'
 import legal from './documents/legal'
 import anthos from './documents/anthos'
+import ramp from './documents/ramp'
+import hiring from './documents/hiring'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 
@@ -52,6 +54,8 @@ export default createSchema({
     thanks,
     legal,
     anthos,
+    ramp,
+    hiring,
     mainImage,
     authorReference,
     bodyPortableText,
