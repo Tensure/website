@@ -32,6 +32,9 @@ const Header = ({ onHideNav, onShowNav, showNav, darkMode }) => (
           <li>
             <Link to='/insights/'>insights</Link>
           </li>
+          {/* <li>
+            <Link to='/careers/'>careers</Link>
+          </li> */}
           <li>
             <Link to='/contact/'>contact</Link>
           </li>

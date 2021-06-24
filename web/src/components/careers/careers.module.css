@@ -1,0 +1,14 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+
+.rootFullWidth {
+  padding-top: 232px;
+  padding-bottom: 175px;
+  margin-top: -139px;
+  background: linear-gradient(#10446E, #0A2949);
+
+  @media (--media-max-medium) {
+    padding: 65px 0 85px 0;
+    margin-top: -65px;
+  }
+}
