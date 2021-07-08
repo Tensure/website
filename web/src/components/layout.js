@@ -55,6 +55,9 @@ const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle, darkMode }
                   <Link to='/insights/'>Insights</Link>
                 </li> */}
                 <li>
+                  <a href="https://boards.greenhouse.io/tensureconsulting">careers</a>
+                </li>
+                <li>
                   <Link to='/contact/'>Contact</Link>
                 </li>
               </ul>

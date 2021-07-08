@@ -33,6 +33,9 @@ const Header = ({ onHideNav, onShowNav, showNav, darkMode }) => (
             <Link to='/insights/'>insights</Link>
           </li>
           <li>
+            <a href="https://boards.greenhouse.io/tensureconsulting">careers</a>
+          </li>
+          <li>
             <Link to='/contact/'>contact</Link>
           </li>
         </ul>
