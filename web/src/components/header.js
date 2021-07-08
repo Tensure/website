@@ -32,9 +32,9 @@ const Header = ({ onHideNav, onShowNav, showNav, darkMode }) => (
           <li>
             <Link to='/insights/'>insights</Link>
           </li>
-          {/* <li>
-            <Link to='/careers/'>careers</Link>
-          </li> */}
+          <li>
+            <a href="https://boards.greenhouse.io/tensureconsulting">careers</a>
+          </li>
           <li>
             <Link to='/contact/'>contact</Link>
           </li>
