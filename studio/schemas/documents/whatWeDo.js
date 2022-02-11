@@ -27,6 +27,15 @@ export default {
         collapsed: true
       }
     },
+
+    {
+      name: 'commerce',
+      title: 'Commerce Content',
+      options: {
+        collapsible: true, // Makes the whole fieldset collapsible
+        collapsed: true
+      }
+    },
     {
       name: 'cloud',
       title: 'Cloud Infrastructure Content',
@@ -114,6 +123,24 @@ export default {
       type: 'bodyPortableText',
       title: 'Description',
       fieldset: 'digitalInnovation'
+    },
+    {
+      name: 'commerceTitle',
+      type: 'string',
+      title: 'Title',
+      fieldset: 'commerce'
+    },
+    {
+      name: 'commerceSubtitle',
+      type: 'string',
+      title: 'Subtitle',
+      fieldset: 'commerce'
+    },
+    {
+      name: 'commerceDescription',
+      type: 'bodyPortableText',
+      title: 'Description',
+      fieldset: 'commerce'
     },
     {
       name: 'cloudTitle',

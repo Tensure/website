@@ -1,0 +1,114 @@
+@import '../../styles/custom-media.css';
+@import '../../styles/custom-properties.css';
+
+.rootFullWidth {
+  background: linear-gradient(#10436D, #5AC1BB);
+  padding-top: 180px;
+  margin-top: -139px;
+}
+
+.servicesTitleContent {
+  text-align: center;
+  margin-bottom: 140px;
+
+  @media (--media-max-small) {
+    margin-bottom: 85px;
+  }
+
+  @nest & .subHeaderGreen {
+    font-family: var(--font-family-titles);
+    font-size: 24px;
+    letter-spacing: 2.3px;
+    line-height: 1.1;
+    color: var(--color-turquoise);
+    margin-bottom: 0;
+  
+    @media (--media-max-small) {
+      font-size: 16px;
+    }
+  }
+}
+
+.servicesTitleContent::after {
+  content: "";
+  width: 300px;
+  height: 3px;
+  background-color: var(--color-turquoise);
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+  @media (--media-max-small) {
+    width: 280px;
+  }
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+
+  @media (--media-max-medium) {
+    grid-gap: 30px;
+  }
+
+  @media (--media-max-small) {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+}
+
+.commerceTitle {
+  padding-top: 10px;
+
+  @media (--media-max-small) {
+    text-align: center;
+  }
+
+  @nest & h2 {
+    margin-bottom: 10px;
+  }
+  
+  @nest & .subHeaderGreen {
+    font-family: var(--font-family-titles);
+    font-size: 24px;
+    letter-spacing: 2.3px;
+    line-height: 1.1;
+    color: var(--color-turquoise);
+    margin-top: 0;
+  
+    @media (--media-max-small) {
+      font-size: 16px;
+    }
+  }
+}
+
+.commerceContent {
+
+  @nest & h3 {
+    color: var(--color-turquoise);
+    font-family: var(--font-family-titles);
+    font-size: 28px;
+    letter-spacing: 2.69px;
+    margin-bottom: 12px;
+    font-weight: 400;
+
+    @media (--media-max-small) {
+      color: var(--color-dark-blue);
+      font-size: 22px;
+      letter-spacing: 2.12px;
+    }
+  }
+
+  @nest & p {
+    margin-top: 0;
+    margin-bottom: 32px;
+
+    @media (--media-max-small) {
+      margin-bottom: 48px;
+    }
+  }
+}

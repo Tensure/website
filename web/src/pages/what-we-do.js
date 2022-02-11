@@ -4,6 +4,7 @@ import {graphql} from 'gatsby'
 import Layout from '../containers/layout'
 import SEO from '../components/seo'
 import DigitalInnovation from '../components/services/digital-innovation'
+import Commerce from '../components/services/commerce'
 import CloudInfrastructure from '../components/services/cloud-infrastructure'
 import DataInsights from '../components/services/data-insights'
 import DevOps from '../components/services/dev-ops'
@@ -20,6 +21,7 @@ function WhatWeDo ({ data }) {
         description={siteSeo.seoDescription}
       />
       <DigitalInnovation data={data.services.edges} />
+      <Commerce data={data.services.edges} />
       <CloudInfrastructure data={data.services.edges} />
       <DataInsights data={data.services.edges} />
       <DevOps data={data.services.edges} />
@@ -51,6 +53,8 @@ export const query = graphql`
           managedSubtitle
           innovationTitle
           innovationSubtitle
+          commerceTitle
+          commerceSubtitle
           id
           devTitle
           devSubtitle
@@ -62,6 +66,7 @@ export const query = graphql`
           _rawDataDescription(resolveReferences: {maxDepth: 10})
           _rawDevDescription(resolveReferences: {maxDepth: 10})
           _rawInnovationDescription(resolveReferences: {maxDepth: 10})
+          _rawCommerceDescription(resolveReferences: {maxDepth: 10})
           _rawManagedDescription(resolveReferences: {maxDepth: 10})
         }
       }
