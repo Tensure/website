@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react'
+import React, {useEffect} from 'react'
 import PortableText from '../portableText'
 import Container from '../container'
 
 import styles from './digital-innovation.module.css'
 
-function DigitalInnovation({data}) {
-
+function DigitalInnovation ({data}) {
   return (
     <div className={styles.rootFullWidth}>
       <Container>
-        {data.map(({ node: innovation }) => (
+        {data.map(({node: innovation}) => (
           <div key={innovation.id}>
             <div className={styles.servicesTitleContent}>
               <p className={styles.subHeaderGreen}>{innovation.pageSubtitle}</p>

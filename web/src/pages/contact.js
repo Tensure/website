@@ -5,16 +5,13 @@ import Layout from '../containers/layout'
 import SEO from '../components/seo'
 import ContactForm from '../components/contact/contact-form'
 
-const Contact = props => {
+const Contact = (props) => {
   const {data} = props
   const siteSeo = (data || {}).siteSeo
 
   return (
-    <Layout darkMode={true}>
-      <SEO
-        title={siteSeo.seoTitle}
-        description={siteSeo.seoDescription}
-      />
+    <Layout darkMode>
+      <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
       <ContactForm data={data.contact.edges} />
     </Layout>
   )

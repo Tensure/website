@@ -1,20 +1,19 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import PortableText from '../components/portableText'
 
 import Layout from '../containers/layout'
 import Container from '../components/container'
 import SEO from '../components/seo'
 
-const HiringThankYou = ({ data }) => {
-
+const HiringThankYou = ({data}) => {
   return (
-    <div className="hiring-bg">
+    <div className='hiring-bg'>
       <Layout>
         <SEO title='Download The Hiring Guide!' />
         <Container>
-          {data.thanks.edges.map(({ node: thanks }) => (
-            <div className="thank-you-content" key={thanks.id}>
+          {data.thanks.edges.map(({node: thanks}) => (
+            <div className='thank-you-content' key={thanks.id}>
               <h1>{thanks.hiringTitle}</h1>
               <PortableText blocks={thanks._rawHiringMessage} />
             </div>

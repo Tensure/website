@@ -1,22 +1,19 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 
 import Layout from '../containers/layout'
 import SEO from '../components/seo'
 import RampWebinar from '../components/ramp/ramp-webinar'
 import RampRegister from '../components/ramp/ramp-register'
 
-const Ramp = props => {
-  const { data } = props
+const Ramp = (props) => {
+  const {data} = props
   const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
-      <SEO
-        title={siteSeo.seoTitle}
-        description={siteSeo.seoDescription}
-      />
-      <div className="ramp-bg">
+      <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
+      <div className='ramp-bg'>
         <RampWebinar data={data.webinar.edges} />
         <RampRegister data={data.webinar.edges} />
       </div>

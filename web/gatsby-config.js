@@ -33,12 +33,12 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-hubspot",
+      resolve: 'gatsby-plugin-hubspot',
       options: {
-        trackingCode: "7506917",
+        trackingCode: '7506917',
         respectDNT: true,
-        productionOnly: true,
-      },
+        productionOnly: true
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,

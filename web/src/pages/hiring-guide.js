@@ -1,22 +1,19 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 
 import Layout from '../containers/layout'
 import SEO from '../components/seo'
 import HiringGuide from '../components/hiring/hiring-guide'
 import HiringTalent from '../components/hiring/hiring-talent'
 
-const Hiring = props => {
-  const { data } = props
+const Hiring = (props) => {
+  const {data} = props
   const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
-      <SEO
-        title={siteSeo.seoTitle}
-        description={siteSeo.seoDescription}
-      />
-      <div className="hiring-bg">
+      <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
+      <div className='hiring-bg'>
         <HiringTalent data={data.overview.edges} />
         <HiringGuide data={data.overview.edges} />
       </div>

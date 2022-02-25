@@ -4,12 +4,11 @@ import Container from '../container'
 
 import styles from './commerce.module.css'
 
-function Commerce({data}) {
-
+function Commerce ({data}) {
   return (
     <div className={styles.rootFullWidth}>
       <Container>
-        {data.map(({ node: commerce }) => (
+        {data.map(({node: commerce}) => (
           <div key={commerce.id}>
             <div className={styles.servicesTitleContent}>
               <p className={styles.subHeaderGreen}>{commerce.pageSubtitle}</p>

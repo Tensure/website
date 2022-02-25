@@ -24,14 +24,13 @@ function BlogPost (props) {
     <article className={styles.root}>
       <Container>
         <div className={styles.grid}>
-
           <aside className={styles.metaContent}>
             {categories && (
               <div className={styles.categories}>
                 <ul>
-                {categories.map(category => (
-                  <li key={category._id}>{category.title}</li>
-                ))}
+                  {categories.map((category) => (
+                    <li key={category._id}>{category.title}</li>
+                  ))}
                 </ul>
               </div>
             )}
@@ -50,18 +49,15 @@ function BlogPost (props) {
               {_rawBody && <PortableText blocks={_rawBody} />}
             </div>
           </div>
-
         </div>
 
-        <Link to='/insights/' className={styles.goBack}>Back To Insights</Link>
+        <Link to='/insights/' className={styles.goBack}>
+          Back To Insights
+        </Link>
 
         <div className={styles.recentPosts}>
           <h2>Recent Insights</h2>
-          {postNodes && (
-            <BlogPostPreviewRecent
-              nodes={postNodes}
-            />
-          )}
+          {postNodes && <BlogPostPreviewRecent nodes={postNodes} />}
         </div>
       </Container>
     </article>

@@ -7,14 +7,20 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import {toPlainText} from '../lib/helpers'
 
-const BlogPostTemplate = props => {
+const BlogPostTemplate = (props) => {
   const {data, errors} = props
   const post = data && data.post
   const recentPosts = data && data.recentPosts
   return (
     <Layout>
       {errors && <SEO title='GraphQL Error' />}
-      {post && <SEO title={post.title || 'Untitled'} description={toPlainText(post._rawExcerpt)} image={post.mainImage} />}
+      {post && (
+        <SEO
+          title={post.title || 'Untitled'}
+          description={toPlainText(post._rawExcerpt)}
+          image={post.mainImage}
+        />
+      )}
 
       {errors && (
         <Container>
@@ -70,7 +76,11 @@ export const query = graphql`
         }
       }
     }
-    recentPosts: allSanityPost(limit: 3, sort: {fields: [publishedAt], order: DESC}, filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}) {
+    recentPosts: allSanityPost(
+      limit: 3
+      sort: {fields: [publishedAt], order: DESC}
+      filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
+    ) {
       edges {
         node {
           id
