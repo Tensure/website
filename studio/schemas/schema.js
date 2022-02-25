@@ -22,6 +22,7 @@ import ramp from './documents/ramp'
 import hiring from './documents/hiring'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
+import ad from './documents/ad'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -54,6 +55,7 @@ export default createSchema({
     thanks,
     legal,
     anthos,
+    ad,
     ramp,
     hiring,
     mainImage,
