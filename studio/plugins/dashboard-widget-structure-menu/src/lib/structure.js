@@ -54,7 +54,7 @@ export function getDefaultStructure () {
     .id('__root__')
     .title('Content')
     .showIcons(items.some(item => item.getSchemaType().icon))
-    .items(items)
+  .items(items)
 }
 
 // We are lazy-requiring/resolving the structure inside of a function in order to catch errors

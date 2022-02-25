@@ -16,7 +16,6 @@ export default function ApplicationDevelopment ({data}) {
               <h2>{cloud.overviewTitle}</h2>
               <p className={styles.overviewDescription}>{cloud.overviewDescription}</p>
               {cloud.overviewUrl1}
-
             </div>
           </div>
         </div>
