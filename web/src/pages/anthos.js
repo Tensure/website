@@ -48,6 +48,10 @@ export const query = graphql`
               url
             }
           }
+          modalTile
+          modalVideo
+          heroTitle
+          heroVideo
           seoDescription
           overviewTitle
           overviewSubtitle

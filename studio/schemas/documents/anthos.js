@@ -66,6 +66,30 @@ export default {
       fieldset: 'overview'
     },
     {
+      name: 'heroTitle',
+      type: 'string',
+      title: 'Hero Video Title',
+      fieldset: 'overview'
+    },
+    {
+      name: 'heroVideo',
+      type: 'string',
+      title: 'Hero Video URL',
+      fieldset: 'overview'
+    },
+    {
+      name: 'modalTile',
+      type: 'string',
+      title: 'Modal Video Title',
+      fieldset: 'overview'
+    },
+    {
+      name: 'modalVideo',
+      type: 'string',
+      title: 'Modal Video URL',
+      fieldset: 'overview'
+    },
+    {
       name: 'overviewDescription',
       type: 'text',
       title: 'Description',

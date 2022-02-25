@@ -1,11 +1,11 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .cloudContainer {
   margin-top: -139px;
   margin-bottom: 190px;
   padding-top: 190px;
-  background: linear-gradient(to right, #10446E, #95D5D4);
+  background: linear-gradient(to right, #10446e, #95d5d4);
   position: relative;
   min-height: 610px;
 
@@ -44,16 +44,6 @@
     margin-top: 0;
     margin-right: 0;
     justify-content: center;
-
-    @nest & .popupPlayBtn {
-      margin-left: 0;
-    }
-  }
-
-  @nest & .popupPlayBtn {
-    width: 144px;
-    height: 88px;
-    box-shadow: 0 2px 35px 0 rgba(0,0,0,.27);
   }
 }
 
@@ -63,7 +53,7 @@
   padding-bottom: 115px;
   padding: 51px 0 65px 38px;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-left: auto;
   margin-top: -767px;
 
@@ -75,7 +65,7 @@
 
   @nest & h2 {
     margin-bottom: 0;
-  
+
     @media (--media-max-small) {
       font-size: 28px;
       color: var(--color-dark-blue);
@@ -93,7 +83,7 @@
     color: var(--color-turquoise);
     margin-top: 0;
     margin-bottom: 6px;
-  
+
     @media (--media-max-small) {
       font-size: 16px;
     }
@@ -116,7 +106,7 @@
     margin-top: 30px;
     display: inline-block;
     text-align: center;
-  
+
     @media (--media-max-small) {
       margin-top: 30px;
       display: flex;
@@ -144,12 +134,4 @@
     bottom: 0;
     right: 0;
   }
-}
-
-.popupBtn {
-  display: block;
-}
-
-.scheduleBtn {
-  margin-top: 25px;
 }
