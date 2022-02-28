@@ -44,5 +44,5 @@ export function toPlainText (blocks) {
       }
       return block.children.map((child) => child.text).join('')
     })
-    .join('\n\n')
+  .join('\n\n')
 }

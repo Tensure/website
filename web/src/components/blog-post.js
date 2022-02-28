@@ -16,8 +16,8 @@ function BlogPost (props) {
   const {_rawBody, categories, title, publishedAt, data, recentPosts} = props
   const postNodes = recentPosts
     ? mapEdgesToNodes(recentPosts)
-      .filter(filterOutDocsWithoutSlugs)
-      .filter(filterOutDocsPublishedInTheFuture)
+        .filter(filterOutDocsWithoutSlugs)
+        .filter(filterOutDocsPublishedInTheFuture)
     : []
 
   return (
