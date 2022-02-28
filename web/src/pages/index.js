@@ -1,42 +1,42 @@
-import React from 'react'
-import {graphql} from 'gatsby'
+import React from "react";
+import { graphql } from "gatsby";
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture
-} from '../lib/helpers'
+  filterOutDocsPublishedInTheFuture,
+} from "../lib/helpers";
 
-import Layout from '../containers/layout'
-import Container from '../components/container'
-import GraphQLErrorList from '../components/graphql-error-list'
-import SEO from '../components/seo'
-import HomeHero from '../components/home/home-hero'
-import AboutUs from '../components/home/about-us'
-import Services from '../components/home/services'
-import ApprenticeAtTensure from '../components/home/apprentice-at-tensure'
-import BlogPostPreviewRecent from '../components/blog-post-preview-recent'
-import SupportCTA from '../components/support-cta'
+import Layout from "../containers/layout";
+import Container from "../components/container";
+import GraphQLErrorList from "../components/graphql-error-list";
+import SEO from "../components/seo";
+import HomeHero from "../components/home/home-hero";
+import AboutUs from "../components/home/about-us";
+import Services from "../components/home/services";
+import ApprenticeAtTensure from "../components/home/apprentice-at-tensure";
+import BlogPostPreviewRecent from "../components/blog-post-preview-recent";
+import SupportCTA from "../components/support-cta";
 
-import styles from '../components/layout.module.css'
+import styles from "../components/layout.module.css";
 
 const IndexPage = (props) => {
-  const {data, errors} = props
+  const { data, errors } = props;
 
   if (errors) {
     return (
       <Layout>
         <GraphQLErrorList errors={errors} />
       </Layout>
-    )
+    );
   }
 
-  const site = (data || {}).site
-  const siteSeo = (data || {}).siteSeo
+  const site = (data || {}).site;
+  const siteSeo = (data || {}).siteSeo;
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts)
         .filter(filterOutDocsWithoutSlugs)
         .filter(filterOutDocsPublishedInTheFuture)
-    : []
+    : [];
 
   return (
     <Layout>
@@ -52,12 +52,12 @@ const IndexPage = (props) => {
       </Container>
       <SupportCTA data={data.support.edges} />
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query IndexPageQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
       keywords
@@ -75,8 +75,8 @@ export const query = graphql`
     }
     posts: allSanityPost(
       limit: 3
-      sort: {fields: [publishedAt], order: DESC}
-      filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
+      sort: { fields: [publishedAt], order: DESC }
+      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
       edges {
         node {
@@ -113,10 +113,10 @@ export const query = graphql`
           aboutTitle
           aboutSubtitle
           aboutButton
-          _rawServicesDescription(resolveReferences: {maxDepth: 10})
-          _rawHeroDescription(resolveReferences: {maxDepth: 10})
-          _rawApprenticeDescription(resolveReferences: {maxDepth: 10})
-          _rawAboutDescription(resolveReferences: {maxDepth: 10})
+          _rawServicesDescription(resolveReferences: { maxDepth: 10 })
+          _rawHeroDescription(resolveReferences: { maxDepth: 10 })
+          _rawApprenticeDescription(resolveReferences: { maxDepth: 10 })
+          _rawAboutDescription(resolveReferences: { maxDepth: 10 })
           servicesPhoto {
             alt
             asset {
@@ -165,6 +165,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

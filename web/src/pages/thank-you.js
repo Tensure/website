@@ -1,16 +1,16 @@
-import React from 'react'
-import {graphql} from 'gatsby'
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from '../containers/layout'
-import Container from '../components/container'
-import SEO from '../components/seo'
+import Layout from "../containers/layout";
+import Container from "../components/container";
+import SEO from "../components/seo";
 
-const ThankYou = ({data}) => {
+const ThankYou = ({ data }) => {
   return (
     <Layout>
-      <SEO title='Thank You!' />
+      <SEO title="Thank You!" />
       <Container>
-        {data.thanks.edges.map(({node: thanks}) => (
+        {data.thanks.edges.map(({ node: thanks }) => (
           <div key={thanks.id}>
             <h1>{thanks.title}</h1>
             <p>{thanks.message}</p>
@@ -18,8 +18,8 @@ const ThankYou = ({data}) => {
         ))}
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query ThanksQuery {
@@ -33,6 +33,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default ThankYou
+export default ThankYou;

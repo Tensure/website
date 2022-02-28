@@ -1,18 +1,18 @@
-import React from 'react'
-import {graphql} from 'gatsby'
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from '../containers/layout'
-import SEO from '../components/seo'
-import ApplicationDevelopment from '../components/ad/ad'
-import CustomerStories from '../components/customer-success/CustomerStories'
-import {mapEdgesToNodes} from '../lib/helpers'
-import Container from '../components/container'
-import styles from '../components/layout.module.css'
+import Layout from "../containers/layout";
+import SEO from "../components/seo";
+import ApplicationDevelopment from "../components/ad/ad";
+import CustomerStories from "../components/customer-success/CustomerStories";
+import { mapEdgesToNodes } from "../lib/helpers";
+import Container from "../components/container";
+import styles from "../components/layout.module.css";
 
-export default function AppDev (props) {
-  const {data} = props
-  const siteSeo = (data || {}).siteSeo
-  const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
+export default function AppDev(props) {
+  const { data } = props;
+  const siteSeo = (data || {}).siteSeo;
+  const postNodes = data && data.posts && mapEdgesToNodes(data.posts);
 
   return (
     <Layout darkMode>
@@ -24,12 +24,12 @@ export default function AppDev (props) {
         {postNodes && postNodes.length && <CustomerStories nodes={postNodes} />}
       </Container>
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`
   query ADQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
       keywords
@@ -65,24 +65,24 @@ export const query = graphql`
       }
     }
     posts: allSanityPost(
-    sort: {fields: [publishedAt], order: DESC}
-    filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
-  ) {
-    edges {
-      node {
-        id
-        publishedAt
-        categories {
+      sort: { fields: [publishedAt], order: DESC }
+      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
+    ) {
+      edges {
+        node {
           id
+          publishedAt
+          categories {
+            id
+            title
+          }
           title
-        }
-        title
-        _rawExcerpt
-        slug {
-          current
+          _rawExcerpt
+          slug {
+            current
+          }
         }
       }
     }
   }
-  }
-`
+`;

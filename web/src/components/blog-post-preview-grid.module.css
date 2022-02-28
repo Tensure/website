@@ -1,5 +1,5 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .headline {
   font-size: var(--font-micro-size);
@@ -34,23 +34,21 @@
 }
 
 .grid li {
-  background: linear-gradient(#95D5D4, #DDDFE4);
+  background: linear-gradient(#95d5d4, #dddfe4);
 }
 
 .grid li:hover {
-  box-shadow: 10px 10px 25px 0 rgba(0,0,0,.1);
+  box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.1);
 }
 
 .grid li[datacat="Case Study"] {
-  background: linear-gradient(#95D5D4, #DDDFE4);
+  background: linear-gradient(#95d5d4, #dddfe4);
 }
 
 .grid li[datacat="News"] {
-  background: linear-gradient(#E5897F, #DDDFE4);
+  background: linear-gradient(#e5897f, #dddfe4);
 }
 
 .grid li[datacat="Blog"] {
-  background: linear-gradient(#7E97AD, #DDDFE4);
+  background: linear-gradient(#7e97ad, #dddfe4);
 }
-
-

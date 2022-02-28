@@ -1,8 +1,8 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .rootFullWidth {
-  background: linear-gradient(#10436D, #5AC1BB);
+  background: linear-gradient(#10436d, #5ac1bb);
   padding-top: 180px;
   margin-top: -139px;
 }
@@ -22,7 +22,7 @@
     line-height: 1.1;
     color: var(--color-turquoise);
     margin-bottom: 0;
-  
+
     @media (--media-max-small) {
       font-size: 16px;
     }
@@ -71,7 +71,7 @@
   @nest & h2 {
     margin-bottom: 10px;
   }
-  
+
   @nest & .subHeaderGreen {
     font-family: var(--font-family-titles);
     font-size: 24px;
@@ -79,7 +79,7 @@
     line-height: 1.1;
     color: var(--color-turquoise);
     margin-top: 0;
-  
+
     @media (--media-max-small) {
       font-size: 16px;
     }
@@ -87,7 +87,6 @@
 }
 
 .commerceContent {
-
   @nest & h3 {
     color: var(--color-turquoise);
     font-family: var(--font-family-titles);

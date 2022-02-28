@@ -1,33 +1,33 @@
-import React, {useEffect} from 'react'
-import PortableText from '../portableText'
+import React, { useEffect } from "react";
+import PortableText from "../portableText";
 
-import greenBlueLines from '../images/apprentice/apprentice-green-blue-lines.png'
+import greenBlueLines from "../images/apprentice/apprentice-green-blue-lines.png";
 
-import styles from './program-overview.module.css'
+import styles from "./program-overview.module.css";
 
-function ProgramOverview ({data}) {
+function ProgramOverview({ data }) {
   useEffect(() => {
-    let windowWidth = window.innerWidth
+    let windowWidth = window.innerWidth;
     if (windowWidth > 768) {
-      function overviewParallax () {
-        let s = document.querySelector('[id*="overviewFloater"]')
-        let s2 = document.querySelector('[id*="overview2Floater"]')
-        let s3 = document.querySelector('[id*="overview3Floater"]')
-        let yPos = 0 - window.pageYOffset / 7
-        s.style.top = 100 + yPos + 'px'
-        s2.style.top = 200 + yPos + 'px'
-        s3.style.top = 285 + yPos + 'px'
+      function overviewParallax() {
+        let s = document.querySelector('[id*="overviewFloater"]');
+        let s2 = document.querySelector('[id*="overview2Floater"]');
+        let s3 = document.querySelector('[id*="overview3Floater"]');
+        let yPos = 0 - window.pageYOffset / 7;
+        s.style.top = 100 + yPos + "px";
+        s2.style.top = 200 + yPos + "px";
+        s3.style.top = 285 + yPos + "px";
       }
 
-      window.addEventListener('scroll', overviewParallax)
+      window.addEventListener("scroll", overviewParallax);
 
-      return () => window.removeEventListener('scroll', overviewParallax)
+      return () => window.removeEventListener("scroll", overviewParallax);
     }
-  })
+  });
 
   return (
     <div>
-      {data.map(({node: overview}) => (
+      {data.map(({ node: overview }) => (
         <div className={styles.rootFullWidth} key={overview.id}>
           <div className={styles.twoColGrid}>
             <div className={styles.mobileShow}>
@@ -45,16 +45,16 @@ function ProgramOverview ({data}) {
             </div>
             <div
               className={styles.programOverviewImage}
-              style={{backgroundImage: `url(${overview.volunteerPhoto.asset.url})`}}
+              style={{ backgroundImage: `url(${overview.volunteerPhoto.asset.url})` }}
             >
-              <img className={styles.greenBlueLines} src={greenBlueLines} alt='Green Blue Lines' />
+              <img className={styles.greenBlueLines} src={greenBlueLines} alt="Green Blue Lines" />
             </div>
           </div>
 
           <div className={styles.twoColGrid}>
             <div
               className={styles.apprenticeshipImage}
-              style={{backgroundImage: `url(${overview.apprenticeshipPhoto.asset.url})`}}
+              style={{ backgroundImage: `url(${overview.apprenticeshipPhoto.asset.url})` }}
             />
             <div className={styles.apprenticeshipContent}>
               <div id={styles.overview2Floater}>
@@ -71,13 +71,13 @@ function ProgramOverview ({data}) {
             </div>
             <div
               className={styles.internshipImage}
-              style={{backgroundImage: `url(${overview.internshipPhoto.asset.url})`}}
+              style={{ backgroundImage: `url(${overview.internshipPhoto.asset.url})` }}
             />
           </div>
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default ProgramOverview
+export default ProgramOverview;

@@ -1,28 +1,28 @@
-import React, {useEffect} from 'react'
-import {Link} from 'gatsby'
-import PortableText from '../portableText'
+import React, { useEffect } from "react";
+import { Link } from "gatsby";
+import PortableText from "../portableText";
 
-import styles from './services.module.css'
+import styles from "./services.module.css";
 
-function Services ({data}) {
+function Services({ data }) {
   useEffect(() => {
-    let windowWidth = window.innerWidth
+    let windowWidth = window.innerWidth;
     if (windowWidth > 768) {
-      function servicesParallax () {
-        let s = document.querySelector('[id*="servicesFloater"]')
-        let yPos = 0 - window.pageYOffset / 9
-        s.style.top = 200 + yPos + 'px'
+      function servicesParallax() {
+        let s = document.querySelector('[id*="servicesFloater"]');
+        let yPos = 0 - window.pageYOffset / 9;
+        s.style.top = 200 + yPos + "px";
       }
 
-      window.addEventListener('scroll', servicesParallax)
+      window.addEventListener("scroll", servicesParallax);
 
-      return () => window.removeEventListener('scroll', servicesParallax)
+      return () => window.removeEventListener("scroll", servicesParallax);
     }
-  })
+  });
 
   return (
     <div className={styles.rootFullWidth}>
-      {data.map(({node: services}) => (
+      {data.map(({ node: services }) => (
         <div className={styles.twoColGrid} key={services.id}>
           <div className={styles.servicesContentContainer}>
             <div className={styles.servicesContent}>
@@ -38,12 +38,12 @@ function Services ({data}) {
           </div>
           <div
             className={styles.servicesImage}
-            style={{backgroundImage: `url(${services.servicesPhoto.asset.url})`}}
+            style={{ backgroundImage: `url(${services.servicesPhoto.asset.url})` }}
           />
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default Services
+export default Services;

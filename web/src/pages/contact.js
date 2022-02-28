@@ -1,25 +1,25 @@
-import React from 'react'
-import {graphql} from 'gatsby'
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from '../containers/layout'
-import SEO from '../components/seo'
-import ContactForm from '../components/contact/contact-form'
+import Layout from "../containers/layout";
+import SEO from "../components/seo";
+import ContactForm from "../components/contact/contact-form";
 
 const Contact = (props) => {
-  const {data} = props
-  const siteSeo = (data || {}).siteSeo
+  const { data } = props;
+  const siteSeo = (data || {}).siteSeo;
 
   return (
     <Layout darkMode>
       <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
       <ContactForm data={data.contact.edges} />
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query ContactQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
       keywords
@@ -45,6 +45,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default Contact
+export default Contact;

@@ -1,11 +1,11 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .rootFullWidth {
   padding-top: 232px;
   padding-bottom: 175px;
   margin-top: -139px;
-  background: linear-gradient(#10446E, #0A2949);
+  background: linear-gradient(#10446e, #0a2949);
 
   @media (--media-max-medium) {
     padding: 65px 0 85px 0;
@@ -108,11 +108,13 @@
   border: 3px solid var(--color-white);
 }
 
-.contactContent ::-webkit-input-placeholder { /* Edge */
+.contactContent ::-webkit-input-placeholder {
+  /* Edge */
   color: var(--color-light-turquoise);
 }
 
-.contactContent :-ms-input-placeholder { /* Internet Explorer 10-11 */
+.contactContent :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: var(--color-light-turquoise);
 }
 
@@ -142,4 +144,3 @@
   background-color: var(--color-tuscany);
   color: var(--color-white);
 }
-

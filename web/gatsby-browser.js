@@ -5,15 +5,15 @@
  */
 
 const addScript = (url) => {
-  const script = document.createElement('script')
-  script.src = url
-  script.async = true
-  document.body.appendChild(script)
-}
+  const script = document.createElement("script");
+  script.src = url;
+  script.async = true;
+  document.body.appendChild(script);
+};
 
 export const onClientEntry = () => {
   window.onload = () => {
-    addScript('https://fast.wistia.com/embed/medias/02n68rjpjf.jsonp')
-    addScript('https://fast.wistia.com/assets/external/E-v1.js')
-  }
-}
+    addScript("https://fast.wistia.com/embed/medias/02n68rjpjf.jsonp");
+    addScript("https://fast.wistia.com/assets/external/E-v1.js");
+  };
+};

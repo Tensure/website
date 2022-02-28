@@ -1,8 +1,8 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .rootFullWidth {
-  background: linear-gradient(#DDDFE4, #E5897F);
+  background: linear-gradient(#dddfe4, #e5897f);
   padding-top: 120px;
 
   @media (--media-max-small) {
@@ -38,7 +38,7 @@
   @nest & h2 {
     margin-bottom: 10px;
   }
-  
+
   @nest & .subHeaderWhite {
     font-family: var(--font-family-titles);
     font-size: 24px;
@@ -46,7 +46,7 @@
     line-height: 1.1;
     color: var(--color-white);
     margin-top: 0;
-  
+
     @media (--media-max-small) {
       font-size: 16px;
     }

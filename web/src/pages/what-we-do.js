@@ -1,18 +1,18 @@
-import React from 'react'
-import {graphql} from 'gatsby'
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from '../containers/layout'
-import SEO from '../components/seo'
-import DigitalInnovation from '../components/services/digital-innovation'
-import Commerce from '../components/services/commerce'
-import CloudInfrastructure from '../components/services/cloud-infrastructure'
-import DataInsights from '../components/services/data-insights'
-import DevOps from '../components/services/dev-ops'
-import ManagedServices from '../components/services/managed-services'
-import SupportCTA from '../components/support-cta'
+import Layout from "../containers/layout";
+import SEO from "../components/seo";
+import DigitalInnovation from "../components/services/digital-innovation";
+import Commerce from "../components/services/commerce";
+import CloudInfrastructure from "../components/services/cloud-infrastructure";
+import DataInsights from "../components/services/data-insights";
+import DevOps from "../components/services/dev-ops";
+import ManagedServices from "../components/services/managed-services";
+import SupportCTA from "../components/support-cta";
 
-function WhatWeDo ({data}) {
-  const siteSeo = (data || {}).siteSeo
+function WhatWeDo({ data }) {
+  const siteSeo = (data || {}).siteSeo;
 
   return (
     <Layout>
@@ -25,7 +25,7 @@ function WhatWeDo ({data}) {
       <ManagedServices data={data.services.edges} />
       <SupportCTA data={data.support.edges} />
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`
@@ -59,12 +59,12 @@ export const query = graphql`
           dataSubtitle
           cloudTitle
           cloudSubtitle
-          _rawCloudDescription(resolveReferences: {maxDepth: 10})
-          _rawDataDescription(resolveReferences: {maxDepth: 10})
-          _rawDevDescription(resolveReferences: {maxDepth: 10})
-          _rawInnovationDescription(resolveReferences: {maxDepth: 10})
-          _rawCommerceDescription(resolveReferences: {maxDepth: 10})
-          _rawManagedDescription(resolveReferences: {maxDepth: 10})
+          _rawCloudDescription(resolveReferences: { maxDepth: 10 })
+          _rawDataDescription(resolveReferences: { maxDepth: 10 })
+          _rawDevDescription(resolveReferences: { maxDepth: 10 })
+          _rawInnovationDescription(resolveReferences: { maxDepth: 10 })
+          _rawCommerceDescription(resolveReferences: { maxDepth: 10 })
+          _rawManagedDescription(resolveReferences: { maxDepth: 10 })
         }
       }
     }
@@ -86,6 +86,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default WhatWeDo
+export default WhatWeDo;

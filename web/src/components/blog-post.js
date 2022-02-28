@@ -1,24 +1,24 @@
-import {format, distanceInWords, differenceInDays} from 'date-fns'
-import React from 'react'
-import PortableText from './portableText'
-import Container from './container'
-import {Link} from 'gatsby'
-import BlogPostPreviewRecent from './blog-post-preview-recent'
+import { format, distanceInWords, differenceInDays } from "date-fns";
+import React from "react";
+import PortableText from "./portableText";
+import Container from "./container";
+import { Link } from "gatsby";
+import BlogPostPreviewRecent from "./blog-post-preview-recent";
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture
-} from '../lib/helpers'
+  filterOutDocsPublishedInTheFuture,
+} from "../lib/helpers";
 
-import styles from './blog-post.module.css'
+import styles from "./blog-post.module.css";
 
-function BlogPost (props) {
-  const {_rawBody, categories, title, publishedAt, data, recentPosts} = props
+function BlogPost(props) {
+  const { _rawBody, categories, title, publishedAt, data, recentPosts } = props;
   const postNodes = recentPosts
     ? mapEdgesToNodes(recentPosts)
         .filter(filterOutDocsWithoutSlugs)
         .filter(filterOutDocsPublishedInTheFuture)
-    : []
+    : [];
 
   return (
     <article className={styles.root}>
@@ -38,7 +38,7 @@ function BlogPost (props) {
               <div className={styles.publishedAt}>
                 {differenceInDays(new Date(publishedAt), new Date()) > 3
                   ? distanceInWords(new Date(publishedAt), new Date())
-                  : format(new Date(publishedAt), 'MM-DD-YYYY')}
+                  : format(new Date(publishedAt), "MM-DD-YYYY")}
               </div>
             )}
           </aside>
@@ -51,7 +51,7 @@ function BlogPost (props) {
           </div>
         </div>
 
-        <Link to='/insights/' className={styles.goBack}>
+        <Link to="/insights/" className={styles.goBack}>
           Back To Insights
         </Link>
 
@@ -61,7 +61,7 @@ function BlogPost (props) {
         </div>
       </Container>
     </article>
-  )
+  );
 }
 
-export default BlogPost
+export default BlogPost;

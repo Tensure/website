@@ -1,33 +1,33 @@
-import React, {useEffect} from 'react'
-import {Link} from 'gatsby'
-import PortableText from '../portableText'
-import apprenticeProgram from '../images/apprentice/apprentice-program.jpg'
+import React, { useEffect } from "react";
+import { Link } from "gatsby";
+import PortableText from "../portableText";
+import apprenticeProgram from "../images/apprentice/apprentice-program.jpg";
 
-import styles from './apprentice-program.module.css'
+import styles from "./apprentice-program.module.css";
 
-function ApprenticeProgram ({data}) {
+function ApprenticeProgram({ data }) {
   useEffect(() => {
-    let windowWidth = window.innerWidth
+    let windowWidth = window.innerWidth;
     if (windowWidth > 768) {
-      function programParallax () {
-        let s = document.querySelector('[id*="programFloater"]')
-        let yPos = 0 - window.pageYOffset / 7
-        s.style.top = 0 + yPos + 'px'
+      function programParallax() {
+        let s = document.querySelector('[id*="programFloater"]');
+        let yPos = 0 - window.pageYOffset / 7;
+        s.style.top = 0 + yPos + "px";
       }
 
-      window.addEventListener('scroll', programParallax)
+      window.addEventListener("scroll", programParallax);
 
-      return () => window.removeEventListener('scroll', programParallax)
+      return () => window.removeEventListener("scroll", programParallax);
     }
-  })
+  });
 
   return (
     <div className={styles.rootFullWidth}>
-      {data.map(({node: program}) => (
+      {data.map(({ node: program }) => (
         <div className={styles.twoColGrid} key={program.id}>
           <div
             className={styles.apprenticeProgramImage}
-            style={{backgroundImage: `url(${program.programPhoto.asset.url})`}}
+            style={{ backgroundImage: `url(${program.programPhoto.asset.url})` }}
           />
           <div className={styles.apprenticeProgramContent}>
             <div id={styles.programFloater}>
@@ -42,7 +42,7 @@ function ApprenticeProgram ({data}) {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default ApprenticeProgram
+export default ApprenticeProgram;

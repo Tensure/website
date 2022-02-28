@@ -1,9 +1,9 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .root {
   margin-top: 86px;
-  background: linear-gradient(#FFFFFF 20%, #FCFCFC, #BDE4E4);
+  background: linear-gradient(#ffffff 20%, #fcfcfc, #bde4e4);
 
   @media (--media-max-small) {
     margin-top: 0;
@@ -20,7 +20,7 @@
 
   @media (--media-max-small) {
     font-size: 20px;
-    letter-spacing: .58px;
+    letter-spacing: 0.58px;
     margin: 0 0 20px 0;
   }
 }
@@ -134,13 +134,13 @@
   width: 40%;
   height: 3px;
   background-color: var(--color-tuscany);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .goBack:hover::after {
   left: 0;
   width: 100%;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .recentPosts {

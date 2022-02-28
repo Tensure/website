@@ -1,11 +1,11 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .content {
   /* background: var(--color-white); */
   min-height: calc(100% - 135px - 347px);
   animation: fadeInAnimation ease 1s;
-  animation-iteration-count: 1; 
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
 
   @media (--media-min-small) {
@@ -13,13 +13,13 @@
   }
 }
 
-@keyframes fadeInAnimation { 
-  0% { 
-      opacity: 0.5; 
-  } 
-  100% { 
-      opacity: 1; 
-  } 
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .subHeader {
@@ -31,7 +31,8 @@
   margin-bottom: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--font-family-headings);
   font-size: 48px;
   line-height: 1;
@@ -205,13 +206,13 @@ h3 {
 }
 
 .footerGoogle img {
-    width: 170px;
-    margin-left: 68px;
-    box-shadow: 0 0 35px rgba(0,0,0,0.10);
+  width: 170px;
+  margin-left: 68px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
 
-    @media (--media-max-medium) {
-      margin-left: 0;
-    }
+  @media (--media-max-medium) {
+    margin-left: 0;
+  }
 }
 
 .companyAddress {

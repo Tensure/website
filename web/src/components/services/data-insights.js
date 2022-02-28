@@ -1,14 +1,14 @@
-import React from 'react'
-import PortableText from '../portableText'
-import Container from '../container'
+import React from "react";
+import PortableText from "../portableText";
+import Container from "../container";
 
-import styles from './data-insights.module.css'
+import styles from "./data-insights.module.css";
 
-const DataInsights = ({data}) => {
+const DataInsights = ({ data }) => {
   return (
     <div className={styles.rootFullWidth}>
       <Container>
-        {data.map(({node: insights}) => (
+        {data.map(({ node: insights }) => (
           <div className={styles.twoColGrid} key={insights.id}>
             <div className={styles.infrastructureTitle}>
               <h2>{insights.dataTitle}</h2>
@@ -21,7 +21,7 @@ const DataInsights = ({data}) => {
         ))}
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default DataInsights
+export default DataInsights;

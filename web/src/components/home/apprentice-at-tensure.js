@@ -1,32 +1,32 @@
-import React, {useEffect} from 'react'
-import {Link} from 'gatsby'
-import PortableText from '../portableText'
+import React, { useEffect } from "react";
+import { Link } from "gatsby";
+import PortableText from "../portableText";
 
-import styles from './apprentice-at-tensure.module.css'
+import styles from "./apprentice-at-tensure.module.css";
 
-function ApprenticeAtTensure ({data}) {
+function ApprenticeAtTensure({ data }) {
   useEffect(() => {
-    let windowWidth = window.innerWidth
+    let windowWidth = window.innerWidth;
     if (windowWidth > 768) {
-      function apprenticeParallax () {
-        let s = document.querySelector('[id*="apprenticeFloater"]')
-        let yPos = 0 - window.pageYOffset / 11
-        s.style.top = 225 + yPos + 'px'
+      function apprenticeParallax() {
+        let s = document.querySelector('[id*="apprenticeFloater"]');
+        let yPos = 0 - window.pageYOffset / 11;
+        s.style.top = 225 + yPos + "px";
       }
 
-      window.addEventListener('scroll', apprenticeParallax)
+      window.addEventListener("scroll", apprenticeParallax);
 
-      return () => window.removeEventListener('scroll', apprenticeParallax)
+      return () => window.removeEventListener("scroll", apprenticeParallax);
     }
-  })
+  });
 
   return (
     <div className={styles.rootFullWidth}>
-      {data.map(({node: apprentice}) => (
+      {data.map(({ node: apprentice }) => (
         <div className={styles.twoColGrid} key={apprentice.id}>
           <div
             className={styles.apprenticeImage}
-            style={{backgroundImage: `url(${apprentice.apprenticePhoto.asset.url})`}}
+            style={{ backgroundImage: `url(${apprentice.apprenticePhoto.asset.url})` }}
           />
           <div className={styles.apprenticeContent}>
             <div id={styles.apprenticeFloater}>
@@ -41,7 +41,7 @@ function ApprenticeAtTensure ({data}) {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default ApprenticeAtTensure
+export default ApprenticeAtTensure;

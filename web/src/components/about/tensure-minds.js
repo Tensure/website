@@ -1,9 +1,9 @@
-import React from 'react'
-import Container from '../container'
-import arrows from '../images/about/blue-arrow-left.svg'
-import avatar from '../images/about/lauren-avatar.png'
+import React from "react";
+import Container from "../container";
+import arrows from "../images/about/blue-arrow-left.svg";
+import avatar from "../images/about/lauren-avatar.png";
 
-import styles from './tensure-minds.module.css'
+import styles from "./tensure-minds.module.css";
 
 const TensureMinds = () => (
   <div className={styles.rootFullWidth}>
@@ -19,17 +19,17 @@ const TensureMinds = () => (
             </p>
           </div>
           <div className={styles.arrows}>
-            <a href='#'>
-              <img src={arrows} alt='Left Blue Arrow' />
+            <a href="#">
+              <img src={arrows} alt="Left Blue Arrow" />
             </a>
-            <a href='#'>
-              <img src={arrows} alt='Left Blue Arrow' />
+            <a href="#">
+              <img src={arrows} alt="Left Blue Arrow" />
             </a>
           </div>
         </div>
         <div className={styles.answers}>
           <ul>
-            <li style={{backgroundImage: `url(${avatar})`}}>
+            <li style={{ backgroundImage: `url(${avatar})` }}>
               <p className={styles.personName}>Louie Hauss</p>
               <p className={styles.personTitle}>Director of Barketing</p>
               <p className={styles.personContent}>
@@ -38,7 +38,7 @@ const TensureMinds = () => (
               </p>
             </li>
 
-            <li style={{backgroundImage: `url(${avatar})`}}>
+            <li style={{ backgroundImage: `url(${avatar})` }}>
               <p className={styles.personName}>Louie Hauss</p>
               <p className={styles.personTitle}>Director of Barketing</p>
               <p className={styles.personContent}>
@@ -47,7 +47,7 @@ const TensureMinds = () => (
               </p>
             </li>
 
-            <li style={{backgroundImage: `url(${avatar})`}}>
+            <li style={{ backgroundImage: `url(${avatar})` }}>
               <p className={styles.personName}>Louie Hauss</p>
               <p className={styles.personTitle}>Director of Barketing</p>
               <p className={styles.personContent}>
@@ -66,6 +66,6 @@ const TensureMinds = () => (
       </div>
     </Container>
   </div>
-)
+);
 
-export default TensureMinds
+export default TensureMinds;

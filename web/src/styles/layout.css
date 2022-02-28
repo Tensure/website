@@ -1,5 +1,5 @@
-@import './custom-properties.css';
-@import 'https://use.typekit.net/kic0ucd.css';
+@import "./custom-properties.css";
+@import "https://use.typekit.net/kic0ucd.css";
 
 html {
   font-family: var(--font-family-sans);
@@ -19,11 +19,11 @@ a {
 }
 
 .hiring-bg {
-  background: linear-gradient(to top, #E5897F, #DDDFE4);
+  background: linear-gradient(to top, #e5897f, #dddfe4);
 }
 
 .ramp-bg {
-  background: linear-gradient(to top, #10446E, #95D5D4);
+  background: linear-gradient(to top, #10446e, #95d5d4);
 }
 
 .thank-you-content {

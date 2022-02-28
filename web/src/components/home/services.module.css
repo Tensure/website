@@ -1,5 +1,5 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .twoColGrid {
   display: grid;
@@ -7,13 +7,13 @@
   grid-gap: 0;
   align-items: center;
   padding-bottom: 100px;
-  background: linear-gradient( #DEF1F0, #DCF1F1);
+  background: linear-gradient(#def1f0, #dcf1f1);
 
   @media (--media-max-medium) {
     padding-bottom: 0;
     grid-gap: 0;
     grid-template-columns: 1fr;
-    background: linear-gradient( var(--color-dark-blue), var(--color-dark-blue));
+    background: linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
   }
 }
 
@@ -129,4 +129,3 @@
     min-height: 375px;
   }
 }
-

@@ -1,5 +1,5 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 body .nav ul li a:hover {
   color: var(--color-white) !important;
@@ -59,7 +59,7 @@ body .nav ul li a:hover {
   padding-bottom: 115px;
   padding: 68px 20px 68px 46px;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-left: auto;
   margin-top: -767px;
 
@@ -72,7 +72,7 @@ body .nav ul li a:hover {
   @nest & h2 {
     margin-bottom: 0;
     max-width: 535px;
-  
+
     @media (--media-max-small) {
       font-size: 28px;
       color: var(--color-dark-blue);
@@ -90,7 +90,7 @@ body .nav ul li a:hover {
     color: var(--color-turquoise);
     margin-top: 0;
     margin-bottom: 6px;
-  
+
     @media (--media-max-small) {
       font-size: 16px;
     }
@@ -113,7 +113,7 @@ body .nav ul li a:hover {
     margin-top: 30px;
     display: inline-block;
     text-align: center;
-  
+
     @media (--media-max-small) {
       margin-top: 30px;
       display: flex;
