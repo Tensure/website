@@ -1,29 +1,29 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import {graphql} from 'gatsby'
 
-import Layout from "../containers/layout";
-import SEO from "../components/seo";
-import HiringGuide from "../components/hiring/hiring-guide";
-import HiringTalent from "../components/hiring/hiring-talent";
+import Layout from '../containers/layout'
+import SEO from '../components/seo'
+import HiringGuide from '../components/hiring/hiring-guide'
+import HiringTalent from '../components/hiring/hiring-talent'
 
 const Hiring = (props) => {
-  const { data } = props;
-  const siteSeo = (data || {}).siteSeo;
+  const {data} = props
+  const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
       <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
-      <div className="hiring-bg">
+      <div className='hiring-bg'>
         <HiringTalent data={data.overview.edges} />
         <HiringGuide data={data.overview.edges} />
       </div>
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query HiringQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
       description
       keywords
@@ -62,6 +62,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default Hiring;
+export default Hiring

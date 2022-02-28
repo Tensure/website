@@ -1,11 +1,11 @@
 // Load variables from `.env` as soon as possible
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV || "development"}`,
-});
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV || 'development'}`
+})
 
-const clientConfig = require("./client-config");
+const clientConfig = require('./client-config')
 
-const isProd = process.env.NODE_ENV === "production";
+const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   plugins: [
@@ -17,8 +17,8 @@ module.exports = {
         // Puts tracking script in the head instead of the body
         head: true,
         // enable ip anonymization
-        anonymize: true,
-      },
+        anonymize: true
+      }
     },
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-postcss`,
@@ -29,16 +29,16 @@ module.exports = {
         ...clientConfig.sanity,
         token: process.env.SANITY_READ_TOKEN,
         watchMode: !isProd,
-        overlayDrafts: !isProd,
-      },
+        overlayDrafts: !isProd
+      }
     },
     {
-      resolve: "gatsby-plugin-hubspot",
+      resolve: 'gatsby-plugin-hubspot',
       options: {
-        trackingCode: "7506917",
+        trackingCode: '7506917',
         respectDNT: true,
-        productionOnly: true,
-      },
+        productionOnly: true
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -50,10 +50,10 @@ module.exports = {
         theme_color: `#0A2949`,
         display: `standalone`,
         icon: `src/components/images/tensure-favicon-transparent.png`,
-        cache_busting_mode: `query`,
-      },
+        cache_busting_mode: `query`
+      }
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-smoothscroll`,
-  ],
-};
+    `gatsby-plugin-smoothscroll`
+  ]
+}

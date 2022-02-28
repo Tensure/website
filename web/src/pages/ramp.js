@@ -1,29 +1,29 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import {graphql} from 'gatsby'
 
-import Layout from "../containers/layout";
-import SEO from "../components/seo";
-import RampWebinar from "../components/ramp/ramp-webinar";
-import RampRegister from "../components/ramp/ramp-register";
+import Layout from '../containers/layout'
+import SEO from '../components/seo'
+import RampWebinar from '../components/ramp/ramp-webinar'
+import RampRegister from '../components/ramp/ramp-register'
 
 const Ramp = (props) => {
-  const { data } = props;
-  const siteSeo = (data || {}).siteSeo;
+  const {data} = props
+  const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
       <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
-      <div className="ramp-bg">
+      <div className='ramp-bg'>
         <RampWebinar data={data.webinar.edges} />
         <RampRegister data={data.webinar.edges} />
       </div>
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query RampQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
       description
       keywords
@@ -53,7 +53,7 @@ export const query = graphql`
           seoDescription
           webinarTitle
           webinarSubtitle
-          _rawWebinarDescription(resolveReferences: { maxDepth: 10 })
+          _rawWebinarDescription(resolveReferences: {maxDepth: 10})
           webinarButton
           registerTitle
           registerDescription
@@ -62,6 +62,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default Ramp;
+export default Ramp

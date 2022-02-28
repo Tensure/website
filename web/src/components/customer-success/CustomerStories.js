@@ -1,8 +1,8 @@
-import React from "react";
-import BlogPostPreview from "../blog-post-preview";
-import styles from "./customer-success.module.css";
+import React from 'react'
+import BlogPostPreview from '../blog-post-preview'
+import styles from './customer-success.module.css'
 
-export default function CustomerStories(props) {
+export default function CustomerStories (props) {
   return (
     <div className={styles.root}>
       <ul className={styles.grid}>
@@ -14,9 +14,9 @@ export default function CustomerStories(props) {
           ))}
       </ul>
     </div>
-  );
+  )
 }
 
 CustomerStories.defaultProps = {
-  nodes: [],
-};
+  nodes: []
+}

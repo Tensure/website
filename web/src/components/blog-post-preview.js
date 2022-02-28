@@ -1,11 +1,11 @@
-import { format } from "date-fns";
-import React from "react";
-import { Link } from "gatsby";
-import { getBlogUrl } from "../lib/helpers";
-import PortableText from "./portableText";
-import styles from "./blog-post-preview.module.css";
+import {format} from 'date-fns'
+import React from 'react'
+import {Link} from 'gatsby'
+import {getBlogUrl} from '../lib/helpers'
+import PortableText from './portableText'
+import styles from './blog-post-preview.module.css'
 
-function BlogPostPreview(props) {
+function BlogPostPreview (props) {
   return (
     <Link
       className={props.isInList ? styles.inList : styles.inGrid}
@@ -17,7 +17,7 @@ function BlogPostPreview(props) {
             {category.title}
           </p>
         ))}
-        <div className={styles.date}>{format(props.publishedAt, "MM-DD-YYYY")}</div>
+        <div className={styles.date}>{format(props.publishedAt, 'MM-DD-YYYY')}</div>
         <h3 className={styles.title}>{props.title}</h3>
         {props._rawExcerpt && (
           <div className={styles.excerpt}>
@@ -27,7 +27,7 @@ function BlogPostPreview(props) {
         <p className={styles.readMore}>read more</p>
       </div>
     </Link>
-  );
+  )
 }
 
-export default BlogPostPreview;
+export default BlogPostPreview
