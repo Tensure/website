@@ -1,7 +1,5 @@
 import React from 'react'
-
 import anthosVidBg from '../images/anthos/anthos-vid-bg.jpg'
-
 import styles from './ad.module.css'
 
 export default function ApplicationDevelopment ({data}) {
@@ -20,6 +18,7 @@ export default function ApplicationDevelopment ({data}) {
           </div>
         </div>
       ))}
+
     </div>
   )
 }
