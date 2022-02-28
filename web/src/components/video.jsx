@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './video.module.css'
 
-export default function Video ({videoSrc, videoTitle, ...props}) {
+export default function Video ({videoSrc, videoTitle}) {
   return (
     <div className={styles.videowrapper}>
       <iframe
