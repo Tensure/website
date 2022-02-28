@@ -3,7 +3,6 @@ import React from 'react'
 import {Link} from 'gatsby'
 import {getBlogUrl} from '../lib/helpers'
 import PortableText from './portableText'
-
 import styles from './blog-post-preview.module.css'
 
 function BlogPostPreview (props) {
