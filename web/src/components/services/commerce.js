@@ -5,7 +5,6 @@ import Container from '../container'
 import styles from './commerce.module.css'
 
 function Commerce ({data}) {
-  console.log(data.node)
   return (
     <div className={styles.rootFullWidth}>
       <Container>
