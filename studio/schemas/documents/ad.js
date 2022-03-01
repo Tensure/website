@@ -1,7 +1,7 @@
 export default {
   name: 'ad',
   type: 'document',
-  title: 'AD',
+  title: 'Application Development',
   fieldsets: [
     {
       name: 'seo',

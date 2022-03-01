@@ -51,12 +51,15 @@ function BlogPost (props) {
           </div>
         </div>
 
-        <Link to='/insights/' className={styles.goBack}>
-          Back To Insights
-        </Link>
+        {
+          props.categories[0].title === 'AD Content' ? <Link to='/ad/' className={styles.goBack}>
+            Back To Application Development
+          </Link> : <Link to='/insights/' className={styles.goBack}>
+            Back To Insights
+          </Link>}
 
         <div className={styles.recentPosts}>
-          <h2>Recent Insights</h2>
+          {props.categories[0].title === 'AD Content' ? <h2>Recent AD Content</h2> : <h2>Recent Insights</h2>}
           {postNodes && <BlogPostPreviewRecent nodes={postNodes} />}
         </div>
       </Container>

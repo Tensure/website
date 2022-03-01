@@ -19,8 +19,8 @@ export default function AppDev (props) {
       <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
       <ApplicationDevelopment data={data.overview.edges} />
       <Container>
-        <p className={styles.subHeader}>Read about our successes</p>
-        <h1>Success Stories</h1>
+        <p className={styles.subHeader}>Read about our Google Cloud Content</p>
+        <h1>Cloud Content</h1>
         {postNodes && postNodes.length && <CustomerStories nodes={postNodes} />}
       </Container>
     </Layout>
@@ -64,7 +64,7 @@ export const query = graphql`
         }
       }
     }
-    posts: allSanityPost(
+    posts: allSanityAdContent(
       sort: {fields: [publishedAt], order: DESC}
       filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
     ) {

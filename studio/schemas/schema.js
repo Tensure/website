@@ -23,6 +23,7 @@ import hiring from './documents/hiring'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 import ad from './documents/ad'
+import adContent from './documents/ad-content'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -56,6 +57,7 @@ export default createSchema({
     legal,
     anthos,
     ad,
+    adContent,
     ramp,
     hiring,
     mainImage,
