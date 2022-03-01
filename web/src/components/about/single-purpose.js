@@ -1,28 +1,28 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from 'react'
 
-import styles from "./single-purpose.module.css";
+import styles from './single-purpose.module.css'
 
-function SinglePurpose({ data }) {
+function SinglePurpose ({data}) {
   useEffect(() => {
-    let windowWidth = window.innerWidth;
+    let windowWidth = window.innerWidth
     if (windowWidth > 768) {
-      function purposeParallax() {
-        let s = document.querySelector('[id*="purposeFloater"]');
-        let s2 = document.querySelector('[id*="purpose2Floater"]');
-        let yPos = 0 - window.pageYOffset / 7;
-        s.style.top = 75 + yPos + "px";
-        s2.style.top = 150 + yPos + "px";
+      function purposeParallax () {
+        let s = document.querySelector('[id*="purposeFloater"]')
+        let s2 = document.querySelector('[id*="purpose2Floater"]')
+        let yPos = 0 - window.pageYOffset / 7
+        s.style.top = 75 + yPos + 'px'
+        s2.style.top = 150 + yPos + 'px'
       }
 
-      window.addEventListener("scroll", purposeParallax);
+      window.addEventListener('scroll', purposeParallax)
 
-      return () => window.removeEventListener("scroll", purposeParallax);
+      return () => window.removeEventListener('scroll', purposeParallax)
     }
-  });
+  })
 
   return (
     <div>
-      {data.map(({ node: section1 }) => (
+      {data.map(({node: section1}) => (
         <div className={styles.singlePurposeContainer} key={section1.id}>
           <div className={styles.twoColGrid}>
             <div className={styles.singlePurposeContent}>
@@ -34,13 +34,13 @@ function SinglePurpose({ data }) {
             </div>
             <div
               className={styles.singlePurposeImage}
-              style={{ backgroundImage: `url(${section1.photo1.asset.url})` }}
+              style={{backgroundImage: `url(${section1.photo1.asset.url})`}}
             />
           </div>
           <div className={styles.twoColGrid}>
             <div
               className={styles.fullTeamImage}
-              style={{ backgroundImage: `url(${section1.photo2.asset.url})` }}
+              style={{backgroundImage: `url(${section1.photo2.asset.url})`}}
             />
             <div className={styles.fullTeamContent}>
               <div id={styles.purpose2Floater}>
@@ -51,7 +51,7 @@ function SinglePurpose({ data }) {
         </div>
       ))}
     </div>
-  );
+  )
 }
 
-export default SinglePurpose;
+export default SinglePurpose

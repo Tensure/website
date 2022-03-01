@@ -1,14 +1,14 @@
-import React from "react";
-import PortableText from "../portableText";
-import Container from "../container";
+import React from 'react'
+import PortableText from '../portableText'
+import Container from '../container'
 
-import styles from "./dev-ops.module.css";
+import styles from './dev-ops.module.css'
 
-const Devops = ({ data }) => {
+const Devops = ({data}) => {
   return (
     <div className={styles.rootFullWidth}>
       <Container>
-        {data.map(({ node: devops }) => (
+        {data.map(({node: devops}) => (
           <div className={styles.twoColGrid} key={devops.id}>
             <div className={styles.infrastructureTitle}>
               <h2>{devops.devTitle}</h2>
@@ -20,7 +20,7 @@ const Devops = ({ data }) => {
         ))}
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default Devops;
+export default Devops

@@ -1,16 +1,16 @@
-import React from "react";
-import { Link } from "gatsby";
-import Container from "../components/container";
+import React from 'react'
+import {Link} from 'gatsby'
+import Container from '../components/container'
 
-import styles from "./support-cta.module.css";
+import styles from './support-cta.module.css'
 
-const SupportCTA = ({ data }) => {
+const SupportCTA = ({data}) => {
   return (
     <div>
-      {data.map(({ node: support }) => (
+      {data.map(({node: support}) => (
         <div
           className={styles.rootFullWidth}
-          style={{ backgroundImage: `url(${support.supportImage.asset.url})` }}
+          style={{backgroundImage: `url(${support.supportImage.asset.url})`}}
           key={support.id}
         >
           <Container>
@@ -25,7 +25,7 @@ const SupportCTA = ({ data }) => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default SupportCTA;
+export default SupportCTA

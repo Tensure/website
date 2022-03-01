@@ -1,14 +1,15 @@
-import React from "react";
-import PortableText from "../portableText";
-import Container from "../container";
+import React from 'react'
+import PortableText from '../portableText'
+import Container from '../container'
 
-import styles from "./commerce.module.css";
+import styles from './commerce.module.css'
 
-function Commerce({ data }) {
+function Commerce ({data}) {
+  console.log(data.node)
   return (
     <div className={styles.rootFullWidth}>
       <Container>
-        {data.map(({ node: commerce }) => (
+        {data.map(({node: commerce}) => (
           <div key={commerce.id}>
             <div className={styles.servicesTitleContent}>
               <p className={styles.subHeaderGreen}>{commerce.pageSubtitle}</p>
@@ -28,7 +29,7 @@ function Commerce({ data }) {
         ))}
       </Container>
     </div>
-  );
+  )
 }
 
-export default Commerce;
+export default Commerce

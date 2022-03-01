@@ -1,17 +1,17 @@
-import React from "react";
-import { cn } from "../../lib/helpers";
+import React from 'react'
+import {cn} from '../../lib/helpers'
 
-import anthosVidBg from "../images/anthos/anthos-vid-bg.jpg";
-import Video from "../video.jsx";
+import anthosVidBg from '../images/anthos/anthos-vid-bg.jpg'
+import Video from '../video.jsx'
 
-import styles from "./anthos-cloud.module.css";
+import styles from './anthos-cloud.module.css'
 
-function AnthosCloud({ data }) {
+function AnthosCloud ({data}) {
   return (
     <div className={styles.rootFullWidth}>
-      {data.map(({ node: cloud }) => (
+      {data.map(({node: cloud}) => (
         <div className={styles.cloudContainer} key={cloud.id}>
-          <div className={styles.cloudVideo} style={{ backgroundImage: `url(${anthosVidBg})` }}>
+          <div className={styles.cloudVideo} style={{backgroundImage: `url(${anthosVidBg})`}}>
             <Video videoSrc={cloud.heroVideo} videoTitle={cloud.heroTitle} />
           </div>
           <div className={styles.cloudContent}>
@@ -21,7 +21,7 @@ function AnthosCloud({ data }) {
               <p className={styles.overviewDescription}>{cloud.overviewDescription}</p>
               {cloud.overviewUrl1}
               <div className={styles.popupBtn}>
-                <a href="#" className={cn(styles.button, styles.buttonGreen)}>
+                <a href='#' className={cn(styles.button, styles.buttonGreen)}>
                   {cloud.overviewButton1}
                 </a>
               </div>
@@ -31,7 +31,7 @@ function AnthosCloud({ data }) {
         </div>
       ))}
     </div>
-  );
+  )
 }
 
-export default AnthosCloud;
+export default AnthosCloud

@@ -1,14 +1,14 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import {graphql} from 'gatsby'
 
-import Layout from "../containers/layout";
-import SEO from "../components/seo";
-import AnthosCloud from "../components/anthos/anthos-cloud";
-import AnthosInterested from "../components/anthos/anthos-interested";
+import Layout from '../containers/layout'
+import SEO from '../components/seo'
+import AnthosCloud from '../components/anthos/anthos-cloud'
+import AnthosInterested from '../components/anthos/anthos-interested'
 
 const Anthos = (props) => {
-  const { data } = props;
-  const siteSeo = (data || {}).siteSeo;
+  const {data} = props
+  const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout darkMode>
@@ -16,12 +16,12 @@ const Anthos = (props) => {
       <AnthosCloud data={data.overview.edges} />
       <AnthosInterested data={data.overview.edges} />
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query AnthosQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
       description
       keywords
@@ -66,6 +66,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default Anthos;
+export default Anthos

@@ -1,15 +1,15 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import {graphql} from 'gatsby'
 
-import Layout from "../containers/layout";
-import Container from "../components/container";
-import SEO from "../components/seo";
-import SinglePurpose from "../components/about/single-purpose";
-import Leadership from "../components/about/leadership";
-import SupportCTA from "../components/support-cta";
+import Layout from '../containers/layout'
+import Container from '../components/container'
+import SEO from '../components/seo'
+import SinglePurpose from '../components/about/single-purpose'
+import Leadership from '../components/about/leadership'
+import SupportCTA from '../components/support-cta'
 
-function WhoWeAre({ data }) {
-  const siteSeo = (data || {}).siteSeo;
+function WhoWeAre ({data}) {
+  const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
@@ -20,7 +20,7 @@ function WhoWeAre({ data }) {
       </Container>
       <SupportCTA data={data.support.edges} />
     </Layout>
-  );
+  )
 }
 
 export const query = graphql`
@@ -75,7 +75,7 @@ export const query = graphql`
               url
             }
           }
-          _rawBio(resolveReferences: { maxDepth: 10 })
+          _rawBio(resolveReferences: {maxDepth: 10})
         }
       }
     }
@@ -97,6 +97,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default WhoWeAre;
+export default WhoWeAre

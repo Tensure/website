@@ -1,9 +1,9 @@
-import React from "react";
-import BlogPostPreview from "./blog-post-preview";
+import React from 'react'
+import BlogPostPreview from './blog-post-preview'
 
-import styles from "./blog-post-preview-grid.module.css";
+import styles from './blog-post-preview-grid.module.css'
 
-function BlogPostPreviewGrid(props) {
+function BlogPostPreviewGrid (props) {
   return (
     <div className={styles.root}>
       <ul className={styles.grid}>
@@ -15,11 +15,11 @@ function BlogPostPreviewGrid(props) {
           ))}
       </ul>
     </div>
-  );
+  )
 }
 
 BlogPostPreviewGrid.defaultProps = {
-  nodes: [],
-};
+  nodes: []
+}
 
-export default BlogPostPreviewGrid;
+export default BlogPostPreviewGrid

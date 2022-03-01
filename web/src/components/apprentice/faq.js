@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react'
 import {
   Accordion,
   AccordionItem,
   AccordionItemHeading,
   AccordionItemButton,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
+  AccordionItemPanel
+} from 'react-accessible-accordion'
 
-import styles from "./faq.module.css";
+import styles from './faq.module.css'
 
-const FAQ = ({ data }) => {
+const FAQ = ({data}) => {
   return (
     <div className={styles.faqContent}>
       <h2>FAQ</h2>
       <Accordion className={styles.accordion}>
-        {data.map(({ node: faqs }) => (
+        {data.map(({node: faqs}) => (
           <div className={styles.accordionItem} key={faqs.id}>
             <AccordionItem>
               <AccordionItemHeading>
@@ -30,7 +30,7 @@ const FAQ = ({ data }) => {
         ))}
       </Accordion>
     </div>
-  );
-};
+  )
+}
 
-export default FAQ;
+export default FAQ
