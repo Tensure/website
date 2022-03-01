@@ -2,6 +2,7 @@ const path = require('path')
 
 module.exports = {
   extends: ['standard', 'standard-react'],
+  ignorePatterns: ["node_modules/"],
   parser: 'babel-eslint',
   rules: {
     'react/prop-types': 0,
