@@ -4,6 +4,7 @@ import BlogPostPreview from '../blog-post-preview'
 import styles from './customer-success.module.css'
 import anthosImage from '../images/anthos.png'
 export default function CustomerStories (props) {
+  console.log(props.nodes)
   return (
     <div className={styles.root}>
 
@@ -20,7 +21,7 @@ export default function CustomerStories (props) {
           </Link>
         </li>
         {props.nodes &&
-          props.nodes.slice(0, 3).map((node) => (
+          props.nodes.slice(0, 5).map((node) => (
             <li key={node.id} datacat={node.categories[0].title}>
               <BlogPostPreview {...node} />
             </li>
