@@ -53,7 +53,7 @@ function BlogPost (props) {
         </div>
 
         {props.categories[0].title === 'AD Content' ? (
-          <Link to='/ad' className={styles.goBack}>
+          <Link to='/app-dev' className={styles.goBack}>
             Back To Application Development
           </Link>
         ) : (
