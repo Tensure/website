@@ -60,6 +60,8 @@ export const query = graphql`
           overviewTitle
           overviewSubtitle
           overviewDescription
+          heroTitle
+          heroVideo
           id
         }
       }
