@@ -1,6 +1,7 @@
 import {format, distanceInWords, differenceInDays} from 'date-fns'
 import React from 'react'
 import PortableText from './portableText'
+import CustomerStories from './customer-success/CustomerStories'
 import Container from './container'
 import {Link} from 'gatsby'
 import BlogPostPreviewRecent from './blog-post-preview-recent'
@@ -11,8 +12,6 @@ import {
 } from '../lib/helpers'
 
 import styles from './blog-post.module.css'
-import adstyles from './customer-success/customer-success.module.css'
-import CustomerStories from './customer-success/CustomerStories'
 
 function BlogPost (props) {
   const {_rawBody, categories, title, publishedAt, data, recentPosts} = props
@@ -53,18 +52,28 @@ function BlogPost (props) {
           </div>
         </div>
 
-        {
-          props.categories[0].title === 'AD Content' ? <Link to='/ad' className={styles.goBack}>
+        {props.categories[0].title === 'AD Content' ? (
+          <Link to='/ad' className={styles.goBack}>
             Back To Application Development
-          </Link> : <Link to='/insights/' className={styles.goBack}>
+          </Link>
+        ) : (
+          <Link to='/insights/' className={styles.goBack}>
             Back To Insights
-          </Link>}
+          </Link>
+        )}
 
         <div className={styles.recentPosts}>
-          {props.categories[0].title === 'AD Content' ? <h2>Recent Cloud Content</h2> : <h2>Recent Insights</h2>}
-          {props.categories[0].title === 'AD Content' && postNodes && <CustomerStories nodes={postNodes} />}
-          {props.categories[0].title !== 'AD Content' && postNodes && <BlogPostPreviewRecent nodes={postNodes} />}
-
+          {props.categories[0].title === 'AD Content' ? (
+            <h2>Recent Cloud Content</h2>
+          ) : (
+            <h2>Recent Insights</h2>
+          )}
+          {props.categories[0].title === 'AD Content' && postNodes && (
+            <CustomerStories nodes={postNodes} />
+          )}
+          {props.categories[0].title !== 'AD Content' && postNodes && (
+            <BlogPostPreviewRecent nodes={postNodes} />
+          )}
         </div>
       </Container>
     </article>

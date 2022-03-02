@@ -4,10 +4,8 @@ import BlogPostPreview from '../blog-post-preview'
 import styles from './customer-success.module.css'
 import anthosImage from '../images/anthos.png'
 export default function CustomerStories (props) {
-  console.log(props.nodes)
   return (
     <div className={styles.root}>
-
       <ul className={styles.grid}>
         <li>
           <Link to='/anthos' className={styles.inGrid}>
@@ -26,7 +24,6 @@ export default function CustomerStories (props) {
               <BlogPostPreview {...node} />
             </li>
           ))}
-
       </ul>
     </div>
   )
