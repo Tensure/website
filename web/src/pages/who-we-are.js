@@ -8,15 +8,12 @@ import SinglePurpose from '../components/about/single-purpose'
 import Leadership from '../components/about/leadership'
 import SupportCTA from '../components/support-cta'
 
-function WhoWeAre ({ data }) {
+function WhoWeAre ({data}) {
   const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
-      <SEO
-        title={siteSeo.seoTitle}
-        description={siteSeo.seoDescription}
-      />
+      <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
       <SinglePurpose data={data.section1.edges} />
       <Container>
         <Leadership data={data.leaders.edges} />

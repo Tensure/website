@@ -9,16 +9,13 @@ import ProgramOverview from '../components/apprentice/program-overview'
 import FAQ from '../components/apprentice/faq'
 import Application from '../components/apprentice/application'
 
-const Apprenticeships = props => {
+const Apprenticeships = (props) => {
   const {data} = props
   const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
-      <SEO
-        title={siteSeo.seoTitle}
-        description={siteSeo.seoDescription}
-      />
+      <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
       <ApprenticeProgram data={data.apprentice.edges} />
       <ProgramOverview data={data.apprentice.edges} />
       <Container>

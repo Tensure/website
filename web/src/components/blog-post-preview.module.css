@@ -1,5 +1,5 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .root {
   display: blog;
@@ -22,7 +22,7 @@
 }
 
 .grid li:hover {
-  box-shadow: 10px 10px 25px 0 rgba(0,0,0,.1);
+  box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.1);
 }
 
 .insightContainer {
@@ -82,11 +82,11 @@
   width: 40%;
   height: 3px;
   background-color: var(--color-tuscany);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .readMore:hover::after {
   left: 0;
   width: 100%;
-  transition: all .3s;
+  transition: all 0.3s;
 }

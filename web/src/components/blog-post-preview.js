@@ -3,7 +3,6 @@ import React from 'react'
 import {Link} from 'gatsby'
 import {getBlogUrl} from '../lib/helpers'
 import PortableText from './portableText'
-
 import styles from './blog-post-preview.module.css'
 
 function BlogPostPreview (props) {
@@ -13,8 +12,10 @@ function BlogPostPreview (props) {
       to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
       <div className={styles.insightContainer}>
-        {props.categories.map(category => (
-          <p className={styles.category} key={category.id}>{category.title}</p>
+        {props.categories.map((category) => (
+          <p className={styles.category} key={category.id}>
+            {category.title}
+          </p>
         ))}
         <div className={styles.date}>{format(props.publishedAt, 'MM-DD-YYYY')}</div>
         <h3 className={styles.title}>{props.title}</h3>

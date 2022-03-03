@@ -1,5 +1,5 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .grid {
   display: grid;
@@ -84,13 +84,13 @@
   background-size: cover;
   background-position: center center;
   position: relative;
-  box-shadow: 20px -20px 35px 0 rgba(0,0,0,0.05);
+  box-shadow: 20px -20px 35px 0 rgba(0, 0, 0, 0.05);
   background-color: var(--color-dark-blue);
   background-blend-mode: screen;
 
   @nest &:hover .teamMemberBio {
     opacity: 1;
-    transition: all .5s;
+    transition: all 0.5s;
   }
 }
 
@@ -136,4 +136,3 @@
     font-size: 20px;
   }
 }
-

@@ -1,5 +1,5 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .rootFullWidth {
   padding-top: 85px;
@@ -104,11 +104,13 @@
   border: 3px solid var(--color-white);
 }
 
-.applicationContent ::-webkit-input-placeholder { /* Edge */
+.applicationContent ::-webkit-input-placeholder {
+  /* Edge */
   color: var(--color-light-turquoise);
 }
 
-.applicationContent :-ms-input-placeholder { /* Internet Explorer 10-11 */
+.applicationContent :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: var(--color-light-turquoise);
 }
 
@@ -133,4 +135,3 @@
   background-color: var(--color-tuscany);
   color: var(--color-white);
 }
-

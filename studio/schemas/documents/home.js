@@ -200,7 +200,7 @@ export default {
       type: 'mainImage',
       title: 'Photo',
       fieldset: 'apprentice'
-    },
+    }
   ],
   preview: {
     select: {

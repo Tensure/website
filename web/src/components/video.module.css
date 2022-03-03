@@ -1,0 +1,19 @@
+.videowrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  width: 35%;
+
+  @nest & iframe {
+    aspect-ratio: 16 / 9;
+    height: 100%;
+    width: 100%;
+  }
+  @media only screen and (max-width: 1440px) {
+    width: 500px;
+  }
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
+}

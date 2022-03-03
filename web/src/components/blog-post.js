@@ -1,6 +1,7 @@
 import {format, distanceInWords, differenceInDays} from 'date-fns'
 import React from 'react'
 import PortableText from './portableText'
+import CustomerStories from './customer-success/CustomerStories'
 import Container from './container'
 import {Link} from 'gatsby'
 import BlogPostPreviewRecent from './blog-post-preview-recent'
@@ -16,22 +17,21 @@ function BlogPost (props) {
   const {_rawBody, categories, title, publishedAt, data, recentPosts} = props
   const postNodes = recentPosts
     ? mapEdgesToNodes(recentPosts)
-      .filter(filterOutDocsWithoutSlugs)
-      .filter(filterOutDocsPublishedInTheFuture)
+        .filter(filterOutDocsWithoutSlugs)
+        .filter(filterOutDocsPublishedInTheFuture)
     : []
 
   return (
     <article className={styles.root}>
       <Container>
         <div className={styles.grid}>
-
           <aside className={styles.metaContent}>
             {categories && (
               <div className={styles.categories}>
                 <ul>
-                {categories.map(category => (
-                  <li key={category._id}>{category.title}</li>
-                ))}
+                  {categories.map((category) => (
+                    <li key={category._id}>{category.title}</li>
+                  ))}
                 </ul>
               </div>
             )}
@@ -50,17 +50,29 @@ function BlogPost (props) {
               {_rawBody && <PortableText blocks={_rawBody} />}
             </div>
           </div>
-
         </div>
 
-        <Link to='/insights/' className={styles.goBack}>Back To Insights</Link>
+        {props.categories[0].title === 'AD Content' ? (
+          <Link to='/app-dev' className={styles.goBack}>
+            Back To Application Development
+          </Link>
+        ) : (
+          <Link to='/insights/' className={styles.goBack}>
+            Back To Insights
+          </Link>
+        )}
 
         <div className={styles.recentPosts}>
-          <h2>Recent Insights</h2>
-          {postNodes && (
-            <BlogPostPreviewRecent
-              nodes={postNodes}
-            />
+          {props.categories[0].title === 'AD Content' ? (
+            <h2>Recent Cloud Content</h2>
+          ) : (
+            <h2>Recent Insights</h2>
+          )}
+          {props.categories[0].title === 'AD Content' && postNodes && (
+            <CustomerStories nodes={postNodes} />
+          )}
+          {props.categories[0].title !== 'AD Content' && postNodes && (
+            <BlogPostPreviewRecent nodes={postNodes} />
           )}
         </div>
       </Container>

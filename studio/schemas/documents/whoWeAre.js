@@ -80,7 +80,7 @@ export default {
       type: 'mainImage',
       title: 'Photo 2',
       fieldset: 'page'
-    },
+    }
   ],
   preview: {
     select: {

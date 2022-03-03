@@ -1,12 +1,12 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .twoColGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 72px;
   padding-bottom: 56px;
-  background: linear-gradient( #DCF1F1, #FFFFFF);
+  background: linear-gradient(#dcf1f1, #ffffff);
 
   @media (--media-max-medium) {
     grid-gap: 0;
@@ -96,4 +96,3 @@
   background-color: var(--color-turquoise);
   color: var(--color-white);
 }
-

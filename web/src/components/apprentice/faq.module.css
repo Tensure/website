@@ -1,5 +1,5 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .faqContent {
   padding-top: 120px;
@@ -51,7 +51,7 @@
 
 .accordionButton:before {
   /* display: inline-block; */
-  content: '\002b';
+  content: "\002b";
   height: 18px;
   width: 18px;
   position: absolute;
@@ -60,9 +60,9 @@
   color: var(--color-light-tuscany);
 }
 
-.accordionButton[aria-expanded='true']::before,
-.accordionButton[aria-selected='true']::before {
-  content: '\2212';
+.accordionButton[aria-expanded="true"]::before,
+.accordionButton[aria-selected="true"]::before {
+  content: "\2212";
 }
 
 .accordionPanel {
@@ -81,10 +81,10 @@
 
 @keyframes fadein {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
 
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }

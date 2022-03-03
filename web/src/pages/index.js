@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
@@ -19,8 +19,8 @@ import SupportCTA from '../components/support-cta'
 
 import styles from '../components/layout.module.css'
 
-const IndexPage = props => {
-  const { data, errors } = props
+const IndexPage = (props) => {
+  const {data, errors} = props
 
   if (errors) {
     return (
@@ -34,17 +34,13 @@ const IndexPage = props => {
   const siteSeo = (data || {}).siteSeo
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts)
-      .filter(filterOutDocsWithoutSlugs)
-      .filter(filterOutDocsPublishedInTheFuture)
+        .filter(filterOutDocsWithoutSlugs)
+        .filter(filterOutDocsPublishedInTheFuture)
     : []
 
   return (
     <Layout>
-      <SEO
-        title={siteSeo.seoTitle}
-        description={siteSeo.seoDescription}
-        keywords={site.keywords}
-      />
+      <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} keywords={site.keywords} />
       <HomeHero data={data.home.edges} />
       <AboutUs data={data.home.edges} />
       <Services data={data.home.edges} />
@@ -52,11 +48,7 @@ const IndexPage = props => {
       <Container>
         <p className={styles.subHeader}>Goings-on at Tensure</p>
         <h2>News & Insights</h2>
-        {postNodes && (
-          <BlogPostPreviewRecent
-            nodes={postNodes}
-          />
-        )}
+        {postNodes && <BlogPostPreviewRecent nodes={postNodes} />}
       </Container>
       <SupportCTA data={data.support.edges} />
     </Layout>
@@ -81,7 +73,11 @@ export const query = graphql`
         }
       }
     }
-    posts: allSanityPost(limit: 3, sort: {fields: [publishedAt], order: DESC}, filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}) {
+    posts: allSanityPost(
+      limit: 3
+      sort: {fields: [publishedAt], order: DESC}
+      filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
+    ) {
       edges {
         node {
           id

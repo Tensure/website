@@ -6,16 +6,13 @@ import SEO from '../components/seo'
 import AnthosCloud from '../components/anthos/anthos-cloud'
 import AnthosInterested from '../components/anthos/anthos-interested'
 
-const Anthos = props => {
+const Anthos = (props) => {
   const {data} = props
   const siteSeo = (data || {}).siteSeo
 
   return (
-    <Layout darkMode={true}>
-      <SEO
-        title={siteSeo.seoTitle}
-        description={siteSeo.seoDescription}
-      />
+    <Layout darkMode>
+      <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
       <AnthosCloud data={data.overview.edges} />
       <AnthosInterested data={data.overview.edges} />
     </Layout>
@@ -51,6 +48,10 @@ export const query = graphql`
               url
             }
           }
+          modalTile
+          modalVideo
+          heroTitle
+          heroVideo
           seoDescription
           overviewTitle
           overviewSubtitle

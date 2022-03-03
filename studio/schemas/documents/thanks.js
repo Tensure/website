@@ -52,8 +52,7 @@ export default {
       type: 'bodyPortableText',
       title: 'Ramp Message',
       fieldset: 'thanksRamp'
-    }
-    ,
+    },
     {
       name: 'hiringTitle',
       type: 'string',

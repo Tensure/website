@@ -1,8 +1,8 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .rootFullWidth {
-  background: linear-gradient(#DDDFE4, var(--color-light-tuscany));
+  background: linear-gradient(#dddfe4, var(--color-light-tuscany));
   padding-top: 63px;
   padding-bottom: 99px;
 
@@ -35,7 +35,7 @@
     line-height: 1.1;
     color: var(--color-tuscany);
     margin-bottom: 0;
-  
+
     @media (--media-max-small) {
       font-size: 16px;
     }
@@ -156,7 +156,7 @@ ul.paginationBullets {
 }
 
 .blueMinds .rootFullWidth {
-  background: linear-gradient(#95D5D4, #10446E);
+  background: linear-gradient(#95d5d4, #10446e);
 }
 
 .blueMinds .question .subHeader {
@@ -173,7 +173,6 @@ ul.paginationBullets {
 }
 
 .blueMinds .answers {
-
   @nest & .personName {
     color: var(--color-white);
   }
@@ -188,7 +187,6 @@ ul.paginationBullets {
 }
 
 .blueMinds ul.paginationBullets {
-
   @nest & li {
     border: 3px solid var(--color-white);
   }
@@ -197,4 +195,3 @@ ul.paginationBullets {
     background-color: var(--color-white);
   }
 }
-

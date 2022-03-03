@@ -1,5 +1,5 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .twoColGrid {
   display: grid;
@@ -17,7 +17,7 @@
 
   @nest & h2 {
     margin-bottom: 0;
-  
+
     @media (--media-max-small) {
       font-size: 28px;
       color: var(--color-dark-blue);
@@ -38,7 +38,7 @@
     color: var(--color-turquoise);
     margin-top: 0;
     margin-bottom: 40px;
-  
+
     @media (--media-max-small) {
       font-size: 16px;
       margin-bottom: 17px;
@@ -118,7 +118,7 @@
     text-decoration: none;
     margin-top: 40px;
     display: inline-flex;
-  
+
     @media (--media-max-small) {
       margin-top: 30px;
     }
@@ -250,4 +250,3 @@
     max-width: 100%;
   }
 }
-

@@ -1,10 +1,11 @@
-@import '../../styles/custom-media.css';
-@import '../../styles/custom-properties.css';
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
 
 .rootFullWidth {
-  background: linear-gradient(#DDDFE4, #FCFCFC);
+  background: linear-gradient(#dddfe4, #fcfcfc);
   padding-top: 180px;
   margin-top: -139px;
+  padding-bottom: 80px;
 }
 
 .servicesTitleContent {
@@ -22,7 +23,7 @@
     line-height: 1.1;
     color: var(--color-turquoise);
     margin-bottom: 0;
-  
+
     @media (--media-max-small) {
       font-size: 16px;
     }
@@ -71,7 +72,7 @@
   @nest & h2 {
     margin-bottom: 10px;
   }
-  
+
   @nest & .subHeaderGreen {
     font-family: var(--font-family-titles);
     font-size: 24px;
@@ -79,7 +80,7 @@
     line-height: 1.1;
     color: var(--color-turquoise);
     margin-top: 0;
-  
+
     @media (--media-max-small) {
       font-size: 16px;
     }
@@ -87,7 +88,6 @@
 }
 
 .innovationContent {
-
   @nest & h3 {
     color: var(--color-turquoise);
     font-family: var(--font-family-titles);

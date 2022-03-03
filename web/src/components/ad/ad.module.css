@@ -1,0 +1,133 @@
+@import "../../styles/custom-media.css";
+@import "../../styles/custom-properties.css";
+
+.cloudContainer {
+  margin-top: -139px;
+  margin-bottom: 190px;
+  padding-top: 190px;
+  background: linear-gradient(to right, #10446e, #95d5d4);
+  position: relative;
+  min-height: 610px;
+
+  @media (--media-max-medium) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-top: 140px;
+  }
+}
+
+.adImage {
+  height: 674px;
+  width: 83%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 240px;
+  margin-top: 93px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 1440px) {
+    justify-content: flex-start;
+  }
+
+  @media (--media-max-video) {
+    width: 100%;
+    height: 400px;
+    margin-top: 0;
+    margin-right: 0;
+    justify-content: center;
+  }
+}
+
+.cloudContent {
+  max-width: 588px;
+  padding-right: 32px;
+  padding-bottom: 115px;
+  padding: 51px 0 65px 38px;
+  position: relative;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-top: -767px;
+
+  @media (--media-max-video) {
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 32px 60px 32px;
+  }
+
+  @nest & h2 {
+    margin-bottom: 0;
+
+    @media (--media-max-small) {
+      font-size: 28px;
+      color: var(--color-dark-blue);
+      -webkit-text-fill-color: var(--color-dark-blue);
+      -webkit-text-stroke-color: transparent;
+      margin-top: 32px;
+    }
+  }
+
+  @nest & .subHeaderGreen {
+    font-family: var(--font-family-titles);
+    font-size: 24px;
+    letter-spacing: 2.3px;
+    line-height: 1.1;
+    color: var(--color-turquoise);
+    margin-top: 0;
+    margin-bottom: 6px;
+
+    @media (--media-max-small) {
+      font-size: 16px;
+    }
+  }
+
+  @nest & .overviewDescription {
+    margin-bottom: 0;
+    max-width: 452px;
+  }
+
+  @nest & .button {
+    border: 3px solid var(--color-tuscany);
+    background-color: transparent;
+    padding: 12px 27px 9px 27px;
+    font-size: 14px;
+    font-family: var(--font-family-headings);
+    color: var(--color-dark-blue);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 30px;
+    display: inline-block;
+    text-align: center;
+
+    @media (--media-max-small) {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      line-height: 1;
+      padding: 12px 10px 9px 10px;
+    }
+  }
+
+  @nest & .buttonGreen {
+    border: 3px solid var(--color-turquoise);
+  }
+
+  @nest & .button:hover {
+    background-color: var(--color-tuscany);
+    color: var(--color-white);
+  }
+
+  @nest & .buttonGreen:hover {
+    background-color: var(--color-turquoise);
+  }
+
+  @nest & .greenBlueLines {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

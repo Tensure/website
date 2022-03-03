@@ -8,7 +8,7 @@ function BlogPostPreviewRecent (props) {
     <div className={styles.root}>
       <ul className={styles.grid}>
         {props.nodes &&
-          props.nodes.slice(0, 3).map(node => (
+          props.nodes.slice(0, 3).map((node) => (
             <li key={node.id} datacat={node.categories[0].title}>
               <BlogPostPreview {...node} />
             </li>

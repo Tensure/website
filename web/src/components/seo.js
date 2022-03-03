@@ -10,11 +10,14 @@ function SEO ({description, lang, meta, keywords, title, image}) {
   return (
     <StaticQuery
       query={detailsQuery}
-      render={data => {
+      render={(data) => {
         const metaDescription = description || (data.site && data.site.description) || ''
         const siteTitle = (data.site && data.site.title) || ''
         const siteAuthor = (data.site && data.site.author && data.site.author.name) || ''
-        const metaImage = (image && image.asset) ? imageUrlFor(buildImageObj(image)).width(1200).url() : `https://tensure.io` + (featuredImage)
+        const metaImage =
+          image && image.asset
+            ? imageUrlFor(buildImageObj(image)).width(1200).url()
+            : `https://tensure.io` + featuredImage
 
         return (
           <Helmet
@@ -62,9 +65,9 @@ function SEO ({description, lang, meta, keywords, title, image}) {
               .concat(
                 keywords && keywords.length > 0
                   ? {
-                    name: 'keywords',
-                    content: keywords.join(', ')
-                  }
+                      name: 'keywords',
+                      content: keywords.join(', ')
+                    }
                   : []
               )
               .concat(meta)}

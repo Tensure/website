@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import PortableText from '../components/portableText'
 
 import Layout from '../containers/layout'
@@ -11,17 +11,14 @@ const TermsOfUse = ({data}) => {
 
   return (
     <Layout>
-      <SEO
-        title={siteSeo.seoTermsTitle}
-        description={siteSeo.seoTermsDescription}
-      />
+      <SEO title={siteSeo.seoTermsTitle} description={siteSeo.seoTermsDescription} />
       <Container>
-      {data.terms.edges.map(({ node: terms }) => (
-        <div key={terms.id}>
-          <h1>{terms.termsTitle}</h1>
-          <PortableText blocks={terms._rawTermsContent} />
-        </div>
-      ))}
+        {data.terms.edges.map(({node: terms}) => (
+          <div key={terms.id}>
+            <h1>{terms.termsTitle}</h1>
+            <PortableText blocks={terms._rawTermsContent} />
+          </div>
+        ))}
       </Container>
     </Layout>
   )

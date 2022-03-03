@@ -11,17 +11,14 @@ import DevOps from '../components/services/dev-ops'
 import ManagedServices from '../components/services/managed-services'
 import SupportCTA from '../components/support-cta'
 
-function WhatWeDo ({ data }) {
+function WhatWeDo ({data}) {
   const siteSeo = (data || {}).siteSeo
 
   return (
     <Layout>
-      <SEO
-        title={siteSeo.seoTitle}
-        description={siteSeo.seoDescription}
-      />
+      <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
       <DigitalInnovation data={data.services.edges} />
-      <Commerce data={data.services.edges} />
+      {data.services.edges.node && <Commerce data={data.services.edges} />}
       <CloudInfrastructure data={data.services.edges} />
       <DataInsights data={data.services.edges} />
       <DevOps data={data.services.edges} />

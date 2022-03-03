@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 
 import Layout from '../containers/layout'
 import Container from '../components/container'
@@ -11,17 +11,14 @@ const Privacy = ({data}) => {
 
   return (
     <Layout>
-      <SEO
-        title={siteSeo.seoTitle}
-        description={siteSeo.seoDescription}
-      />
+      <SEO title={siteSeo.seoTitle} description={siteSeo.seoDescription} />
       <Container>
-      {data.privacy.edges.map(({ node: privacy }) => (
-        <div key={privacy.id}>
-          <h1>{privacy.privacyTitle}</h1>
-          <PortableText blocks={privacy._rawPrivacyContent} />
-        </div>
-      ))}
+        {data.privacy.edges.map(({node: privacy}) => (
+          <div key={privacy.id}>
+            <h1>{privacy.privacyTitle}</h1>
+            <PortableText blocks={privacy._rawPrivacyContent} />
+          </div>
+        ))}
       </Container>
     </Layout>
   )
