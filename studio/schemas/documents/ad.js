@@ -83,7 +83,6 @@ export default {
       title: 'Hero Video URL',
       fieldset: 'overview'
     }
-
   ],
   preview: {
     select: {

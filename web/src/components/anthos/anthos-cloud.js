@@ -19,7 +19,11 @@ function AnthosCloud ({data}) {
               <p className={styles.overviewDescription}>{cloud.overviewDescription}</p>
               {cloud.overviewUrl1}
               <div className={styles.popupBtn}>
-                <a href='https://www.youtube.com/watch?v=WB4z5VoJ4EM' target='_blank' className={cn(styles.button, styles.buttonGreen)}>
+                <a
+                  href='https://www.youtube.com/watch?v=WB4z5VoJ4EM'
+                  target='_blank'
+                  className={cn(styles.button, styles.buttonGreen)}
+                >
                   {cloud.overviewButton1}
                 </a>
               </div>
