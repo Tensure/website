@@ -14,11 +14,11 @@ export default function ApplicationDevelopment ({data}) {
           </div>
           <div className={styles.cloudContent}>
             <div>
-              <img src={adGoogleImg} width='100' height='100' />
               <p className={styles.subHeaderGreen}>{cloud.overviewSubtitle}</p>
               <h2>{cloud.overviewTitle}</h2>
               <p className={styles.overviewDescription}>{cloud.overviewDescription}</p>
               {cloud.overviewUrl1}
+              <img src={adGoogleImg} width='100' height='100' />
             </div>
           </div>
         </div>
